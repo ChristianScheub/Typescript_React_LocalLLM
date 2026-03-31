@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import type { ChatMessage as ChatMessageType } from '../types';
+import type { ChatMessage as ChatMessageType, ChatSettings } from '../types';
 import { modelService } from '../services/modelService';
 import { modelStateManager } from '../services/modelStateManager';
 import Logger from '../services/logger';
@@ -7,9 +7,10 @@ import { ChatView } from '../views/Chat/ChatView';
 
 interface ChatContainerProps {
   provider: 'transformers' | 'webllm';
+  chatSettings: ChatSettings;
 }
 
-export function ChatContainer({ provider }: ChatContainerProps) {
+export function ChatContainer({ provider, chatSettings }: ChatContainerProps) {
   const [messages, setMessages] = useState<ChatMessageType[]>([]);
   const [inputValue, setInputValue] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -71,7 +72,12 @@ export function ChatContainer({ provider }: ChatContainerProps) {
 
     try {
       Logger.infoService(`[ChatContainer.handleSendMessage] Generating response with provider: ${provider}`);
-      const response = await modelService.generateResponse(provider, currentInput);
+      const response = await modelService.generateResponse(provider, currentInput, {
+        temperature: chatSettings.temperature,
+        maxTokens: chatSettings.maxTokens,
+        presencePenalty: chatSettings.presencePenalty,
+        mode: chatSettings.mode,
+      });
       Logger.infoService(`[ChatContainer.handleSendMessage] Response received, length: ${response.length}`);
       
       const assistantMessage: ChatMessageType = {

@@ -70,7 +70,7 @@ class WebLLMService {
     return this.initPromise;
   }
 
-  async generate(prompt: string): Promise<string> {
+  async generate(prompt: string, options?: { temperature?: number; maxTokens?: number; presencePenalty?: number; mode?: 'fast' | 'expert' }): Promise<string> {
     Logger.infoService(`[webllmService.generate] Starting generation for prompt: "${prompt.substring(0, 100)}..."`);
     
     if (!this.currentModel || this.isLoading) {
@@ -83,8 +83,11 @@ class WebLLMService {
       throw new Error('Web-LLM Engine konnte nicht initialisiert werden. Echte Inference nicht verfügbar.');
     }
 
+    const temperature = options?.temperature ?? 0.7;
+    const maxTokens = options?.maxTokens ?? 200;
+    
     Logger.infoService(`[webllmService.generate] Engine ready. Model: ${this.currentModel}`);
-    Logger.infoService(`[webllmService.generate] Generating with max_tokens: 200, temperature: 0.7`);
+    Logger.infoService(`[webllmService.generate] Generating with max_tokens: ${maxTokens}, temperature: ${temperature}`);
     
     const messages = [
       {
@@ -98,8 +101,8 @@ class WebLLMService {
     
     for await (const chunk of await engine.chat.completions.create({
       messages,
-      max_tokens: 200,
-      temperature: 0.7,
+      max_tokens: maxTokens,
+      temperature: temperature,
       stream: true,
     })) {
       if (chunk.choices[0]?.delta?.content) {

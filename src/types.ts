@@ -5,3 +5,18 @@ export interface ChatMessage {
   content: string;
   timestamp: Date;
 }
+
+export interface ChatSettings {
+  temperature: number;
+  maxTokens: number;
+  presencePenalty: number;
+  mode: 'fast' | 'expert';
+}
+
+export interface LogEntry {
+  id: string;
+  timestamp: Date;
+  level: 'info' | 'error' | 'warning' | 'debug';
+  message: string;
+  source?: string;
+}

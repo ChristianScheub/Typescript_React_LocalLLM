@@ -57,47 +57,47 @@ export function ChatView({
         </div>
       </div>
 
-      <div className="messages-container">
-        {messages.length === 0 ? (
-          <div className="empty-state">
-            <div className="empty-icon">✨</div>
-            <p>Welcome to Chris AI</p>
-            <p className="empty-subtitle">Start a conversation with your AI assistant</p>
+      <div className="chat-main-content">
+        <div className="messages-section">
+          <div className="messages-container">
+            {messages.length === 0 ? (
+              <div className="empty-state">
+                <div className="empty-icon">✨</div>
+                <p>Welcome to Chris AI</p>
+                <p className="empty-subtitle">Start a conversation with your AI assistant</p>
+              </div>
+            ) : (
+              messages.map((msg) => <ChatMessage key={msg.id} message={msg} />)
+            )}
+            {isLoading && (
+              <div className="loading-state">
+                <Spinner size="medium" />
+                <p>Generating response...</p>
+              </div>
+            )}
           </div>
-        ) : (
-          messages.map((msg) => <ChatMessage key={msg.id} message={msg} />)
-        )}
-        {isLoading && (
-          <div className="loading-state">
-            <Spinner size="medium" />
-            <p>Generating response...</p>
-          </div>
-        )}
-      </div>
 
-      {error && (
-        <div className="error-message">
-          {error}
+          {error && <div className="error-message">{error}</div>}
+
+          <div className="chat-input-area">
+            <Input
+              value={inputValue}
+              onChange={onInputChange}
+              onKeyDown={handleKeyDown}
+              placeholder="Ask Chris anything..."
+              disabled={!isModelLoaded || isLoading}
+              className="chat-input"
+            />
+            <Button
+              onClick={onSendMessage}
+              disabled={!isModelLoaded || isLoading || !inputValue.trim()}
+              variant="primary"
+              className="send-button"
+            >
+              <FiArrowUp size={18} />
+            </Button>
+          </div>
         </div>
-      )}
-
-      <div className="chat-input-area">
-        <Input
-          value={inputValue}
-          onChange={onInputChange}
-          onKeyDown={handleKeyDown}
-          placeholder="Ask Chris anything..."
-          disabled={!isModelLoaded || isLoading}
-          className="chat-input"
-        />
-        <Button
-          onClick={onSendMessage}
-          disabled={!isModelLoaded || isLoading || !inputValue.trim()}
-          variant="primary"
-          className="send-button"
-        >
-          <FiArrowUp size={18} />
-        </Button>
       </div>
     </div>
   );

@@ -5,6 +5,8 @@
   gap: 0;
   padding: 0;
   background: white;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 /* Activity Sections */
@@ -13,11 +15,11 @@
   flex-direction: column;
   padding: 16px;
   border-bottom: 1px solid #e5e7eb;
+  flex-shrink: 0;
 }
 
 /* Temperature Section */
 .temperature-section {
-  flex-shrink: 0;
   gap: 12px;
 }
 
@@ -81,6 +83,8 @@
   min-height: 180px;
   gap: 12px;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .section-header {

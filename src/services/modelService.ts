@@ -11,6 +11,13 @@ export interface ModelState {
   error: string | null;
 }
 
+export interface GenerationOptions {
+  temperature?: number;
+  maxTokens?: number;
+  presencePenalty?: number;
+  mode?: 'fast' | 'expert';
+}
+
 class ModelService {
   getModelsByProvider(provider: 'transformers' | 'webllm'): TransformersModel[] | WebLLMModel[] {
     Logger.infoService(`[modelService.getModelsByProvider] Fetching models for provider: ${provider}`);
@@ -41,17 +48,33 @@ class ModelService {
     }
   }
 
-  async generateResponse(provider: 'transformers' | 'webllm', prompt: string): Promise<string> {
+  async generateResponse(provider: 'transformers' | 'webllm', prompt: string, options?: GenerationOptions): Promise<string> {
     Logger.infoService(`[modelService.generateResponse] Generating response with provider: ${provider}`);
     Logger.infoService(`[modelService.generateResponse] Prompt length: ${prompt.length} characters`);
+    
+    // Build enhanced prompt based on mode
+    let enhancedPrompt = prompt;
+    if (options?.mode) {
+      const prefix = options.mode === 'fast'
+        ? 'Du bist ein hilfreicher Assistent. Antworte immer extrem kurz und prägnant, maximal in zwei Sätzen.\n\n'
+        : 'Du bist ein Experte. Erkläre Konzepte ausführlich, nutze Bullet Points und gehe tief ins Detail.\n\n';
+      
+      const suffix = options.mode === 'fast'
+        ? '\n\nAntworte kurz und prägnant.'
+        : '\n\nBitte ausführlich antworten.';
+      
+      enhancedPrompt = prefix + prompt + suffix;
+      Logger.infoService(`[modelService.generateResponse] Enhanced prompt with ${options.mode} mode`);
+    }
+    
     try {
       let response: string;
       if (provider === 'transformers') {
         Logger.infoService(`[modelService.generateResponse] Using transformersService`);
-        response = await transformersService.generate(prompt);
+        response = await transformersService.generate(enhancedPrompt, options);
       } else {
         Logger.infoService(`[modelService.generateResponse] Using webllmService`);
-        response = await webllmService.generate(prompt);
+        response = await webllmService.generate(enhancedPrompt, options);
       }
       Logger.infoService(`[modelService.generateResponse] Response generated. Length: ${response.length} characters`);
       return response;

@@ -1,6 +1,13 @@
 import { useState, useEffect, useRef } from 'react';
+import type { ChatSettings } from '../types';
+import { ChatSettingsContainer } from './ChatSettingsContainer';
 import Logger from '../services/logger';
 import './ContextExplorerContainer.css';
+
+interface ContextExplorerContainerProps {
+  chatSettings: ChatSettings;
+  onSettingsChange: (settings: ChatSettings) => void;
+}
 
 interface ActivityLog {
   id: string;
@@ -9,8 +16,7 @@ interface ActivityLog {
   type: 'info' | 'chunk' | 'error' | 'warning';
 }
 
-export function ContextExplorerContainer() {
-  const [temperature, setTemperature] = useState(0.7);
+export function ContextExplorerContainer({ chatSettings, onSettingsChange }: ContextExplorerContainerProps) {
   const [activityLogs, setActivityLogs] = useState<ActivityLog[]>([]);
   const [chunkHistory, setChunkHistory] = useState<number[]>(Array(60).fill(0)); // 5 mins, 5 sec intervals
   const logsEndRef = useRef<HTMLDivElement>(null);
@@ -103,23 +109,11 @@ export function ContextExplorerContainer() {
 
   return (
     <div className="context-explorer">
-      {/* Temperature Control */}
-      <div className="activity-section temperature-section">
-        <div className="section-label">TEMPERATURE</div>
-        <div className="temperature-control">
-          <input
-            type="range"
-            min="0"
-            max="2"
-            step="0.01"
-            value={temperature}
-            onChange={(e) => setTemperature(parseFloat(e.target.value))}
-            className="temperature-slider"
-          />
-          <div className="temperature-value">{temperature.toFixed(2)}</div>
-        </div>
-      </div>
-
+            {/* Chat Settings Panel */}
+      <ChatSettingsContainer 
+        settings={chatSettings}
+        onSettingsChange={onSettingsChange}
+      />
       {/* Live Pipeline Log */}
       <div className="activity-section pipeline-section">
         <div className="section-header">

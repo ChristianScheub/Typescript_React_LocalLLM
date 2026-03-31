@@ -58,7 +58,7 @@ class TransformersService {
     }
   }
 
-  async generate(prompt: string): Promise<string> {
+  async generate(prompt: string, options?: { temperature?: number; maxTokens?: number; presencePenalty?: number; mode?: 'fast' | 'expert' }): Promise<string> {
     Logger.infoService(`[transformersService.generate] Generiere Response für Prompt: "${prompt.substring(0, 80)}..."`);
     
     if (!this.currentModel) {
@@ -81,11 +81,14 @@ class TransformersService {
       Logger.infoService(`[transformersService.generate] Modell: ${this.currentModel}`);
       Logger.infoService(`[transformersService.generate] Prompt-Länge: ${prompt.length} Zeichen`);
       
+      const temperature = options?.temperature ?? 0.7;
+      const maxTokens = options?.maxTokens ?? 150;
+      
       const startTime = Date.now();
       
       const result = await pipeline(prompt, {
-        max_new_tokens: 150,
-        temperature: 0.7,
+        max_new_tokens: maxTokens,
+        temperature: temperature,
         top_p: 0.9,
         do_sample: true,
       });
