@@ -80,19 +80,18 @@ class ModelService {
     return model;
   }
 
-  async downloadModel(provider: 'transformers' | 'webllm', modelName: string, onProgress?: (progress: number) => void): Promise<void> {
+  async downloadModel(provider: 'transformers' | 'webllm', modelName: string, onProgress?: (progress: number) => void, onStatusMessage?: (message: string) => void): Promise<void> {
     Logger.infoService(`[modelService.downloadModel] Starting download: ${modelName} (provider: ${provider})`);
     try {
       if (provider === 'transformers') {
         Logger.infoService(`[modelService.downloadModel] Using transformersService for download`);
-        await transformersService.downloadModel(modelName, onProgress);
-        Logger.infoService(`[modelService.downloadModel] Download complete, initializing model...`);
-        await transformersService.initializeModel(modelName);
+        await transformersService.downloadModel(modelName, onProgress, onStatusMessage);
       } else {
         Logger.infoService(`[modelService.downloadModel] Using webllmService for download`);
         await webllmService.downloadModel(modelName, onProgress);
         Logger.infoService(`[modelService.downloadModel] Download complete, initializing model...`);
-        await webllmService.initializeModel(modelName);
+        onStatusMessage?.('Initializing model...');
+        await webllmService.initializeModel(modelName, onStatusMessage);
       }
       Logger.infoService(`[modelService.downloadModel] Download and initialization complete: ${modelName}`);
     } catch (error) {

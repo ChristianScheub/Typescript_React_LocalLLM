@@ -13,9 +13,9 @@
 
 .modal-content {
   background: white;
-  border-radius: 8px;
+  border-radius: 12px;
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  max-width: 500px;
+  max-width: 700px;
   width: 90%;
   max-height: 90vh;
   overflow-y: auto;
@@ -25,8 +25,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 16px 32px;
   border-bottom: 1px solid #e5e7eb;
+  min-height: 52px;
 }
 
 .modal-header h2 {
@@ -34,6 +35,11 @@
   font-size: 18px;
   font-weight: 600;
   color: #1f2937;
+  min-height: 24px;
+}
+
+.modal-header h2:empty {
+  display: none;
 }
 
 .modal-close {
@@ -58,5 +64,5 @@
 }
 
 .modal-body {
-  padding: 20px;
+  padding: 32px;
 }

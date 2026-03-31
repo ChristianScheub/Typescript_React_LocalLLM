@@ -3,6 +3,7 @@ import { Modal } from '../ui/Modal';
 import { modelService } from '../services/modelService';
 import { modelStateManager } from '../services/modelStateManager';
 import Logger from '../services/logger';
+import { FiSettings } from 'react-icons/fi';
 import { SettingsView } from '../views/settings/SettingsView';
 
 interface SettingsContainerProps {
@@ -90,14 +91,24 @@ export function SettingsContainer({ provider, onProviderChange }: SettingsContai
           border: 'none',
           cursor: 'pointer',
           padding: '8px',
-          fontSize: '20px',
+          color: 'white',
+          fontWeight: 'bold',
+          minWidth: '40px',
+          minHeight: '40px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          borderRadius: '6px',
+          transition: 'background-color 0.2s ease',
         }}
+        onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.1)')}
+        onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = 'transparent')}
         title="Settings"
       >
-        ⚙️
+        <FiSettings size={20} />
       </button>
 
-      <Modal isOpen={isModalOpen} title="Settings" onClose={() => {
+      <Modal isOpen={isModalOpen} title="" onClose={() => {
         Logger.infoService(`[SettingsContainer] Closing settings modal`);
         setIsModalOpen(false);
       }}>

@@ -1,0 +1,92 @@
+.system-status {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 12px 20px;
+  background: #1f2937;
+  color: white;
+  height: 60px;
+  border-top: 1px solid #374151;
+}
+
+.status-left {
+  display: flex;
+  align-items: center;
+}
+
+.status-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #111827;
+  border: 1px solid #374151;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-button:hover {
+  background: #1f2937;
+  border-color: #4b5563;
+}
+
+.status-label {
+  white-space: nowrap;
+}
+
+.status-metrics {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex: 1;
+}
+
+.metric {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+}
+
+.metric-label {
+  color: #9ca3af;
+  white-space: nowrap;
+}
+
+.metric-bar {
+  width: 80px;
+  height: 4px;
+  background: #374151;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.metric-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #3b82f6, #2563eb);
+  border-radius: 2px;
+}
+
+.metric-value {
+  color: #d1d5db;
+  font-weight: 600;
+  min-width: 30px;
+}
+
+.status-right {
+  display: flex;
+  align-items: center;
+}
+
+.status-info {
+  font-size: 11px;
+  color: #9ca3af;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}

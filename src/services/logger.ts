@@ -15,6 +15,7 @@ class Logger {
   private static readonly isMobile: boolean = false;
   private static readonly logKey: string = "app_logs";
   private static readonly isWorker: boolean = typeof window === 'undefined';
+  private static logListeners: ((message: string, type: 'info' | 'warning' | 'error' | 'cache') => void)[] = [];
 
   private static getCallerFunctionName(): string {
     const stack = new Error().stack;
@@ -33,6 +34,23 @@ class Logger {
       }
     }
     return "Unknown Function";
+  }
+
+  static subscribe(callback: (message: string, type: 'info' | 'warning' | 'error' | 'cache') => void): () => void {
+    this.logListeners.push(callback);
+    return () => {
+      this.logListeners = this.logListeners.filter(cb => cb !== callback);
+    };
+  }
+
+  private static notifyListeners(message: string, type: 'info' | 'warning' | 'error' | 'cache'): void {
+    this.logListeners.forEach(cb => {
+      try {
+        cb(message, type);
+      } catch (e) {
+        // Silently ignore listener errors to prevent breaking the app
+      }
+    });
   }
 
   static deleteLogs(){
@@ -89,7 +107,9 @@ class Logger {
 
   static infoService(message: string): void {
     if (featureFlag_Debug_Log_Service || featureFlag_Debug_AllLogs) {
-      this.log(this.formatMessage(`Service Call Info: ${message}`, "⚙️"));
+      const formattedMsg = this.formatMessage(`Service Call Info: ${message}`, "⚙️");
+      this.log(formattedMsg);
+      this.notifyListeners(formattedMsg, 'info');
     }
   }
 
@@ -114,7 +134,9 @@ class Logger {
 
   static warnService(message: string): void {
     if (featureFlag_Debug_Log_Warning ||featureFlag_Debug_Log_Service || featureFlag_Debug_AllLogs) {
-      this.log(this.formatMessage(`Service Warning: ${message}`, "⚙️⚠️"));
+      const formattedMsg = this.formatMessage(`Service Warning: ${message}`, "⚙️⚠️");
+      this.log(formattedMsg);
+      this.notifyListeners(formattedMsg, 'warning');
     }
   }
 
@@ -126,7 +148,9 @@ class Logger {
 
   static errorService(message: string): void {
     if (featureFlag_Debug_Log_Service || featureFlag_Debug_AllLogs) {
-      this.log(this.formatMessage(`Service Error: ${message}`, "⚙️‼️"));
+      const formattedMsg = this.formatMessage(`Service Error: ${message}`, "⚙️‼️");
+      this.log(formattedMsg);
+      this.notifyListeners(formattedMsg, 'error');
     }
   }
 
@@ -135,12 +159,15 @@ class Logger {
     if (featureFlag_Debug_Log_Error || featureFlag_Debug_AllLogs) {
       const errorMessage = `${this.formatMessage(`ERROR: ${message}`, "‼️🆘")}\nError Details: ${error.message}\nStack Trace: ${error.stack}`;
       this.log(errorMessage);
+      this.notifyListeners(errorMessage, 'error');
     }
   }
 
   static cache(message: string): void {
     if (featureFlag_Debug_Log_Cache || featureFlag_Debug_AllLogs) {
-      this.log(this.formatMessage(`CACHE: ${message}`, '🗄️'));
+      const formattedMsg = this.formatMessage(`CACHE: ${message}`, '🗄️');
+      this.log(formattedMsg);
+      this.notifyListeners(formattedMsg, 'cache');
     }
   }
 

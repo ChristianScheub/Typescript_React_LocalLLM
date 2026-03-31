@@ -4,6 +4,7 @@ import { ChatMessage } from '../../ui/ChatMessage';
 import { Input } from '../../ui/Input';
 import { Button } from '../../ui/Button';
 import { Spinner } from '../../ui/Spinner';
+import { FiArrowUp, FiSearch, FiUser } from 'react-icons/fi';
 
 interface ChatViewProps {
   messages: ChatMessageType[];
@@ -26,7 +27,6 @@ export function ChatView({
   error,
   currentModel,
   isModelLoaded,
-  provider,
 }: ChatViewProps) {
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter' && !e.shiftKey) {
@@ -38,24 +38,31 @@ export function ChatView({
   return (
     <div className="chat-container">
       <div className="chat-header">
-        <h2>{provider === 'transformers' ? 'Transformers.js' : 'Web-LLM'}</h2>
-        <p className="model-info">
-          {isModelLoaded ? (
-            <>
-              <span className="status-badge status-active">Active</span> Model loaded: <strong>{currentModel}</strong>
-            </>
-          ) : (
-            <>
-              <span className="status-badge status-inactive">Inactive</span> No model loaded. Download one in settings.
-            </>
+        <div className="header-left">
+          <h2>ACTIVE MODEL</h2>
+          {currentModel && (
+            <span className="active-model-badge">
+              <span className="model-indicator"></span>
+              {currentModel}
+            </span>
           )}
-        </p>
+        </div>
+        <div className="header-right">
+          <button className="header-icon-btn" title="Search">
+            <FiSearch size={18} />
+          </button>
+          <button className="header-icon-btn" title="Profile">
+            <FiUser size={18} />
+          </button>
+        </div>
       </div>
 
       <div className="messages-container">
         {messages.length === 0 ? (
           <div className="empty-state">
-            <p>No messages yet. Download a model and start chatting!</p>
+            <div className="empty-icon">✨</div>
+            <p>Welcome to Chris AI</p>
+            <p className="empty-subtitle">Start a conversation with your AI assistant</p>
           </div>
         ) : (
           messages.map((msg) => <ChatMessage key={msg.id} message={msg} />)
@@ -79,7 +86,7 @@ export function ChatView({
           value={inputValue}
           onChange={onInputChange}
           onKeyDown={handleKeyDown}
-          placeholder="Type your message... (Shift+Enter for new line)"
+          placeholder="Ask Chris anything..."
           disabled={!isModelLoaded || isLoading}
           className="chat-input"
         />
@@ -87,8 +94,9 @@ export function ChatView({
           onClick={onSendMessage}
           disabled={!isModelLoaded || isLoading || !inputValue.trim()}
           variant="primary"
+          className="send-button"
         >
-          {isLoading ? 'Sending...' : 'Send'}
+          <FiArrowUp size={18} />
         </Button>
       </div>
     </div>

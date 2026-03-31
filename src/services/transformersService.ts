@@ -21,7 +21,7 @@ class TransformersService {
   private currentModel: string | null = null;
   private isLoading: boolean = false;
 
-  async initializeModel(modelName: string): Promise<void> {
+  async initializeModel(modelName: string, onStatusMessage?: (message: string) => void): Promise<void> {
     Logger.infoService(`[transformersService] Starting model initialization for: ${modelName}`);
     this.isLoading = true;
     
@@ -36,7 +36,9 @@ class TransformersService {
       // Real pipeline loading without fallback
       pipeline = await huggingFacePipeline('text-generation', modelName, {
         progress_callback: (progress: any) => {
+          const message = `Loading model: ${Math.round((progress.progress || 0) * 100)}%`;
           Logger.cache(`[transformersService] Pipeline loading progress: ${JSON.stringify(progress).substring(0, 80)}`);
+          onStatusMessage?.(message);
         }
       });
       
@@ -119,7 +121,7 @@ class TransformersService {
     }
   }
 
-  async downloadModel(modelName: string, onProgress?: (progress: number) => void): Promise<void> {
+  async downloadModel(modelName: string, onProgress?: (progress: number) => void, onStatusMessage?: (message: string) => void): Promise<void> {
     Logger.infoService(`[transformersService.downloadModel] Vorbereitung zum Download: ${modelName}`);
     Logger.infoService(`[transformersService.downloadModel] ⚠️ WICHTIG: Modell wird direkt vom transformers-Browser CDN geladen`);
     Logger.infoService(`[transformersService.downloadModel] Erste Nutzung kann 30-60 Sekunden dauern!`);
@@ -138,7 +140,8 @@ class TransformersService {
       
       Logger.infoService(`[transformersService.downloadModel] 🔄 Starte echte Modell-Initialization mit Transformers.js...`);
       Logger.infoService(`[transformersService.downloadModel] 🔄 Dies kann 30-60 Sekunden dauern - NICHT SCHLIESSEN!`);
-      await this.initializeModel(modelName);
+      onStatusMessage?.('Initializing model with Transformers.js...');
+      await this.initializeModel(modelName, onStatusMessage);
       
       // Complete progress
       for (let i = 50; i <= 100; i += 5) {

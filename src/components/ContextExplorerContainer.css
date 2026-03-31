@@ -1,0 +1,236 @@
+.context-explorer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 0;
+  padding: 0;
+  background: white;
+}
+
+/* Activity Sections */
+.activity-section {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Temperature Section */
+.temperature-section {
+  flex-shrink: 0;
+  gap: 12px;
+}
+
+.section-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.temperature-control {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.temperature-slider {
+  flex: 1;
+  height: 5px;
+  border-radius: 3px;
+  background: #e5e7eb;
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+.temperature-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #3b82f6;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.temperature-slider::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #3b82f6;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.temperature-value {
+  font-size: 12px;
+  font-weight: 600;
+  color: #3b82f6;
+  min-width: 40px;
+  text-align: right;
+}
+
+/* Pipeline Section */
+.pipeline-section {
+  flex: 1;
+  min-height: 180px;
+  gap: 12px;
+  overflow: hidden;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.status-badge {
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.status-badge.processing {
+  background: #dbeafe;
+  color: #0369a1;
+}
+
+.activity-log {
+  flex: 1;
+  overflow-y: auto;
+  background: #f9fafb;
+  border-radius: 6px;
+  padding: 12px;
+  font-family: 'Monaco', 'Courier New', monospace;
+  font-size: 11px;
+  line-height: 1.6;
+  border: 1px solid #e5e7eb;
+}
+
+.activity-log::-webkit-scrollbar {
+  width: 6px;
+}
+
+.activity-log::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.activity-log::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 3px;
+}
+
+.activity-log::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+.log-empty {
+  color: #9ca3af;
+  text-align: center;
+  padding: 20px 10px;
+}
+
+.log-entry {
+  margin-bottom: 6px;
+  padding: 6px 8px;
+  border-radius: 4px;
+  display: flex;
+  gap: 8px;
+  word-break: break-word;
+}
+
+.log-time {
+  color: #9ca3af;
+  flex-shrink: 0;
+  font-weight: 600;
+}
+
+.log-message {
+  color: #374151;
+}
+
+.log-info {
+  background: rgba(59, 130, 246, 0.05);
+}
+
+.log-info .log-time {
+  color: #3b82f6;
+}
+
+.log-chunk {
+  background: rgba(16, 185, 129, 0.05);
+}
+
+.log-chunk .log-time {
+  color: #10b981;
+}
+
+.log-warning {
+  background: rgba(245, 158, 11, 0.05);
+}
+
+.log-warning .log-time {
+  color: #d97706;
+}
+
+.log-error {
+  background: rgba(239, 68, 68, 0.05);
+}
+
+.log-error .log-message {
+  color: #dc2626;
+}
+
+/* Chart Section */
+.chart-section {
+  flex-shrink: 0;
+  gap: 12px;
+}
+
+.chart-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.bars-wrapper {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 3px;
+  height: 80px;
+  padding: 8px;
+  background: #f9fafb;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+}
+
+.bar {
+  flex: 1;
+  background: linear-gradient(180deg, #3b82f6, #2563eb);
+  border-radius: 2px 2px 0 0;
+  min-height: 2px;
+  transition: all 0.3s ease;
+}
+
+.bar:hover {
+  opacity: 1 !important;
+  filter: brightness(1.1);
+}
+
+.chart-label {
+  text-align: center;
+  font-size: 11px;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}

@@ -22,7 +22,7 @@ class WebLLMService {
   private isLoading: boolean = false;
   private initPromise: Promise<void> | null = null;
 
-  async initializeModel(modelName: string): Promise<void> {
+  async initializeModel(modelName: string, onStatusMessage?: (message: string) => void): Promise<void> {
     Logger.infoService(`[webllmService] Starting model initialization for: ${modelName}`);
     
     if (this.initPromise) {
@@ -40,7 +40,9 @@ class WebLLMService {
         Logger.infoService(`[webllmService] Creating MLCEngine instance for model: ${modelName}`);
         engine = new MLCEngine({
           initProgressCallback: (progress: any) => {
-            Logger.cache(`[webllmService.initializeModel] MLCEngine init progress: ${progress.text || 'initializing'}`);
+            const message = progress.text || 'Initializing model...';
+            Logger.cache(`[webllmService.initializeModel] MLCEngine init progress: ${message}`);
+            onStatusMessage?.(message);
           },
         });
         
