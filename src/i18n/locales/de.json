@@ -1,0 +1,63 @@
+{
+  "navbar": {
+    "title": "Lokaler LLM Chat",
+    "providers": {
+      "transformers": "Transformers.js v3",
+      "webllm": "Web-LLM"
+    }
+  },
+  "settings": {
+    "engineArchitecture": "Engine-Architektur",
+    "selectRuntime": "Wählen Sie die Laufzeitumgebung, die am besten zu Ihrer Hardware passt. Chris AI verwaltet Ressourcen dynamisch für optimale Inferenzgeschwindigkeit.",
+    "engineCards": {
+      "webllm": {
+        "name": "Web-LLM",
+        "description": "Native WebGPU-Beschleunigung für hochleistungsfähige neuronale Inferenzen direkt im Browser.",
+        "recommendation": "Empfohlen für M1/M2/M3 & RTX Series"
+      },
+      "transformers": {
+        "name": "Transformers v3 - FUNKTIONIERT NICHT",
+        "description": "Max Kompatibilitäts-Runtime mit WASM-Kerneln. Ideal für Legacy-Systeme und diverse Umgebungen.",
+        "recommendation": "CPU-optimierter Fallback"
+      },
+      "active": "AKTIV"
+    },
+    "availableModels": "Verfügbare Modelle",
+    "modelsSubtitle": "Bibliothek von Gewichten, die mit Ihrer aktuellen Engine kompatibel sind.",
+    "viewRegistry": "Registrierung anzeigen",
+    "models": {
+      "optimized": "OPTIMIERT",
+      "ready": "BEREIT",
+      "downloading": "WIRD HERUNTERGELADEN",
+      "loaded": "GELADEN",
+      "download": "HERUNTERLADEN",
+      "quant": "Quant",
+      "q4_k_m": "Q4_K_M",
+      "size": "Größe",
+      "stat": "Statistik",
+      "instruct": "ANLEITUNG"
+    },
+    "architecturalDetail": "Architektur-Details",
+    "webgpuVsWasm": "WEBGPU vs WASM",
+    "webgpuDescription": "Web-LLM nutzt die aufkommende WebGPU API++, die es der Schnittstelle ermöglicht, den Standard-Browser-Overhead zu umgehen und direkt mit der GPU Ihres Geräts zu kommunizieren. Dies führt zu bis zu 10x schnellerer Tokenerzeugung im Vergleich zu traditionellen WASM-Implementierungen.",
+    "localPrivacy": "LOKALE PRIVATSPHÄRE",
+    "localPrivacyDescription": "Alle Daten bleiben auf Ihrer Maschine. Beide Engines werden vollständig innerhalb der Sandbox-Umgebung Ihres Browsers ausgeführt, um sicherzustellen, dass Ihre Prompts und privaten Modellgewichte streng lokal auf Ihrer Hardware verbleiben."
+  },
+  "chatSettings": {
+    "mode": "Modus",
+    "modeOptions": {
+      "fast": "⚡ Schnell",
+      "expert": "🧠 Experte"
+    },
+    "modeDescriptions": {
+      "fast": "Kurze, prägnante Antworten (max 2 Sätze)",
+      "expert": "Ausführliche Erklärungen mit Details und Bullet Points"
+    },
+    "temperature": "Temperatur",
+    "temperatureHint": "Kleinere Werte = präzisere, größere Werte = kreativere Antworten",
+    "maxTokens": "Max Tokens",
+    "maxTokensHint": "Maximale Länge der Antwort",
+    "presencePenalty": "Präsenz-Strafe",
+    "presencePenaltyHint": "Kontrolliert die Wiederholung von Themen"
+  }
+}

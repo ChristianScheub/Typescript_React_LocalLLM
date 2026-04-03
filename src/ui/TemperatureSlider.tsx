@@ -1,13 +1,17 @@
+import { useTranslation } from 'react-i18next';
+
 interface TemperatureSliderProps {
   temperature: number;
   onChange: (value: number) => void;
 }
 
 export function TemperatureSlider({ temperature, onChange }: TemperatureSliderProps) {
+  const { t } = useTranslation();
+
   return (
     <div className="settings-group">
       <div className="slider-header">
-        <label htmlFor="temperature">Temperatur</label>
+        <label htmlFor="temperature">{t('chatSettings.temperature')}</label>
         <span className="slider-value">{temperature.toFixed(2)}</span>
       </div>
       <input
@@ -20,7 +24,7 @@ export function TemperatureSlider({ temperature, onChange }: TemperatureSliderPr
         onChange={(e) => onChange(parseFloat(e.target.value))}
         className="slider"
       />
-      <p className="slider-hint">Kleinere Werte = präzisere, größere Werte = kreativere Antworten</p>
+      <p className="slider-hint">{t('chatSettings.temperatureHint')}</p>
     </div>
   );
 }

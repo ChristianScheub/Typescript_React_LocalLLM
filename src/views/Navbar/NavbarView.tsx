@@ -1,5 +1,6 @@
 import './NavbarView.css';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { SettingsButton } from '@ui/SettingsButton';
 import { SettingsContainer } from '@components/SettingsContainer';
 
@@ -9,6 +10,7 @@ interface NavbarViewProps {
 }
 
 export function NavbarView({ currentProvider, onProviderChange }: NavbarViewProps) {
+  const { t } = useTranslation();
   const [selectedProvider, setSelectedProvider] = useState(currentProvider);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -21,7 +23,7 @@ export function NavbarView({ currentProvider, onProviderChange }: NavbarViewProp
     <nav className="navbar">
       <div className="navbar-content">
         <div className="navbar-title">
-          <h1>Local LLM Chat</h1>
+          <h1>{t('navbar.title')}</h1>
         </div>
 
         <div className="navbar-provider-selector">
@@ -29,13 +31,13 @@ export function NavbarView({ currentProvider, onProviderChange }: NavbarViewProp
             className={`provider-btn ${selectedProvider === 'transformers' ? 'active' : ''}`}
             onClick={() => handleProviderChange('transformers')}
           >
-            Transformers.js v3
+            {t('navbar.providers.transformers')}
           </button>
           <button
             className={`provider-btn ${selectedProvider === 'webllm' ? 'active' : ''}`}
             onClick={() => handleProviderChange('webllm')}
           >
-            Web-LLM
+            {t('navbar.providers.webllm')}
           </button>
         </div>
 

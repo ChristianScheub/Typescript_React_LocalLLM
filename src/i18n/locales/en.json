@@ -1,0 +1,63 @@
+{
+  "navbar": {
+    "title": "Local LLM Chat",
+    "providers": {
+      "transformers": "Transformers.js v3",
+      "webllm": "Web-LLM"
+    }
+  },
+  "settings": {
+    "engineArchitecture": "Engine Architecture",
+    "selectRuntime": "Select the runtime environment that best fits your hardware. Chris AI dynamically manages resources to ensure optimal inference speeds.",
+    "engineCards": {
+      "webllm": {
+        "name": "Web-LLM",
+        "description": "Native WebGPU acceleration for high-performance neural inference directly in the browser.",
+        "recommendation": "Recommended for M1/M2/M3 & RTX Series"
+      },
+      "transformers": {
+        "name": "Transformers v3 - NOT WORKING",
+        "description": "Max compatibility runtime using WASM kernels. Ideal for legacy systems and diverse environments.",
+        "recommendation": "CPU-Optimized Fallback"
+      },
+      "active": "ACTIVE"
+    },
+    "availableModels": "Available Models",
+    "modelsSubtitle": "Library of weights compatible with your current engine.",
+    "viewRegistry": "View Registry",
+    "models": {
+      "optimized": "OPTIMIZED",
+      "ready": "READY",
+      "downloading": "DOWNLOADING",
+      "loaded": "LOADED",
+      "download": "DOWNLOAD",
+      "quant": "Quant",
+      "q4_k_m": "Q4_K_M",
+      "size": "Size",
+      "stat": "Stat",
+      "instruct": "INSTRUCT"
+    },
+    "architecturalDetail": "Architectural Detail",
+    "webgpuVsWasm": "WEBGPU vs WASM",
+    "webgpuDescription": "Web-LLM utilizes the emerging WebGPU API++, which allows the interface to bypass standard browser overhead and communicate directly with your device's graphics card. This results in up to 10x faster token generation compared to traditional WASM implementations.",
+    "localPrivacy": "LOCAL PRIVACY",
+    "localPrivacyDescription": "All data remains on your machine. Both engines execute entirely within your browser's sandbox environment, ensuring that your prompts and private model weights remain strictly local to your hardware."
+  },
+  "chatSettings": {
+    "mode": "Mode",
+    "modeOptions": {
+      "fast": "⚡ Fast",
+      "expert": "🧠 Expert"
+    },
+    "modeDescriptions": {
+      "fast": "Short, concise answers (max 2 sentences)",
+      "expert": "Detailed explanations with details and bullet points"
+    },
+    "temperature": "Temperature",
+    "temperatureHint": "Lower values = more precise, higher values = more creative answers",
+    "maxTokens": "Max Tokens",
+    "maxTokensHint": "Maximum length of the answer",
+    "presencePenalty": "Presence Penalty",
+    "presencePenaltyHint": "Controls the repetition of topics"
+  }
+}

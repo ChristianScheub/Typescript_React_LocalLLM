@@ -1,13 +1,17 @@
+import { useTranslation } from 'react-i18next';
+
 interface PresencePenaltySliderProps {
   presencePenalty: number;
   onChange: (value: number) => void;
 }
 
 export function PresencePenaltySlider({ presencePenalty, onChange }: PresencePenaltySliderProps) {
+  const { t } = useTranslation();
+
   return (
     <div className="settings-group">
       <div className="slider-header">
-        <label htmlFor="presence-penalty">Presence Penalty</label>
+        <label htmlFor="presence-penalty">{t('chatSettings.presencePenalty')}</label>
         <span className="slider-value">{presencePenalty.toFixed(2)}</span>
       </div>
       <input
@@ -20,7 +24,7 @@ export function PresencePenaltySlider({ presencePenalty, onChange }: PresencePen
         onChange={(e) => onChange(parseFloat(e.target.value))}
         className="slider"
       />
-      <p className="slider-hint">Negative Werte = mehr Wiederholungen, positive Werte = mehr Vielfalt</p>
+      <p className="slider-hint">{t('chatSettings.presencePenaltyHint')}</p>
     </div>
   );
 }

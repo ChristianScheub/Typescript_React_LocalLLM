@@ -1,5 +1,6 @@
 import './SettingsView.css';
 import { FiCheck, FiDownload, FiArrowRight } from 'react-icons/fi';
+import { useTranslation } from 'react-i18next';
 import { featureFlag_Debug_View } from '@config/featureFlags';
 
 interface Model {
@@ -31,15 +32,16 @@ export function SettingsView({
   error,
   statusMessage,
 }: SettingsViewProps) {
+  const { t } = useTranslation();
+
   return (
     <div className="settings-view">
       {/* Engine Architecture Section */}
       <section className="engine-section">
         <div className="section-header">
-          <h2 className="section-title">Engine Architecture</h2>
+          <h2 className="section-title">{t('settings.engineArchitecture')}</h2>
           <p className="section-subtitle">
-            Select the runtime environment that best fits your hardware. Chris AI dynamically
-            manages resources to ensure optimal inference speeds.
+            {t('settings.selectRuntime')}
           </p>
         </div>
 
@@ -56,16 +58,16 @@ export function SettingsView({
             <div className="engine-icon">
               <div className="icon-circle">⚡</div>
             </div>
-            <h3>Web-LLM</h3>
+            <h3>{t('settings.engineCards.webllm.name')}</h3>
             <p className="engine-description">
-              Native WebGPU acceleration for high-performance neural inference directly in the browser.
+              {t('settings.engineCards.webllm.description')}
             </p>
             {currentProvider === 'webllm' && (
-              <span className="active-badge">ACTIVE</span>
+              <span className="active-badge">{t('settings.engineCards.active')}</span>
             )}
             {currentProvider === 'webllm' && (
               <div className="recommendation">
-                Recommended for M1/M2/M3 & RTX Series
+                {t('settings.engineCards.webllm.recommendation')}
               </div>
             )}
           </div>
@@ -90,16 +92,16 @@ export function SettingsView({
                 <div className="engine-icon">
                   <div className="icon-circle">⚙</div>
                 </div>
-                <h3>Transformers v3 - NOT WORKING</h3>
+                <h3>{t('settings.engineCards.transformers.name')}</h3>
                 <p className="engine-description">
-                  Max compatibility runtime using WASM kernels. Ideal for legacy systems and diverse environments.
+                  {t('settings.engineCards.transformers.description')}
                 </p>
                 {currentProvider === 'transformers' && (
-                  <span className="active-badge">ACTIVE</span>
+                  <span className="active-badge">{t('settings.engineCards.active')}</span>
                 )}
                 {currentProvider === 'transformers' && (
                   <div className="recommendation">
-                    CPU-Optimized Fallback
+                    {t('settings.engineCards.transformers.recommendation')}
                   </div>
                 )}
               </div>
@@ -111,10 +113,10 @@ export function SettingsView({
       {/* Available Models Section */}
       <section className="models-section">
         <div className="models-header">
-          <h2 className="section-title">Available Models</h2>
-          <p className="models-subtitle">Library of weights compatible with your current engine.</p>
+          <h2 className="section-title">{t('settings.availableModels')}</h2>
+          <p className="models-subtitle">{t('settings.modelsSubtitle')}</p>
           <a className="view-registry" href="https://github.com/mlc-ai/web-llm/blob/main/src/config.ts" target="_blank" rel="noopener noreferrer">
-            View Registry
+            {t('settings.viewRegistry')}
           </a>
         </div>
 
@@ -130,28 +132,28 @@ export function SettingsView({
               <div className="model-card-header">
                 {model.downloaded && (
                   <span className="model-badge model-badge-optimized">
-                    {downloadingModel === model.id ? 'DOWNLOADING' : 'OPTIMIZED'}
+                    {downloadingModel === model.id ? t('settings.models.downloading') : t('settings.models.optimized')}
                   </span>
                 )}
                 {!model.downloaded && !downloadingModel && (
-                  <span className="model-badge model-badge-ready">READY</span>
+                  <span className="model-badge model-badge-ready">{t('settings.models.ready')}</span>
                 )}
                 {downloadingModel === model.id && (
-                  <span className="model-badge model-badge-downloading">DOWNLOADING</span>
+                  <span className="model-badge model-badge-downloading">{t('settings.models.downloading')}</span>
                 )}
               </div>
 
               <h3 className="model-card-title">{model.name}</h3>
-              <p className="model-card-subtitle">{model.description.split(' ')[0].toUpperCase()} INSTRUCT</p>
+              <p className="model-card-subtitle">{model.description.split(' ')[0].toUpperCase()} {t('settings.models.instruct')}</p>
 
               <div className="model-stats">
                 <div className="stat">
-                  <span className="stat-label">Size</span>
+                  <span className="stat-label">{t('settings.models.size')}</span>
                   <span className="stat-value">{model.size}</span>
                 </div>
                 <div className="stat">
-                  <span className="stat-label">Quant</span>
-                  <span className="stat-value">Q4_K_M</span>
+                  <span className="stat-label">{t('settings.models.quant')}</span>
+                  <span className="stat-value">{t('settings.models.q4_k_m')}</span>
                 </div>
               </div>
 
@@ -176,10 +178,10 @@ export function SettingsView({
                   onClick={() => !model.downloaded && onDownload(model.id)}
                   disabled={downloadingModel !== null}
                 >
-                  {model.downloaded ? 'LOADED' : (
+                  {model.downloaded ? t('settings.models.loaded') : (
                     <>
                       <FiDownload size={16} />
-                      DOWNLOAD
+                      {t('settings.models.download')}
                     </>
                   )}
                 </button>
@@ -191,26 +193,21 @@ export function SettingsView({
 
       {/* Architectural Detail Section */}
       <section className="architectural-section">
-        <h2 className="section-title">Architectural Detail</h2>
+        <h2 className="section-title">{t('settings.architecturalDetail')}</h2>
         
         <div className="architectural-content">
           <div className="architectural-text">
             <div className="detail-item">
-              <h4 className="detail-title">WEBGPU vs WASM</h4>
+              <h4 className="detail-title">{t('settings.webgpuVsWasm')}</h4>
               <p className="detail-description">
-                Web-LLM utilizes the emerging <strong>WebGPU API++</strong>, which allows the interface to
-                bypass standard browser overhead and communicate directly with your
-                device's graphics card. This results in up to 10x faster token generation
-                compared to traditional WASM implementations.
+                {t('settings.webgpuDescription')}
               </p>
             </div>
 
             <div className="detail-item">
-              <h4 className="detail-title">LOCAL PRIVACY</h4>
+              <h4 className="detail-title">{t('settings.localPrivacy')}</h4>
               <p className="detail-description">
-                All data remains on your machine. Both engines execute entirely within your
-                browser's sandbox environment, ensuring that your prompts and private model
-                weights remain strictly local to your hardware.
+                {t('settings.localPrivacyDescription')}
               </p>
             </div>
           </div>

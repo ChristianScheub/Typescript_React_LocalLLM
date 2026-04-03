@@ -209,6 +209,130 @@ export function checkCodeQuality() {
     }
   });
 
+  // 5. Hardcoded Text Check (i18n migration)
+  console.log('Checking for hardcoded text strings (should use i18next)...');
+
+  const HARDCODED_TEXT_CHECK_FOLDERS = ['ui', 'views'];
+  const HARDCODED_TEXT_IGNORE_PATTERNS = [
+    /\.test\./,
+    /Logger/,
+    /\.css\.ts$/,
+  ];
+
+  // Common technical terms and characters that are allowed (not user-facing text)
+  const ALLOWED_HARDCODED = new Set([
+    // Single characters and symbols
+    ':', ',', '.', '!', '?', ';', '/', '-', '_', '+', '=', '(', ')', '[', ']', '{', '}', '$', '%', '@', '#', '&',
+    // Empty strings
+    '',
+    // Aria labels, IDs (technical)
+    'id', 'role', 'aria-label', 'className', 'src', 'href', 'target', 'rel', 'type', 'value',
+    // Common variable names and technical terms
+    'false', 'true', 'null', 'undefined', 'px', 'ms', 'auto', 'center',
+    // UUID/ID patterns
+    'msg-', 'user', 'assistant', 'chat-message',
+    // Emojis and symbols (when used as standalone)
+    '⚡', '🧠', '⚙', '💬', '🔧',
+    // CSS class names (kebab-case technical identifiers)
+    // These are filtered by containing hyphens and being fully lowercase/hyphenated
+  ]);
+
+  HARDCODED_TEXT_CHECK_FOLDERS.forEach((folderName) => {
+    const folderPath = path.join(srcDir, folderName);
+    if (!fs.existsSync(folderPath)) return;
+
+    walkDir(folderPath, (file) => {
+      if (!file.endsWith('.tsx') && !file.endsWith('.ts')) return;
+      if (HARDCODED_TEXT_IGNORE_PATTERNS.some((p) => p.test(file))) return;
+
+      const relFile = getRelativePath(file, projectRoot);
+      const content = fs.readFileSync(file, 'utf8');
+      const lines = content.split('\n');
+
+      // Check each line for hardcoded strings that should be i18n keys
+      lines.forEach((line, idx) => {
+        // Skip imports, comments, and type declarations
+        if (line.trim().startsWith('import ') || 
+            line.trim().startsWith('//') || 
+            line.trim().startsWith('*') ||
+            line.trim().startsWith('interface ') ||
+            line.trim().startsWith('type ')) {
+          return;
+        }
+
+        // Skip lines that already use i18next translation function
+        if (/\bt\(['"]/m.test(line) || /useTranslation/m.test(line)) {
+          return;
+        }
+
+        // Skip lines that are clearly className, CSS, or style-related
+        if (line.includes('className') || 
+            line.includes('class=') || 
+            line.includes('[`') ||
+            line.includes('style') ||
+            line.includes('CSS')) {
+          return;
+        }
+
+        // Find string literals: "..." or '...'
+        // Match strings longer than 2 characters that look like user-facing text
+        const stringRegex = /(['"`])([^'"` ]{3,}?)\1/g;
+        let match;
+
+        while ((match = stringRegex.exec(line)) !== null) {
+          const stringContent = match[2];
+
+          // Skip if it's in comment
+          if (line.substring(0, match.index).includes('//')) continue;
+
+          // Skip allowed patterns
+          if (ALLOWED_HARDCODED.has(stringContent)) continue;
+
+          // Skip CSS custom properties/variables (--something)
+          if (stringContent.startsWith('--')) continue;
+
+          // Skip CSS class names (kebab-case, all lowercase with hyphens)
+          // e.g., "settings-group", "modal-overlay", "chart-label"
+          if (/^[a-z0-9]([a-z0-9-]*[a-z0-9])?$/.test(stringContent) && stringContent.includes('-')) {
+            continue; // This looks like a CSS class name
+          }
+
+          // Skip if it contains interpolation markers
+          if (stringContent.includes('${') || stringContent.includes('${')) continue;
+
+          // Skip if it's a URL or path
+          if (stringContent.startsWith('http') || stringContent.startsWith('/') || stringContent.startsWith('.')) continue;
+
+          // Skip if it's a file extension or format code
+          if (stringContent.match(/^\.[a-z]+$/) || stringContent.match(/^[A-Z0-9]+$/)) continue;
+
+          // Skip locale format strings (like "2-digit", "en-US")
+          if (stringContent.match(/^[a-z]+-[a-z0-9]+$/i) && stringContent.length < 15) continue;
+
+          // Skip very short strings or pure numbers  
+          if (stringContent.length < 3) continue;
+
+          // Check if it looks like user-facing text (contains letters)
+          if (/[a-zA-ZäöüÄÖÜß]/.test(stringContent)) {
+            // Check for common patterns of legitimate code strings
+            if (stringContent.match(/^[a-zA-Z_][a-zA-Z0-9_]*$/)) {
+              // Looks like a variable name, skip
+              continue;
+            }
+
+            // Potential hardcoded text found - this is real user-facing content
+            // (not CSS, not variable names, not format strings)
+            violations.push(
+              `Hardcoded Text Check (${folderName}): File '${relFile}' line ${idx + 1} contains potential hardcoded text: "${stringContent}". ` +
+              `Use i18next translation function instead: t('namespace.key'). ` +
+              `Add the text to src/i18n/locales/de.json and en.json, then use useTranslation() hook to access it.`
+            );
+          }
+        }
+      });
+    });
+  });
+
   return violations;
 }
 

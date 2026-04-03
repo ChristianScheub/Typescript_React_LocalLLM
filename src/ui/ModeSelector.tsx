@@ -1,30 +1,34 @@
+import { useTranslation } from 'react-i18next';
+
 interface ModeSelectorProps {
   mode: 'fast' | 'expert';
   onChange: (mode: 'fast' | 'expert') => void;
 }
 
 export function ModeSelector({ mode, onChange }: ModeSelectorProps) {
+  const { t } = useTranslation();
+
   return (
     <div className="settings-group">
-      <label className="settings-group-title">Mode</label>
+      <label className="settings-group-title">{t('chatSettings.mode')}</label>
       <div className="mode-buttons">
         <button
           className={`mode-button ${mode === 'fast' ? 'active' : ''}`}
           onClick={() => onChange('fast')}
         >
-          ⚡ Schnell
+          {t('chatSettings.modeOptions.fast')}
         </button>
         <button
           className={`mode-button ${mode === 'expert' ? 'active' : ''}`}
           onClick={() => onChange('expert')}
         >
-          🧠 Experte
+          {t('chatSettings.modeOptions.expert')}
         </button>
       </div>
       <p className="mode-description">
         {mode === 'fast'
-          ? 'Kurze, prägnante Antworten (max 2 Sätze)'
-          : 'Ausführliche Erklärungen mit Details und Bullet Points'}
+          ? t('chatSettings.modeDescriptions.fast')
+          : t('chatSettings.modeDescriptions.expert')}
       </p>
     </div>
   );
