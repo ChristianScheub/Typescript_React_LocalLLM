@@ -78,7 +78,6 @@ classDiagram
     }
     
     Container --> View: renders
-    Container --> UIComponent: renders
     Container --> Service: uses
     View --> UIComponent: uses
 ```
