@@ -3,9 +3,8 @@ import type { ChatMessage as ChatMessageType, ChatSettings } from '@types';
 import { modelService } from '@services/model';
 import { modelStateManager } from '@services/modelStateManager';
 import Logger from '@services/logger';
-import { MobileChatView } from '@views/MobileChat/MobileChatView';
-import { MobileChatWelcome } from '@ui/MobileChatWelcome';
-import './MobileChatContainer.css';
+import { MobileChatView } from '@views/mobileOnly/MobileChat/MobileChatView';
+import { MobileChatWelcome } from '@ui/mobileOnly/MobileChatWelcome';
 
 interface MobileChatContainerProps {
   provider: 'transformers' | 'webllm';
@@ -20,6 +19,7 @@ export function MobileChatContainer({ provider, chatSettings, onSettingsChange }
   const [error, setError] = useState<string | null>(null);
   const [currentModel, setCurrentModel] = useState<string | null>(null);
   const [isModelLoaded, setIsModelLoaded] = useState(false);
+  const [showSettings, setShowSettings] = useState(false);
 
   useEffect(() => {
     Logger.infoService(`[MobileChatContainer] Initializing for provider: ${provider}`);
@@ -122,6 +122,8 @@ export function MobileChatContainer({ provider, chatSettings, onSettingsChange }
         isModelLoaded={isModelLoaded}
         chatSettings={chatSettings}
         onSettingsChange={onSettingsChange}
+        showSettings={showSettings}
+        onShowSettings={setShowSettings}
       />
     </div>
   );

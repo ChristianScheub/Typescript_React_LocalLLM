@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import type { ChatMessage as ChatMessageType, ChatSettings } from '@types';
 import { ChatMessage } from '@ui/ChatMessage';
@@ -6,7 +5,7 @@ import { Input } from '@ui/Input';
 import { Button } from '@ui/Button';
 import { Spinner } from '@ui/Spinner';
 import { FiArrowUp, FiSettings } from 'react-icons/fi';
-import { MobileChatSettingsPanel } from '@components/MobileChatSettingsPanel';
+import { MobileChatSettingsPanelContainer } from '@components/mobileOnly/MobileChatSettingsPanelContainer';
 import './MobileChatView.css';
 
 interface MobileChatViewProps {
@@ -20,6 +19,8 @@ interface MobileChatViewProps {
   isModelLoaded: boolean;
   chatSettings: ChatSettings;
   onSettingsChange: (settings: ChatSettings) => void;
+  showSettings: boolean;
+  onShowSettings: (show: boolean) => void;
 }
 
 export function MobileChatView({
@@ -33,9 +34,10 @@ export function MobileChatView({
   isModelLoaded,
   chatSettings,
   onSettingsChange,
+  showSettings,
+  onShowSettings,
 }: MobileChatViewProps) {
   const { t } = useTranslation();
-  const [showSettings, setShowSettings] = useState(false);
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter' && !e.shiftKey) {
@@ -48,7 +50,7 @@ export function MobileChatView({
     <div className="mobile-chat-view">
       <div className="mobile-chat-header">
         <h2 className="model-title">{currentModel || 'Chris AI'}</h2>
-        <button className="settings-button" onClick={() => setShowSettings(true)}>
+        <button className="settings-button" onClick={() => onShowSettings(true)}>
           <FiSettings size={20} />
         </button>
       </div>
@@ -95,9 +97,9 @@ export function MobileChatView({
         </Button>
       </div>
 
-      <MobileChatSettingsPanel
+      <MobileChatSettingsPanelContainer
         isOpen={showSettings}
-        onClose={() => setShowSettings(false)}
+        onClose={() => onShowSettings(false)}
         chatSettings={chatSettings}
         onSettingsChange={onSettingsChange}
       />

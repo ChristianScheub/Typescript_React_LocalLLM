@@ -1,4 +1,4 @@
-import '../../components/SidebarContainer.css';
+import './SidebarView.css';
 import { SidebarHeader } from '@ui/SidebarHeader';
 import { SidebarNavigation } from '@ui/SidebarNavigation';
 

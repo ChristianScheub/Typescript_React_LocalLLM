@@ -274,6 +274,11 @@ export function checkCodeQuality() {
           return;
         }
 
+        // Skip lines with titleKey, descriptionKey, or other *Key props (i18n keys, not hardcoded text)
+        if (line.includes('Key=') || line.includes('Key:')) {
+          return;
+        }
+
         // Find string literals: "..." or '...'
         // Match strings longer than 2 characters that look like user-facing text
         const stringRegex = /(['"`])([^'"` ]{3,}?)\1/g;
@@ -295,6 +300,11 @@ export function checkCodeQuality() {
           // e.g., "settings-group", "modal-overlay", "chart-label"
           if (/^[a-z0-9]([a-z0-9-]*[a-z0-9])?$/.test(stringContent) && stringContent.includes('-')) {
             continue; // This looks like a CSS class name
+          }
+
+          // Skip translation keys (i18n.key or namespace.key format)
+          if (stringContent.includes('.') && /^[a-zA-Z][a-zA-Z0-9._]*$/.test(stringContent)) {
+            continue; // Looks like an i18n key like "settings.deleteAllData"
           }
 
           // Skip if it contains interpolation markers

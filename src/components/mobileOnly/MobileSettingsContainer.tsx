@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { deletionService } from '@services/deletion';
 import Logger from '@services/logger';
-import { MobileSettingsView } from '@views/MobileSettings/MobileSettingsView';
+import { MobileSettingsView } from '@views/mobileOnly/MobileSettings/MobileSettingsView';
 
 export function MobileSettingsContainer() {
   const { t } = useTranslation();

@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { modelService } from '@services/model';
 import { modelStateManager } from '@services/modelStateManager';
 import Logger from '@services/logger';
-import { MobileModelsView } from '@views/MobileModels/MobileModelsView';
+import { MobileModelsView } from '@views/mobileOnly/MobileModels/MobileModelsView';
 
 interface MobileModelsContainerProps {
   provider: 'transformers' | 'webllm';

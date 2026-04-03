@@ -4,7 +4,7 @@ import { Modal } from '@ui/Modal';
 import { PrivacyContent } from '@ui/PrivacyContent';
 import { ImpressumContent } from '@ui/ImpressumContent';
 import { LibrariesContent } from '@ui/LibrariesContent';
-import { MobileSettingItem } from '@ui/MobileSettingItem';
+import { MobileSettingItem } from '@ui/mobileOnly/MobileSettingItem';
 import './MobileSettingsView.css';
 
 interface MobileSettingsViewProps {

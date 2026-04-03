@@ -7,10 +7,10 @@ import { SidebarContainer } from '@components/SidebarContainer';
 import { ContextExplorerContainer } from '@components/ContextExplorerContainer';
 import { ModelsContainer } from '@components/ModelsContainer';
 import { SettingsContainer } from '@components/SettingsContainer';
-import { MobileChatContainer } from '@components/MobileChatContainer';
-import { MobileModelsContainer } from '@components/MobileModelsContainer';
-import { MobileSettingsContainer } from '@components/MobileSettingsContainer';
-import { MobileBottomNav } from '@ui/MobileBottomNav';
+import { MobileChatContainer } from '@components/mobileOnly/MobileChatContainer';
+import { MobileModelsContainer } from '@components/mobileOnly/MobileModelsContainer';
+import { MobileSettingsContainer } from '@components/mobileOnly/MobileSettingsContainer';
+import { MobileBottomNav } from '@ui/mobileOnly/MobileBottomNav';
 import './App.css';
 
 function App() {

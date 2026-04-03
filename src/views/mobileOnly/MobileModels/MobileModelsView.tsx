@@ -1,5 +1,5 @@
-import { MobileModelCard } from '@ui/MobileModelCard';
-import { MobileEngineSelector } from '@ui/MobileEngineSelector';
+import { MobileModelCard } from '@ui/mobileOnly/MobileModelCard';
+import { MobileEngineSelector } from '@ui/mobileOnly/MobileEngineSelector';
 import './MobileModelsView.css';
 
 interface Model {

@@ -1,11 +1,7 @@
 import type { ChatSettings } from '@types';
-import { ChatSettingsContainer } from '@components/ChatSettingsContainer';
-import { NeuralOscillationChart } from '@ui/NeuralOscillationChart';
-import { LivePipelineLog } from '@ui/LivePipelineLog';
-import { FiX } from 'react-icons/fi';
-import './MobileChatSettingsPanel.css';
 import { useEffect, useRef, useState } from 'react';
 import Logger from '@services/logger';
+import { MobileChatSettingsPanel } from '@ui/mobileOnly/MobileChatSettingsPanel';
 
 interface ActivityLog {
   id: string;
@@ -13,19 +9,19 @@ interface ActivityLog {
   message: string;
 }
 
-interface MobileChatSettingsPanelProps {
+interface MobileChatSettingsPanelContainerProps {
   isOpen: boolean;
   onClose: () => void;
   chatSettings: ChatSettings;
   onSettingsChange: (settings: ChatSettings) => void;
 }
 
-export function MobileChatSettingsPanel({
+export function MobileChatSettingsPanelContainer({
   isOpen,
   onClose,
   chatSettings,
   onSettingsChange,
-}: MobileChatSettingsPanelProps) {
+}: MobileChatSettingsPanelContainerProps) {
   const [activityLogs, setActivityLogs] = useState<ActivityLog[]>([]);
   const [logCounts, setLogCounts] = useState<number[]>(Array(60).fill(0));
   const logsEndRef = useRef<HTMLElement>(null);
@@ -65,35 +61,15 @@ export function MobileChatSettingsPanel({
     return () => clearInterval(intervalId);
   }, []);
 
-  if (!isOpen) return null;
-
   return (
-    <>
-      <div className="mobile-settings-overlay" onClick={onClose} />
-      <div className="mobile-chat-settings-panel">
-        <div className="panel-header">
-          <h2>Chat Settings</h2>
-          <button className="close-button" onClick={onClose}>
-            <FiX size={24} />
-          </button>
-        </div>
-
-        <div className="panel-content">
-          <ChatSettingsContainer 
-            settings={chatSettings} 
-            onSettingsChange={onSettingsChange}
-            isMobile={true}
-          />
-
-          <div className="chart-section">
-            <NeuralOscillationChart chunkHistory={logCounts} isMobile={true} />
-          </div>
-
-          <div className="live-pipeline-section">
-            <LivePipelineLog logs={activityLogs} logsEndRef={logsEndRef} isMobile={true} />
-          </div>
-        </div>
-      </div>
-    </>
+    <MobileChatSettingsPanel
+      isOpen={isOpen}
+      onClose={onClose}
+      chatSettings={chatSettings}
+      onSettingsChange={onSettingsChange}
+      activityLogs={activityLogs}
+      logCounts={logCounts}
+      logsEndRef={logsEndRef}
+    />
   );
 }
