@@ -4,8 +4,8 @@ interface NeuralOscillationChartProps {
 }
 
 export function NeuralOscillationChart({ chunkHistory, isMobile = false }: NeuralOscillationChartProps) {
-  // Fixed max value: 5 messages per 5 seconds = 100% height
-  const maxChunks = 5;
+  // Fixed max value: 10 messages per 5 seconds = 100% height
+  const maxChunks = 10;
 
   return (
     <div className={`activity-section chart-section ${isMobile ? 'mobile' : ''}`}>

@@ -16,6 +16,7 @@
       "@views/*": ["src/views/*"],
       "@ui/*": ["src/ui/*"],
       "@config/*": ["src/config/*"],
+      "@hooks/*": ["src/hooks/*"],
       "@types": ["src/types.ts"]
     },
 

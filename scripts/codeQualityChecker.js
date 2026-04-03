@@ -145,7 +145,7 @@ export function checkCodeQuality() {
   console.log('Checking for absolute import paths with proper @ aliases...');
 
   // Define allowed import aliases
-  const allowedAliases = ['@services', '@components', '@views', '@ui', '@config', '@types'];
+  const allowedAliases = ['@services', '@components', '@views', '@ui', '@config', '@types', '@hooks'];
 
   walkDir(srcDir, (file) => {
     if (!file.endsWith('.ts') && !file.endsWith('.tsx')) return;
@@ -182,7 +182,7 @@ export function checkCodeQuality() {
       if (!hasValidAlias) {
         violations.push(
           `Import Alias Check: File '${relFile}' uses invalid import path '${importPath}'. ` +
-          `Must use: @services, @components, @views, @ui, @config, @types. ` +
+          `Must use: @services, @components, @views, @ui, @config, @types, @hooks. ` +
           `GOOD: 'import Model from "@services/model"'`
         );
         continue;

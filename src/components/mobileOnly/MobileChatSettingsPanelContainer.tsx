@@ -28,11 +28,6 @@ export function MobileChatSettingsPanelContainer({
   const totalLogsRef = useRef(0);
   const lastSnapshotRef = useRef(0);
 
-  // Auto-scroll to latest log
-  useEffect(() => {
-    logsEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  }, [activityLogs]);
-
   // Subscribe to Logger events
   useEffect(() => {
     const unsubscribe = Logger.subscribe((message: string) => {

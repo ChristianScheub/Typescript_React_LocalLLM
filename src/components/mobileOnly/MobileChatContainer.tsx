@@ -3,6 +3,7 @@ import type { ChatMessage as ChatMessageType, ChatSettings } from '@types';
 import { modelService } from '@services/model';
 import { modelStateManager } from '@services/modelStateManager';
 import Logger from '@services/logger';
+import { useLogCounts } from '@hooks/useLogCounts';
 import { MobileChatView } from '@views/mobileOnly/MobileChat/MobileChatView';
 
 interface MobileChatContainerProps {
@@ -19,6 +20,7 @@ export function MobileChatContainer({ provider, chatSettings, onSettingsChange }
   const [currentModel, setCurrentModel] = useState<string | null>(null);
   const [isModelLoaded, setIsModelLoaded] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
+  const logCounts = useLogCounts();
 
   useEffect(() => {
     Logger.infoService(`[MobileChatContainer] Initializing for provider: ${provider}`);
@@ -114,6 +116,7 @@ export function MobileChatContainer({ provider, chatSettings, onSettingsChange }
         onSettingsChange={onSettingsChange}
         showSettings={showSettings}
         onShowSettings={setShowSettings}
+        logCounts={logCounts}
       />
     </div>
   );

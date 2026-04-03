@@ -4,6 +4,7 @@ import { ChatMessage } from '@ui/ChatMessage';
 import { Input } from '@ui/Input';
 import { Button } from '@ui/Button';
 import { Spinner } from '@ui/Spinner';
+import { NeuralOscillationChart } from '@ui/NeuralOscillationChart';
 import { FiArrowUp, FiSettings } from 'react-icons/fi';
 import { MobileChatSettingsPanelContainer } from '@components/mobileOnly/MobileChatSettingsPanelContainer';
 import './MobileChatView.css';
@@ -21,6 +22,7 @@ interface MobileChatViewProps {
   onSettingsChange: (settings: ChatSettings) => void;
   showSettings: boolean;
   onShowSettings: (show: boolean) => void;
+  logCounts: number[];
 }
 
 export function MobileChatView({
@@ -36,6 +38,7 @@ export function MobileChatView({
   onSettingsChange,
   showSettings,
   onShowSettings,
+  logCounts,
 }: MobileChatViewProps) {
   const { t } = useTranslation();
 
@@ -83,6 +86,10 @@ export function MobileChatView({
       </div>
 
       {error && <div className="mobile-error-message">{error}</div>}
+
+      <div className="mobile-neural-chart">
+        <NeuralOscillationChart chunkHistory={logCounts} isMobile={true} />
+      </div>
 
       <div className="mobile-input-area">
         <Input

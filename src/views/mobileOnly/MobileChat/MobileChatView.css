@@ -4,6 +4,7 @@
   height: 100%;
   background: #ffffff;
   color: #1f2937;
+  width: 100%;
 }
 
 .mobile-chat-header {
@@ -51,7 +52,7 @@
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
-  padding: 1rem;
+  padding: 1rem 1rem 2rem 1rem;
   gap: 1rem;
   -webkit-overflow-scrolling: touch;
 }
@@ -119,10 +120,44 @@
   flex-shrink: 0;
 }
 
+.mobile-neural-chart {
+  width: 100%;
+  padding: 0.5rem 0;
+  background: #ffffff;
+  border-top: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-neural-chart .activity-section {
+  width: 100%;
+  padding: 0.5rem 1rem;
+}
+
+.mobile-neural-chart .section-label {
+  display: none;
+}
+
+.mobile-neural-chart .chart-section .bars-wrapper {
+  height: 30px;
+}
+
+.mobile-neural-chart .bar {
+  background: linear-gradient(180deg, #93c5e8 0%, #3b82f6 100%);
+  border-radius: 2px;
+}
+
+.mobile-neural-chart .chart-label {
+  display: none;
+}
+
 .mobile-input-area {
   display: flex;
   gap: 0.5rem;
-  padding: 1rem;
+  padding: 0.75rem 1rem;
   background: #ffffff;
   border-top: 1px solid #e5e7eb;
   flex-shrink: 0;

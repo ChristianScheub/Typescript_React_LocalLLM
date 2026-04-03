@@ -1,3 +1,4 @@
+import { featureFlag_Debug_View } from '@config/featureFlags';
 import './MobileEngineSelector.css';
 
 interface MobileEngineSelectorProps {
@@ -17,12 +18,14 @@ export function MobileEngineSelector({ currentProvider, onToggle }: MobileEngine
         {isWebllm && <span className="active-badge">AKTIV</span>}
       </div>
 
-      <button 
-        className="toggle-provider-btn"
-        onClick={onToggle}
-      >
-        Zu {isWebllm ? 'Transformers' : 'Web-LLM'} wechseln
-      </button>
+      {featureFlag_Debug_View && (
+        <button 
+          className="toggle-provider-btn"
+          onClick={onToggle}
+        >
+          Zu {isWebllm ? 'Transformers' : 'Web-LLM'} wechseln
+        </button>
+      )}
     </div>
   );
 }
