@@ -1,9 +1,9 @@
 import { FiTrash2, FiBook, FiGithub, FiCheckCircle } from 'react-icons/fi';
 import { useTranslation } from 'react-i18next';
 import { Modal } from '@ui/Modal';
-import { PrivacyContent } from '@ui/PrivacyContent';
-import { ImpressumContent } from '@ui/ImpressumContent';
-import { LibrariesContent } from '@ui/LibrariesContent';
+import Datenschutz from '../../../legal/datenschutz';
+import Impressum from '../../../legal/impressum';
+import UsedLibsListContainer from '../../../legal/usedLibs/container_usedLibList';
 import { MobileSettingItem } from '@ui/mobileOnly/MobileSettingItem';
 import './MobileSettingsView.css';
 
@@ -165,9 +165,9 @@ export function MobileSettingsView({
       {expandedInfo && expandedInfo !== 'delete-all' && expandedInfo !== 'delete-models' && (
         <Modal isOpen={true} title={expandedInfo === 'privacy' ? t('settings.privacy') : expandedInfo === 'impressum' ? t('settings.impressum') : t('settings.libraries')} onClose={onInfoClose}>
           <div className="info-modal">
-            {expandedInfo === 'privacy' && <PrivacyContent />}
-            {expandedInfo === 'impressum' && <ImpressumContent />}
-            {expandedInfo === 'libraries' && <LibrariesContent />}
+            {expandedInfo === 'privacy' && <Datenschutz />}
+            {expandedInfo === 'impressum' && <Impressum />}
+            {expandedInfo === 'libraries' && <UsedLibsListContainer />}
           </div>
         </Modal>
       )}

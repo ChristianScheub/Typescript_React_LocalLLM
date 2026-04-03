@@ -207,5 +207,49 @@ export function checkViewUIComponents() {
     });
   });
 
+  // 5. Minimal Component Code Check - Prevent wrapper-only components
+  console.log('Checking for minimal wrapper-only components...');
+
+  foldersToCheck.forEach((folderName) => {
+    const folderPath = path.join(srcDir, folderName);
+    if (!fs.existsSync(folderPath)) return;
+
+    walkDir(folderPath, (file) => {
+      if (!file.endsWith('.tsx')) return;
+
+      const relFile = getRelativePath(file, projectRoot);
+      const content = fs.readFileSync(file, 'utf8');
+      
+      // Find the export statement
+      const exportMatch = content.match(/\nexport\s+(?:function|const|default)/);
+      if (!exportMatch) return;
+
+      // Get code after export
+      const exportIndex = content.indexOf(exportMatch[0]);
+      const codeAfterExport = content.substring(exportIndex);
+      const lines = codeAfterExport.split('\n');
+
+      // Count non-empty, non-whitespace-only lines (excluding import/export lines)
+      let contentLineCount = 0;
+      for (const line of lines) {
+        const trimmed = line.trim();
+        if (trimmed && !trimmed.startsWith('//') && trimmed !== '}' && trimmed !== ');') {
+          contentLineCount++;
+          // Stop after first meaningful export line
+          if (contentLineCount > 3) break;
+        }
+      }
+
+      // If there are 3 or fewer lines of actual content after export, it's too minimal
+      if (contentLineCount <= 3 && contentLineCount > 0) {
+        violations.push(
+          `Minimal Component Check (${folderName}): File '${relFile}' exports a component with only ${contentLineCount} lines of code. ` +
+          `Avoid creating wrapper-only components that just re-export or wrap another component. ` +
+          `Import the component directly or merge the logic into the parent component.`
+        );
+      }
+    });
+  });
+
   return violations;
 }

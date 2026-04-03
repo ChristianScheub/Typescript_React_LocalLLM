@@ -133,6 +133,21 @@
   margin-top: 4px;
 }
 
+.empty-warning {
+  color: #d97706;
+  background: #fef3c7;
+  padding: 12px 16px;
+  border-radius: 6px;
+  margin-top: 8px;
+  max-width: 300px;
+  font-weight: 500;
+}
+
+.empty-warning strong {
+  font-weight: 700;
+  color: #b45309;
+}
+
 .loading-state {
   display: flex;
   flex-direction: column;

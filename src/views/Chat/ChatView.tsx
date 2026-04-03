@@ -64,7 +64,13 @@ export function ChatView({
               <div className="empty-state">
                 <div className="empty-icon">✨</div>
                 <p>Welcome to Chris AI</p>
-                <p className="empty-subtitle">Start a conversation with your AI assistant</p>
+                {!isModelLoaded ? (
+                  <p className="empty-subtitle empty-warning">
+                    Please load an AI Model first by clicking the <strong>Models</strong> tab
+                  </p>
+                ) : (
+                  <p className="empty-subtitle">Start a conversation with your AI assistant</p>
+                )}
               </div>
             ) : (
               messages.map((msg) => <ChatMessage key={msg.id} message={msg} />)

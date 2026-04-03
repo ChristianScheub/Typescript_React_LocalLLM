@@ -60,7 +60,13 @@ export function MobileChatView({
           <div className="empty-state">
             <div className="empty-icon">✨</div>
             <h1>{t('chat.empty.title', 'Welcome to Chris AI')}</h1>
-            <p>{t('chat.empty.subtitle', 'Start a conversation with your AI assistant')}</p>
+            {!isModelLoaded ? (
+              <p className="empty-subtitle empty-warning">
+                {t('chat.empty.loadModel', 'Please load an AI Model first by clicking the Models tab')}
+              </p>
+            ) : (
+              <p className="empty-subtitle">{t('chat.empty.subtitle', 'Start a conversation with your AI assistant')}</p>
+            )}
           </div>
         ) : (
           <div className="messages-list">

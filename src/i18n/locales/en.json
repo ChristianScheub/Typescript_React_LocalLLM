@@ -87,7 +87,6 @@
     ],
     "github": "GitHub Repository",
     "githubDescription": "View the source code and contribute on GitHub",
-    "githubLink": "https://github.com/yourusername/Typescript_React_LocalLLM",
     "confirmDelete": "Are you sure?",
     "confirmDeleteMessage": "This action cannot be undone.",
     "cancel": "Cancel",

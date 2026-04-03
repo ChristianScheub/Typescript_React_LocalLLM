@@ -4,7 +4,6 @@ import { modelService } from '@services/model';
 import { modelStateManager } from '@services/modelStateManager';
 import Logger from '@services/logger';
 import { MobileChatView } from '@views/mobileOnly/MobileChat/MobileChatView';
-import { MobileChatWelcome } from '@ui/mobileOnly/MobileChatWelcome';
 
 interface MobileChatContainerProps {
   provider: 'transformers' | 'webllm';
@@ -99,16 +98,7 @@ export function MobileChatContainer({ provider, chatSettings, onSettingsChange }
     }
   };
 
-  // Show welcome screen if no model is loaded
-  if (!isModelLoaded) {
-    return (
-      <div className="mobile-chat-container welcome">
-        <MobileChatWelcome />
-      </div>
-    );
-  }
-
-  // Show actual chat view when model is loaded
+  // Show actual chat view always (with warning if no model loaded)
   return (
     <div className="mobile-chat-container">
       <MobileChatView

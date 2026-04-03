@@ -2,9 +2,9 @@ import { FiTrash2, FiBook, FiGithub, FiCheckCircle } from 'react-icons/fi';
 import { useTranslation } from 'react-i18next';
 import { Modal } from '@ui/Modal';
 import { SettingsOptionItem } from '@ui/SettingsOptionItem';
-import { PrivacyContent } from '@ui/PrivacyContent';
-import { ImpressumContent } from '@ui/ImpressumContent';
-import { LibrariesContent } from '@ui/LibrariesContent';
+import Datenschutz from '../../legal/datenschutz';
+import Impressum from '../../legal/impressum';
+import UsedLibsListContainer from '../../legal/usedLibs/container_usedLibList';
 import './AppSettingsView.css';
 
 interface AppSettingsViewProps {
@@ -71,7 +71,7 @@ export function AppSettingsView({
             isExpanded={expandedOptions.has('privacy')}
             onToggleExpand={onToggleExpand}
           >
-            <PrivacyContent />
+            <Datenschutz />
           </SettingsOptionItem>
 
           <SettingsOptionItem
@@ -82,7 +82,7 @@ export function AppSettingsView({
             isExpanded={expandedOptions.has('impressum')}
             onToggleExpand={onToggleExpand}
           >
-            <ImpressumContent />
+            <Impressum />
           </SettingsOptionItem>
 
           <SettingsOptionItem
@@ -93,7 +93,7 @@ export function AppSettingsView({
             isExpanded={expandedOptions.has('libraries')}
             onToggleExpand={onToggleExpand}
           >
-            <LibrariesContent />
+            <UsedLibsListContainer />
           </SettingsOptionItem>
 
           <SettingsOptionItem
@@ -102,7 +102,7 @@ export function AppSettingsView({
             titleKey="settings.github"
             descriptionKey="settings.githubDescription"
             hasLink={true}
-            link={t('settings.githubLink')}
+            link={"https://github.com/ChristianScheub/Typescript_React_LocalLLM"}
           />
         </div>
       </div>
