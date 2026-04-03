@@ -108,6 +108,12 @@
   color: #0369a1;
 }
 
+.activity-log ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .activity-log {
   flex: 1;
   overflow-y: auto;
@@ -198,12 +204,8 @@
 .chart-section {
   flex-shrink: 0;
   gap: 12px;
-}
-
-.chart-container {
   display: flex;
   flex-direction: column;
-  gap: 12px;
 }
 
 .bars-wrapper {
