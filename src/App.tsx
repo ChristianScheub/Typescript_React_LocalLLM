@@ -1,16 +1,22 @@
 import { useState, useEffect } from 'react';
 import type { ChatSettings } from '@types';
 import Logger from '@services/logger';
+import { useDevicePlatform } from './hooks/useDevicePlatform';
 import { ChatContainer } from '@components/ChatContainer';
 import { SidebarContainer } from '@components/SidebarContainer';
 import { ContextExplorerContainer } from '@components/ContextExplorerContainer';
 import { ModelsContainer } from '@components/ModelsContainer';
 import { SettingsContainer } from '@components/SettingsContainer';
+import { MobileChatContainer } from '@components/MobileChatContainer';
+import { MobileModelsContainer } from '@components/MobileModelsContainer';
+import { MobileSettingsContainer } from '@components/MobileSettingsContainer';
+import { MobileBottomNav } from '@ui/MobileBottomNav';
 import './App.css';
 
 function App() {
+  const deviceInfo = useDevicePlatform();
   const [provider, setProvider] = useState<'transformers' | 'webllm'>('webllm');
-  const [currentView, setCurrentView] = useState<'chat' | 'models' | 'settings'>('chat');
+  const [currentView, setCurrentView] = useState<'chat' | 'models' | 'info'>('chat');
   const [chatSettings, setChatSettings] = useState<ChatSettings>({
     temperature: 0.7,
     maxTokens: 200,
@@ -19,8 +25,8 @@ function App() {
   });
 
   useEffect(() => {
-    Logger.infoService(`[App] Application initialized with provider: ${provider}`);
-  }, [provider]);
+    Logger.infoService(`[App] Application initialized with provider: ${provider} on platform: ${deviceInfo.platform}`);
+  }, [provider, deviceInfo.platform]);
 
   const handleProviderChange = (newProvider: 'transformers' | 'webllm') => {
     Logger.infoService(`[App] Provider changed from ${provider} to ${newProvider}`);
@@ -32,6 +38,27 @@ function App() {
     setChatSettings(settings);
   };
 
+  // Mobile Layout
+  if (deviceInfo.isMobile) {
+    return (
+      <div className="app-mobile">
+        <main className="mobile-main">
+          {currentView === 'chat' && (
+            <MobileChatContainer key={provider} provider={provider} chatSettings={chatSettings} onSettingsChange={handleSettingsChange} />
+          )}
+          {currentView === 'models' && (
+            <MobileModelsContainer provider={provider} onProviderChange={handleProviderChange} />
+          )}
+          {currentView === 'info' && (
+            <MobileSettingsContainer />
+          )}
+        </main>
+        <MobileBottomNav currentView={currentView} onViewChange={setCurrentView} />
+      </div>
+    );
+  }
+
+  // Desktop Layout
   return (
     <div className="app">
       <SidebarContainer 
@@ -46,10 +73,8 @@ function App() {
         {currentView === 'models' && (
           <ModelsContainer provider={provider} onProviderChange={handleProviderChange} />
         )}
-        {currentView === 'settings' && (
+        {currentView === 'info' && (
           <SettingsContainer 
-            provider={provider} 
-            onProviderChange={handleProviderChange}
             isModalOpen={true}
             onModalClose={() => setCurrentView('chat')}
           />

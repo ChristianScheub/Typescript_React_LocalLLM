@@ -15,4 +15,14 @@ export default defineConfig({
       '@types': path.resolve(__dirname, './src'),
     },
   },
+  server: {
+    deps: {
+      exclude: ['@capacitor/device', '@capacitor/core', '@capacitor/app'],
+    },
+  },
+  build: {
+    rollupOptions: {
+      external: ['@capacitor/device', '@capacitor/core', '@capacitor/app'],
+    },
+  },
 })

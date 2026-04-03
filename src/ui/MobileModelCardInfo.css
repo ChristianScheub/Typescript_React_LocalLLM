@@ -1,0 +1,35 @@
+.model-info {
+  flex: 1;
+}
+
+.model-info h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 4px;
+}
+
+.model-description {
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 8px;
+}
+
+.model-meta {
+  display: flex;
+  gap: 12px;
+  font-size: 12px;
+}
+
+.status {
+  color: #6b7280;
+}
+
+.status.ready {
+  color: #10b981;
+  font-weight: 600;
+}
+
+.model-size {
+  color: #6b7280;
+}

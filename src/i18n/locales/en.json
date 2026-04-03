@@ -7,6 +7,7 @@
     }
   },
   "settings": {
+    "title": "Settings",
     "engineArchitecture": "Engine Architecture",
     "selectRuntime": "Select the runtime environment that best fits your hardware. Chris AI dynamically manages resources to ensure optimal inference speeds.",
     "engineCards": {
@@ -41,7 +42,58 @@
     "webgpuVsWasm": "WEBGPU vs WASM",
     "webgpuDescription": "Web-LLM utilizes the emerging WebGPU API++, which allows the interface to bypass standard browser overhead and communicate directly with your device's graphics card. This results in up to 10x faster token generation compared to traditional WASM implementations.",
     "localPrivacy": "LOCAL PRIVACY",
-    "localPrivacyDescription": "All data remains on your machine. Both engines execute entirely within your browser's sandbox environment, ensuring that your prompts and private model weights remain strictly local to your hardware."
+    "localPrivacyDescription": "All data remains on your machine. Both engines execute entirely within your browser's sandbox environment, ensuring that your prompts and private model weights remain strictly local to your hardware.",
+    "appSettings": "App Settings",
+    "appSettingsDescription": "Manage your application data and preferences",
+    "deleteAllData": "Delete All Data",
+    "deleteAllDataDescription": "Remove all locally stored data including chat history, settings, and downloaded models. This action cannot be undone.",
+    "deleteAllDataButton": "Delete All Data",
+    "deleteAllDataSuccess": "✅ All data deleted successfully! The page will reload shortly...",
+    "deleteModels": "Delete AI Models",
+    "deleteModelsDescription": "Remove all downloaded AI/LLM models to free up storage space. Models can be re-downloaded later.",
+    "deleteModelsButton": "Delete Models",
+    "deleteModelsSuccess": "✅ Models deleted successfully!",
+    "reloadingPage": "Reloading page...",
+    "privacy": "Privacy",
+    "privacyDescription": "Your data stays on your device. No information is sent to external servers.",
+    "privacyContent": "All computations are performed locally in your browser. No data is transmitted to any server. Your prompts and model weights remain strictly on your device.",
+    "impressum": "Imprint",
+    "impressumDescription": "Legal information and copyright notices",
+    "impressumContent": "© 2026 Local LLM Chat. All rights reserved.",
+    "libraries": "Used Libraries",
+    "librariesDescription": "View the open-source libraries powering this application",
+    "libraries": "Used Libraries",
+    "libraryList": [
+      {
+        "name": "React",
+        "version": "19.2.4",
+        "license": "MIT"
+      },
+      {
+        "name": "i18next",
+        "version": "23.7.6",
+        "license": "MIT"
+      },
+      {
+        "name": "Web-LLM",
+        "version": "0.2.82",
+        "license": "Apache 2.0"
+      },
+      {
+        "name": "Transformers.js",
+        "version": "2.17.2",
+        "license": "Apache 2.0"
+      }
+    ],
+    "github": "GitHub Repository",
+    "githubDescription": "View the source code and contribute on GitHub",
+    "githubLink": "https://github.com/yourusername/Typescript_React_LocalLLM",
+    "confirmDelete": "Are you sure?",
+    "confirmDeleteMessage": "This action cannot be undone.",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "expandLabel": "Expand",
+    "collapseLabel": "Collapse"
   },
   "chatSettings": {
     "mode": "Mode",

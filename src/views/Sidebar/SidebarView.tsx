@@ -3,8 +3,8 @@ import { SidebarHeader } from '@ui/SidebarHeader';
 import { SidebarNavigation } from '@ui/SidebarNavigation';
 
 interface SidebarViewProps {
-  currentView: 'chat' | 'models' | 'settings';
-  onViewChange: (view: 'chat' | 'models' | 'settings') => void;
+  currentView: 'chat' | 'models' | 'info';
+  onViewChange: (view: 'chat' | 'models' | 'info') => void;
 }
 
 export function SidebarView({ currentView, onViewChange }: SidebarViewProps) {

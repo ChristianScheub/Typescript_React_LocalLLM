@@ -44,8 +44,6 @@ export function NavbarView({ currentProvider, onProviderChange }: NavbarViewProp
         <div className="navbar-actions">
           <SettingsButton onClick={() => setIsModalOpen(true)} />
           <SettingsContainer
-            provider={selectedProvider}
-            onProviderChange={handleProviderChange}
             isModalOpen={isModalOpen}
             onModalClose={() => setIsModalOpen(false)}
           />

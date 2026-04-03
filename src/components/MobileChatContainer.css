@@ -1,0 +1,12 @@
+.mobile-chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #ffffff;
+}
+
+.mobile-chat-container.welcome {
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}

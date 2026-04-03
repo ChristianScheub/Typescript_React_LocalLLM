@@ -8,6 +8,16 @@
   flex-shrink: 0;
 }
 
+.chat-settings-panel.mobile {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  margin: 0;
+  overflow: visible;
+  box-shadow: none;
+  flex-shrink: unset;
+}
+
 .settings-toggle {
   width: 100%;
   padding: 14px 16px;
@@ -39,6 +49,13 @@
   background: #fafbfc;
   max-height: 400px;
   overflow-y: auto;
+}
+
+.chat-settings-panel.mobile .settings-content {
+  padding: 0;
+  border-top: none;
+  background: transparent;
+  max-height: none;
 }
 
 .settings-content::-webkit-scrollbar {

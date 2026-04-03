@@ -18,6 +18,11 @@
   flex-shrink: 0;
 }
 
+.activity-section.mobile {
+  padding: 0;
+  border-bottom: none;
+}
+
 /* Temperature Section */
 .temperature-section {
   gap: 12px;
@@ -29,6 +34,11 @@
   color: #6b7280;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+}
+
+.activity-section.mobile .section-label {
+  font-size: 10px;
+  color: #9ca3af;
 }
 
 .temperature-control {
@@ -126,6 +136,13 @@
   border: 1px solid #e5e7eb;
 }
 
+.pipeline-section.mobile .activity-log {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+}
+
 .activity-log::-webkit-scrollbar {
   width: 6px;
 }
@@ -218,6 +235,13 @@
   background: #f9fafb;
   border-radius: 6px;
   border: 1px solid #e5e7eb;
+}
+
+.chart-section.mobile .bars-wrapper {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
 }
 
 .bar {

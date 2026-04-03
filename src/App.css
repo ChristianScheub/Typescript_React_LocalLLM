@@ -10,6 +10,7 @@ html, body, #root {
   overflow: hidden;
 }
 
+/* Desktop Layout */
 .app {
   display: grid;
   grid-template-columns: 200px 1fr 320px;
@@ -44,6 +45,23 @@ html, body, #root {
   grid-row: 2;
 }
 
+/* Mobile Layout */
+.app-mobile {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background: white;
+}
+
+.mobile-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #ffffff;
+}
+
 /* Responsive Design */
 @media (max-width: 1400px) {
   .app {
@@ -67,17 +85,16 @@ html, body, #root {
 
 @media (max-width: 768px) {
   .app {
-    grid-template-columns: 1fr;
+    display: none;
   }
 
-  .sidebar {
-    position: fixed;
-    left: -200px;
-    transition: left 0.3s ease;
-    z-index: 1000;
+  .app-mobile {
+    display: flex;
   }
+}
 
-  .sidebar.open {
-    left: 0;
+@media (min-width: 769px) {
+  .app-mobile {
+    display: none;
   }
 }

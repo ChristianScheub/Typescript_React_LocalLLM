@@ -9,11 +9,12 @@ interface ActivityLog {
 interface LivePipelineLogProps {
   logs: ActivityLog[];
   logsEndRef: React.RefObject<HTMLElement | null>;
+  isMobile?: boolean;
 }
 
-export function LivePipelineLog({ logs, logsEndRef }: LivePipelineLogProps) {
+export function LivePipelineLog({ logs, logsEndRef, isMobile = false }: LivePipelineLogProps) {
   return (
-    <div className="activity-section pipeline-section">
+    <div className={`activity-section pipeline-section ${isMobile ? 'mobile' : ''}`}>
       <header className="section-header">
         <strong className="section-label">LIVE PIPELINE</strong>
         <mark className="status-badge processing">PROCESSING</mark>

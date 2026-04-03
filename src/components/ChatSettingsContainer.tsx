@@ -6,10 +6,11 @@ import { ChatSettingsView } from '@views/ChatSettings/ChatSettingsView';
 interface ChatSettingsContainerProps {
   settings: ChatSettings;
   onSettingsChange: (settings: ChatSettings) => void;
+  isMobile?: boolean;
 }
 
-export function ChatSettingsContainer({ settings, onSettingsChange }: ChatSettingsContainerProps) {
-  const [isExpanded, setIsExpanded] = useState(false);
+export function ChatSettingsContainer({ settings, onSettingsChange, isMobile = false }: ChatSettingsContainerProps) {
+  const [isExpanded, setIsExpanded] = useState(isMobile);
 
   const handleTemperatureChange = (value: number) => {
     onSettingsChange({
@@ -43,11 +44,12 @@ export function ChatSettingsContainer({ settings, onSettingsChange }: ChatSettin
     <ChatSettingsView
       settings={settings}
       isExpanded={isExpanded}
-      onToggleExpand={() => setIsExpanded(!isExpanded)}
+      onToggleExpand={isMobile ? undefined : () => setIsExpanded(!isExpanded)}
       onTemperatureChange={handleTemperatureChange}
       onMaxTokensChange={handleMaxTokensChange}
       onPresencePenaltyChange={handlePresencePenaltyChange}
       onModeChange={handleModeChange}
+      isMobile={isMobile}
     />
   );
 }

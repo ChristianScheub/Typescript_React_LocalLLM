@@ -128,6 +128,46 @@ export function checkContainerComponents() {
     });
   }
 
+  // 3.5. Storage & Database Access Restrictions in Containers
+  console.log('Checking storage and database operations in containers...');
+
+  if (fs.existsSync(componentsDir)) {
+    walkDir(componentsDir, (file) => {
+      if (!file.endsWith('.tsx')) return;
+
+      const relFile = getRelativePath(file, projectRoot);
+      const content = fs.readFileSync(file, 'utf8');
+
+      // Only check Container files
+      if (!relFile.endsWith('Container.tsx')) return;
+
+      // Check for localStorage, sessionStorage, indexedDB operations
+      if (/localStorage\./i.test(content)) {
+        violations.push(
+          `Storage Access Check (containers): File '${relFile}' accesses localStorage. ` +
+          `All storage operations must be delegated to a Service. ` +
+          `Create a dedicated Service and use dependency injection instead.`
+        );
+      }
+
+      if (/sessionStorage\./i.test(content)) {
+        violations.push(
+          `Storage Access Check (containers): File '${relFile}' accesses sessionStorage. ` +
+          `All storage operations must be delegated to a Service. ` +
+          `Create a dedicated Service and use dependency injection instead.`
+        );
+      }
+
+      if (/indexedDB\./i.test(content)) {
+        violations.push(
+          `Database Access Check (containers): File '${relFile}' accesses indexedDB. ` +
+          `All database operations must be delegated to a Service. ` +
+          `Create a dedicated Service and use dependency injection instead.`
+        );
+      }
+    });
+  }
+
   // 4. Tag Count Check (div, p, span, label, h1, h2)
   console.log('Checking tag count limits in components...');
 

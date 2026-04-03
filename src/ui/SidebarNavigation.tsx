@@ -1,8 +1,8 @@
-import { FiMessageSquare, FiDatabase, FiSettings } from 'react-icons/fi';
+import { FiMessageSquare, FiDatabase, FiInfo } from 'react-icons/fi';
 
 interface SidebarNavigationProps {
-  currentView: 'chat' | 'models' | 'settings';
-  onViewChange: (view: 'chat' | 'models' | 'settings') => void;
+  currentView: 'chat' | 'models' | 'info';
+  onViewChange: (view: 'chat' | 'models' | 'info') => void;
 }
 
 export function SidebarNavigation({ currentView, onViewChange }: SidebarNavigationProps) {
@@ -25,11 +25,11 @@ export function SidebarNavigation({ currentView, onViewChange }: SidebarNavigati
       </button>
 
       <button
-        className={`nav-item ${currentView === 'settings' ? 'active' : ''}`}
-        onClick={() => onViewChange('settings')}
+        className={`nav-item ${currentView === 'info' ? 'active' : ''}`}
+        onClick={() => onViewChange('info')}
       >
-        <FiSettings size={20} />
-        <span>Settings</span>
+        <FiInfo size={20} />
+        <span>App Info</span>
       </button>
     </nav>
   );

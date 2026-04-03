@@ -1,8 +1,8 @@
 import { SidebarView } from '@views/Sidebar/SidebarView';
 
 interface SidebarContainerProps {
-  currentView: 'chat' | 'models' | 'settings';
-  onViewChange: (view: 'chat' | 'models' | 'settings') => void;
+  currentView: 'chat' | 'models' | 'info';
+  onViewChange: (view: 'chat' | 'models' | 'info') => void;
 }
 
 export function SidebarContainer({ currentView, onViewChange }: SidebarContainerProps) {
