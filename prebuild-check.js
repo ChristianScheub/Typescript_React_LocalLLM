@@ -481,6 +481,187 @@ STYLE_AND_TAG_CHECK_FOLDERS.forEach((folderName) => {
   });
 });
 
+// 12. Modular Facade Service Architecture Check
+console.log('Checking Modular Facade Service Architecture compliance...');
+const servicesRootDir = path.join(srcDir, 'services');
+
+if (fs.existsSync(servicesRootDir)) {
+  // Check 0: No .ts/.tsx files allowed directly in services/ folder
+  const filesInServicesRoot = fs.readdirSync(servicesRootDir);
+  const tsFilesInRoot = filesInServicesRoot.filter(name => 
+    (name.endsWith('.ts') || name.endsWith('.tsx')) && name !== 'README.md'
+  );
+
+  if (tsFilesInRoot.length > 0) {
+    violations.push(
+      `Service Structure (Modular Facade Pattern): Found individual .ts/.tsx files directly in 'src/services/': [${tsFilesInRoot.join(', ')}]. ` +
+      `Services must be organized in folders. Each service must have its own folder with index.ts, I[ServiceName]Service.ts, and a logic/ subfolder.`
+    );
+  }
+
+  const serviceFolderNames = fs.readdirSync(servicesRootDir)
+    .filter(name => {
+      const fullPath = path.join(servicesRootDir, name);
+      const isDir = fs.statSync(fullPath).isDirectory();
+      return isDir && name !== 'README.md';
+    });
+
+  serviceFolderNames.forEach((serviceName) => {
+    const servicePath = path.join(servicesRootDir, serviceName);
+    const files = fs.readdirSync(servicePath);
+    const isDir = fs.statSync(servicePath).isDirectory();
+
+    if (!isDir) return;
+
+    // Check for required files in main service folder
+    const hasIndexTs = files.includes('index.ts');
+    const interfaceFiles = files.filter(f => f.match(/^I[A-Z]\w*Service\.ts$/));
+    const logicFolder = files.includes('logic');
+    
+    // Files that should only be in main folder
+    const mainFolderFiles = ['index.ts', ...interfaceFiles];
+    const otherFiles = files.filter(f => 
+      !mainFolderFiles.includes(f) && f !== 'logic' && !f.startsWith('.')
+    );
+
+    const relPath = path.relative(projectRoot, servicePath).split(path.sep).join('/');
+
+    // Check 1: Must have index.ts (Facade)
+    if (!hasIndexTs) {
+      violations.push(
+        `Service Structure (Modular Facade Pattern): Service '${relPath}' missing 'index.ts'. ` +
+        `Each service must have a Facade index.ts that exports typed methods.`
+      );
+    }
+
+    // Check 2: Must have exactly one interface file (IServiceNameService.ts)
+    if (interfaceFiles.length === 0) {
+      violations.push(
+        `Service Structure (Modular Facade Pattern): Service '${relPath}' missing interface file. ` +
+        `Expected: I${serviceName.charAt(0).toUpperCase() + serviceName.slice(1)}Service.ts (pure interface definition).`
+      );
+    } else if (interfaceFiles.length > 1) {
+      violations.push(
+        `Service Structure (Modular Facade Pattern): Service '${relPath}' has ${interfaceFiles.length} interface files. ` +
+        `Expected exactly one: I${serviceName.charAt(0).toUpperCase() + serviceName.slice(1)}Service.ts`
+      );
+    }
+
+    // Check 3: Must have logic folder for implementation
+    if (!logicFolder) {
+      violations.push(
+        `Service Structure (Modular Facade Pattern): Service '${relPath}' missing 'logic' folder. ` +
+        `All implementation logic must be in a './logic/' subfolder.`
+      );
+    }
+
+    // Check 4: No implementation files in main folder (only index.ts and I*Service.ts allowed)
+    if (otherFiles.length > 0) {
+      const invalidFiles = otherFiles.filter(f => f.endsWith('.ts') || f.endsWith('.tsx'));
+      if (invalidFiles.length > 0) {
+        violations.push(
+          `Service Structure (Modular Facade Pattern): Service '${relPath}' has implementation files in main folder: [${invalidFiles.join(', ')}]. ` +
+          `Only 'index.ts' and 'I*Service.ts' interface files are allowed in main folder. Implementation must be in './logic/' subfolder.`
+        );
+      }
+    }
+
+    // Check 5: Validate index.ts (should only import and export façade object)
+    if (hasIndexTs) {
+      const indexPath = path.join(servicePath, 'index.ts');
+      const indexContent = fs.readFileSync(indexPath, 'utf8');
+      const indexLines = indexContent.split('\n');
+      
+      // Count export statements (should be exactly 1)
+      const exportLines = indexLines.filter(line => 
+        /^export\s+(const|default)\s+\w+/.test(line.trim())
+      );
+      
+      if (exportLines.length !== 1) {
+        violations.push(
+          `Facade Pattern (${relPath}/index.ts): Must have exactly 1 export statement (the Facade object). ` +
+          `Found ${exportLines.length}. The facade should export a single typed object aggregating all methods.`
+        );
+      }
+
+      // Check if it imports from logic subfolder
+      const hasLogicImports = indexContent.includes("from './logic/");
+      if (!hasLogicImports && logicFolder) {
+        violations.push(
+          `Facade Pattern (${relPath}/index.ts): Should import implementation from './logic/' subfolder. ` +
+          `The facade orchestrates logic functions into a typed object.`
+        );
+      }
+
+      // Check for implementation logic in index.ts (forbidden)
+      if (/^\s*(function|const.*=\s*[\(\{]|class|interface|type.*=)[\s\S]*?[\{\(\[]/.test(indexContent)) {
+        const hasLogicIndicators = 
+          /(?<!\/\/)(?:\{[\s\S]*?\}|=>|function|\bif\s*\(|\bfor\s*\(|\bwhile\s*\(|\bswitch\s*\()/.test(
+            indexContent.split('from')[0] || ''
+          );
+        
+        if (hasLogicIndicators) {
+          violations.push(
+            `Facade Pattern (${relPath}/index.ts): Contains implementation logic. ` +
+            `Index.ts (facade) must only contain imports and a typed object export. All logic belongs in './logic/' subfolder.`
+          );
+        }
+      }
+    }
+
+    // Check 6: Validate interface file (should only contain interface definition, no logic)
+    if (interfaceFiles.length === 1) {
+      const interfacePath = path.join(servicePath, interfaceFiles[0]);
+      const interfaceContent = fs.readFileSync(interfacePath, 'utf8');
+      
+      // Check for non-interface exports
+      if (/^export\s+(const|class|function|enum|let|var)\s+/m.test(interfaceContent)) {
+        violations.push(
+          `Service Interface (${relPath}/${interfaceFiles[0]}): Must only contain interface definitions. ` +
+          `Found const, class, function, enum, let, or var exports. Interface files must be pure type definitions.`
+        );
+      }
+
+      // Check for implementation logic indicators
+      const interfaceBody = interfaceContent.split('interface')[1] || '';
+      if (/\{[\s\S]*?(?:=>|if\s*\(|for\s*\(|while\s*\(|switch\s*\(|\/\/|:)[\s\S]*?\}/.test(interfaceBody)) {
+        const hasImplementation = /=>|function[\s\(]|{\s*[\w\s\n]*[^}]+\n\s*}|if\s*\(|for\s*\(|while\s*\(/.test(interfaceBody);
+        if (hasImplementation) {
+          violations.push(
+            `Service Interface (${relPath}/${interfaceFiles[0]}): Contains implementation logic inside interface. ` +
+            `Interface files must only have type definitions, no implementation or method bodies.`
+          );
+        }
+      }
+    }
+
+    // Check 7: Validate logic folder (if exists)
+    if (logicFolder) {
+      const logicPath = path.join(servicePath, 'logic');
+      const logicIsDir = fs.statSync(logicPath).isDirectory();
+      
+      if (logicIsDir) {
+        walkDir(logicPath, (file) => {
+          if (!file.endsWith('.ts') && !file.endsWith('.tsx')) return;
+          
+          const relFile = path.relative(projectRoot, file).split(path.sep).join('/');
+          const content = fs.readFileSync(file, 'utf8');
+          
+          // Count exports (max 2 per file for atomization)
+          const exportCount = (content.match(/^export\s+(?:const|function|class|default)/gm) || []).length;
+          
+          if (exportCount > 2) {
+            violations.push(
+              `Service Atomization (${relFile}): Exports ${exportCount} items. ` +
+              `Maximum 2 exports per file in logic subfolder. Keep files focused on a single responsibility.`
+            );
+          }
+        });
+      }
+    }
+  });
+}
+
 // Output results
 if (violations.length > 0) {
   console.error('\n\x1b[31m❌ Pre-Build Checks failed!\x1b[0m\n');
