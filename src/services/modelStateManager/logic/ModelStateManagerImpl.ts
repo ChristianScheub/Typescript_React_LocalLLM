@@ -1,7 +1,6 @@
-import Logger from './logger';
+import Logger from '@services/logger';
 
-// Global model state management
-class ModelStateManager {
+export class ModelStateManagerImpl {
   private loadedModels: Map<string, Set<string>> = new Map();
   private listeners: Set<() => void> = new Set();
 
@@ -57,5 +56,3 @@ class ModelStateManager {
     });
   }
 }
-
-export const modelStateManager = new ModelStateManager();

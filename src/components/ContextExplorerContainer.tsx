@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
-import type { ChatSettings } from '../types';
-import { ChatSettingsContainer } from './ChatSettingsContainer';
-import Logger from '../services/logger';
+import type { ChatSettings } from '@types';
+import { ChatSettingsContainer } from '@components/ChatSettingsContainer';
+import Logger from '@services/logger';
 import './ContextExplorerContainer.css';
 
 interface ContextExplorerContainerProps {
@@ -21,7 +21,7 @@ export function ContextExplorerContainer({ chatSettings, onSettingsChange }: Con
   const [chunkHistory, setChunkHistory] = useState<number[]>(Array(60).fill(0)); // 5 mins, 5 sec intervals
   const logsEndRef = useRef<HTMLDivElement>(null);
   const chunkCounterRef = useRef(0);
-  const lastChunkIntervalRef = useRef(Date.now());
+  const lastChunkIntervalRef = useRef(0);
 
   // Auto-scroll to latest log
   useEffect(() => {
@@ -30,6 +30,8 @@ export function ContextExplorerContainer({ chatSettings, onSettingsChange }: Con
 
   // Subscribe to Logger events
   useEffect(() => {
+    lastChunkIntervalRef.current = Date.now();
+
     const unsubscribe = Logger.subscribe((message: string, type: 'info' | 'warning' | 'error' | 'cache') => {
       // Clean up message - just show what we got
       const cleanMessage = message.trim();

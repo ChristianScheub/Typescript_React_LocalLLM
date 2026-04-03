@@ -1,6 +1,6 @@
 import './SettingsView.css';
 import { FiCheck, FiDownload, FiArrowRight } from 'react-icons/fi';
-import { featureFlag_Debug_View } from '../../config/featureFlags';
+import { featureFlag_Debug_View } from '@config/featureFlags';
 
 interface Model {
   id: string;
@@ -160,7 +160,7 @@ export function SettingsView({
                   <div className="progress-bar">
                     <div
                       className="progress-fill"
-                      style={{ width: `${downloadProgress}%` }}
+                      style={{ '--progress': `${downloadProgress}%` } as React.CSSProperties}
                     ></div>
                   </div>
                   <div className="progress-status">

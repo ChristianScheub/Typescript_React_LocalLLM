@@ -1,6 +1,6 @@
 import '../../components/SidebarContainer.css';
-import { SidebarHeader } from '../../ui/SidebarHeader';
-import { SidebarNavigation } from '../../ui/SidebarNavigation';
+import { SidebarHeader } from '@ui/SidebarHeader';
+import { SidebarNavigation } from '@ui/SidebarNavigation';
 
 interface SidebarViewProps {
   currentView: 'chat' | 'models' | 'settings';

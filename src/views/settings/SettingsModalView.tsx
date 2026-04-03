@@ -1,5 +1,5 @@
-import { Modal } from '../../ui/Modal';
-import { SettingsView } from './SettingsView';
+import { Modal } from '@ui/Modal';
+import { SettingsView } from '@views/settings/SettingsView';
 
 interface Model {
   id: string;

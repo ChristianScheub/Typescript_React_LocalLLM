@@ -1,7 +1,7 @@
 import './NavbarView.css';
 import { useState } from 'react';
-import { SettingsButton } from '../../ui/SettingsButton';
-import { SettingsContainer } from '../../components/SettingsContainer';
+import { SettingsButton } from '@ui/SettingsButton';
+import { SettingsContainer } from '@components/SettingsContainer';
 
 interface NavbarViewProps {
   currentProvider: 'transformers' | 'webllm';

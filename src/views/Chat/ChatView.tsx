@@ -1,9 +1,9 @@
 import './ChatView.css';
-import type { ChatMessage as ChatMessageType } from '../../types';
-import { ChatMessage } from '../../ui/ChatMessage';
-import { Input } from '../../ui/Input';
-import { Button } from '../../ui/Button';
-import { Spinner } from '../../ui/Spinner';
+import type { ChatMessage as ChatMessageType } from '@types';
+import { ChatMessage } from '@ui/ChatMessage';
+import { Input } from '@ui/Input';
+import { Button } from '@ui/Button';
+import { Spinner } from '@ui/Spinner';
 import { FiArrowUp, FiSearch, FiUser } from 'react-icons/fi';
 
 interface ChatViewProps {

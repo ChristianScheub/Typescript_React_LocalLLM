@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
-import { modelService } from '../services/modelService';
-import { modelStateManager } from '../services/modelStateManager';
-import Logger from '../services/logger';
-import { SettingsModalView } from '../views/settings/SettingsModalView';
+import { modelService } from '@services/model';
+import { modelStateManager } from '@services/modelStateManager';
+import Logger from '@services/logger';
+import { SettingsModalView } from '@views/settings/SettingsModalView';
 
 interface SettingsContainerProps {
   provider: 'transformers' | 'webllm';
@@ -87,7 +87,7 @@ export function SettingsContainer({ provider, onProviderChange, isModalOpen, onM
       }}
       currentProvider={provider}
       onProviderChange={onProviderChange}
-      models={models as any}
+      models={models as { id: string; name: string; description: string; size: string; downloaded: boolean }[]}
       downloadingModel={downloadingModel}
       downloadProgress={downloadProgress}
       onDownload={handleDownloadModel}

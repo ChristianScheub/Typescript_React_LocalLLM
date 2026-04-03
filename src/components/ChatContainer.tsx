@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
-import type { ChatMessage as ChatMessageType, ChatSettings } from '../types';
-import { modelService } from '../services/modelService';
-import { modelStateManager } from '../services/modelStateManager';
-import Logger from '../services/logger';
-import { ChatView } from '../views/Chat/ChatView';
+import type { ChatMessage as ChatMessageType, ChatSettings } from '@types';
+import { modelService } from '@services/model';
+import { modelStateManager } from '@services/modelStateManager';
+import Logger from '@services/logger';
+import { ChatView } from '@views/Chat/ChatView';
 
 interface ChatContainerProps {
   provider: 'transformers' | 'webllm';

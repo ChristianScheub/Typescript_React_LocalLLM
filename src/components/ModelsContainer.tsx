@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
-import { modelService } from '../services/modelService';
-import { modelStateManager } from '../services/modelStateManager';
-import Logger from '../services/logger';
-import { SettingsView } from '../views/settings/SettingsView';
+import { modelService } from '@services/model';
+import { modelStateManager } from '@services/modelStateManager';
+import Logger from '@services/logger';
+import { SettingsView } from '@views/settings/SettingsView';
 
 interface ModelsContainerProps {
   provider: 'transformers' | 'webllm';
@@ -87,7 +87,7 @@ export function ModelsContainer({ provider, onProviderChange }: ModelsContainerP
     <SettingsView
       currentProvider={provider}
       onProviderChange={onProviderChange}
-      models={models as any}
+      models={models as { id: string; name: string; description: string; size: string; downloaded: boolean }[]}
       downloadingModel={downloadingModel}
       downloadProgress={downloadProgress}
       onDownload={handleDownloadModel}

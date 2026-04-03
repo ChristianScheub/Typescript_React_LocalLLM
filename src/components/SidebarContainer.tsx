@@ -1,4 +1,4 @@
-import { SidebarView } from '../views/Sidebar/SidebarView';
+import { SidebarView } from '@views/Sidebar/SidebarView';
 
 interface SidebarContainerProps {
   currentView: 'chat' | 'models' | 'settings';

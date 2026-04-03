@@ -1,25 +1,22 @@
-import { transformersService } from './transformersService';
-import type { TransformersModel } from './transformersService';
-import { webllmService } from './webllmService';
-import type { WebLLMModel } from './webllmService';
-import Logger from './logger';
+import type { GenerationOptions } from '@services/model/IModelService';
 
-export interface ModelState {
-  provider: 'transformers' | 'webllm';
-  currentModel: string | null;
-  isLoading: boolean;
-  error: string | null;
-}
+// Dependencies (will be injected via setDependencies)
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+let transformersService: any;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+let webllmService: any;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+let Logger: any;
 
-export interface GenerationOptions {
-  temperature?: number;
-  maxTokens?: number;
-  presencePenalty?: number;
-  mode?: 'fast' | 'expert';
-}
+export class ModelServiceImpl {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  static setDependencies(ts: any, wls: any, logger: any) {
+    transformersService = ts;
+    webllmService = wls;
+    Logger = logger;
+  }
 
-class ModelService {
-  getModelsByProvider(provider: 'transformers' | 'webllm'): TransformersModel[] | WebLLMModel[] {
+  static getModelsByProvider(provider: 'transformers' | 'webllm') {
     Logger.infoService(`[modelService.getModelsByProvider] Fetching models for provider: ${provider}`);
     const models = provider === 'transformers' 
       ? transformersService.getAvailableModels()
@@ -28,7 +25,7 @@ class ModelService {
     return models;
   }
 
-  async initializeModel(provider: 'transformers' | 'webllm', modelName: string): Promise<void> {
+  static async initializeModel(provider: 'transformers' | 'webllm', modelName: string): Promise<void> {
     Logger.infoService(`[modelService.initializeModel] Initializing ${modelName} with provider: ${provider}`);
     try {
       if (provider === 'transformers') {
@@ -48,11 +45,10 @@ class ModelService {
     }
   }
 
-  async generateResponse(provider: 'transformers' | 'webllm', prompt: string, options?: GenerationOptions): Promise<string> {
+  static async generateResponse(provider: 'transformers' | 'webllm', prompt: string, options?: GenerationOptions): Promise<string> {
     Logger.infoService(`[modelService.generateResponse] Generating response with provider: ${provider}`);
     Logger.infoService(`[modelService.generateResponse] Prompt length: ${prompt.length} characters`);
     
-    // Build enhanced prompt based on mode
     let enhancedPrompt = prompt;
     if (options?.mode) {
       const prefix = options.mode === 'fast'
@@ -87,7 +83,7 @@ class ModelService {
     }
   }
 
-  isModelLoaded(provider: 'transformers' | 'webllm'): boolean {
+  static isModelLoaded(provider: 'transformers' | 'webllm'): boolean {
     const loaded = provider === 'transformers'
       ? transformersService.isModelLoaded()
       : webllmService.isModelLoaded();
@@ -95,7 +91,7 @@ class ModelService {
     return loaded;
   }
 
-  getCurrentModel(provider: 'transformers' | 'webllm'): string | null {
+  static getCurrentModel(provider: 'transformers' | 'webllm'): string | null {
     const model = provider === 'transformers'
       ? transformersService.getCurrentModel()
       : webllmService.getCurrentModel();
@@ -103,7 +99,7 @@ class ModelService {
     return model;
   }
 
-  async downloadModel(provider: 'transformers' | 'webllm', modelName: string, onProgress?: (progress: number) => void, onStatusMessage?: (message: string) => void): Promise<void> {
+  static async downloadModel(provider: 'transformers' | 'webllm', modelName: string, onProgress?: (progress: number) => void, onStatusMessage?: (message: string) => void): Promise<void> {
     Logger.infoService(`[modelService.downloadModel] Starting download: ${modelName} (provider: ${provider})`);
     try {
       if (provider === 'transformers') {
@@ -126,5 +122,3 @@ class ModelService {
     }
   }
 }
-
-export const modelService = new ModelService();

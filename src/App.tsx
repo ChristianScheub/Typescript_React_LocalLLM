@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
-import type { ChatSettings } from './types';
-import Logger from './services/logger';
-import { ChatContainer } from './components/ChatContainer';
-import { SidebarContainer } from './components/SidebarContainer';
-import { ContextExplorerContainer } from './components/ContextExplorerContainer';
-import { ModelsContainer } from './components/ModelsContainer';
-import { SettingsContainer } from './components/SettingsContainer';
+import type { ChatSettings } from '@types';
+import Logger from '@services/logger';
+import { ChatContainer } from '@components/ChatContainer';
+import { SidebarContainer } from '@components/SidebarContainer';
+import { ContextExplorerContainer } from '@components/ContextExplorerContainer';
+import { ModelsContainer } from '@components/ModelsContainer';
+import { SettingsContainer } from '@components/SettingsContainer';
 import './App.css';
 
 function App() {

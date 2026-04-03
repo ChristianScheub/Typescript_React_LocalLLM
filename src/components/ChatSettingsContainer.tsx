@@ -1,7 +1,7 @@
 import './ChatSettingsContainer.css';
 import { useState } from 'react';
-import type { ChatSettings } from '../types';
-import { ChatSettingsView } from '../views/ChatSettings/ChatSettingsView';
+import type { ChatSettings } from '@types';
+import { ChatSettingsView } from '@views/ChatSettings/ChatSettingsView';
 
 interface ChatSettingsContainerProps {
   settings: ChatSettings;

@@ -1,4 +1,5 @@
 import { FiSettings } from 'react-icons/fi';
+import './SettingsButton.css';
 
 interface SettingsButtonProps {
   onClick: () => void;
@@ -9,23 +10,7 @@ export function SettingsButton({ onClick, title = 'Settings' }: SettingsButtonPr
   return (
     <button
       onClick={onClick}
-      style={{
-        background: 'none',
-        border: 'none',
-        cursor: 'pointer',
-        padding: '8px',
-        color: 'white',
-        fontWeight: 'bold',
-        minWidth: '40px',
-        minHeight: '40px',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        borderRadius: '6px',
-        transition: 'background-color 0.2s ease',
-      }}
-      onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.1)')}
-      onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = 'transparent')}
+      className="settings-button"
       title={title}
     >
       <FiSettings size={20} />

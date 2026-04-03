@@ -1,8 +1,8 @@
-import type { ChatSettings } from '../types';
-import { ModeSelector } from './ModeSelector';
-import { TemperatureSlider } from './TemperatureSlider';
-import { MaxTokensInput } from './MaxTokensInput';
-import { PresencePenaltySlider } from './PresencePenaltySlider';
+import type { ChatSettings } from '@types';
+import { ModeSelector } from '@ui/ModeSelector';
+import { TemperatureSlider } from '@ui/TemperatureSlider';
+import { MaxTokensInput } from '@ui/MaxTokensInput';
+import { PresencePenaltySlider } from '@ui/PresencePenaltySlider';
 
 interface ChatSettingsPanelProps {
   settings: ChatSettings;

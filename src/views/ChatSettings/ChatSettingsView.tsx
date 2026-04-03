@@ -1,7 +1,7 @@
 import '../../components/ChatSettingsContainer.css';
-import type { ChatSettings } from '../../types';
-import { ChatSettingsToggleButton } from '../../ui/ChatSettingsToggleButton';
-import { ChatSettingsPanel } from '../../ui/ChatSettingsPanel';
+import type { ChatSettings } from '@types';
+import { ChatSettingsToggleButton } from '@ui/ChatSettingsToggleButton';
+import { ChatSettingsPanel } from '@ui/ChatSettingsPanel';
 
 interface ChatSettingsViewProps {
   settings: ChatSettings;
