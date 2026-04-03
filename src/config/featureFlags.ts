@@ -1,9 +1,7 @@
-const featureFlag_Debug_View: boolean = true; //Show some dev things in the view
-const featureFlag_Debug_Settings_View: boolean = true; //Show dev settings things in the view
+const featureFlag_Debug_View: boolean = false; //Show some dev things in the view
 
 const featureFlag_Debug_StoreLogs: boolean = true; //Store logs in the local storage
 
-const featureFlag_SetupWizzard: boolean = true; //Enable setup wizard feature
 const featureFlag_Debug_AllLogs: boolean = true; //Show all logs in the console
 const featureFlag_Debug_Log_infoRedux: boolean = true; //Show info logs of the setter in the console
 const featureFlag_Debug_Log_Service: boolean = true; //Show info logs of the setter in the console
@@ -17,9 +15,7 @@ const featureFlag_SetupImport: boolean = true; //Enable setup import feature
 
 
 export {
-  featureFlag_SetupWizzard,
   featureFlag_Debug_Log_Analytics,
-  featureFlag_Debug_Settings_View,
   featureFlag_Debug_View,
   featureFlag_Debug_StoreLogs,
   featureFlag_Debug_Log_Service,

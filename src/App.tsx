@@ -47,7 +47,12 @@ function App() {
           <ModelsContainer provider={provider} onProviderChange={handleProviderChange} />
         )}
         {currentView === 'settings' && (
-          <SettingsContainer provider={provider} onProviderChange={handleProviderChange} />
+          <SettingsContainer 
+            provider={provider} 
+            onProviderChange={handleProviderChange}
+            isModalOpen={true}
+            onModalClose={() => setCurrentView('chat')}
+          />
         )}
       </main>
 

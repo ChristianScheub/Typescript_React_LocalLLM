@@ -1,18 +1,17 @@
 import { useState, useEffect } from 'react';
-import { Modal } from '../ui/Modal';
 import { modelService } from '../services/modelService';
 import { modelStateManager } from '../services/modelStateManager';
 import Logger from '../services/logger';
-import { FiSettings } from 'react-icons/fi';
-import { SettingsView } from '../views/settings/SettingsView';
+import { SettingsModalView } from '../views/settings/SettingsModalView';
 
 interface SettingsContainerProps {
   provider: 'transformers' | 'webllm';
   onProviderChange: (provider: 'transformers' | 'webllm') => void;
+  isModalOpen: boolean;
+  onModalClose: () => void;
 }
 
-export function SettingsContainer({ provider, onProviderChange }: SettingsContainerProps) {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+export function SettingsContainer({ provider, onProviderChange, isModalOpen, onModalClose }: SettingsContainerProps) {
   const [downloadingModel, setDownloadingModel] = useState<string | null>(null);
   const [downloadProgress, setDownloadProgress] = useState(0);
   const [error, setError] = useState<string | null>(null);
@@ -80,48 +79,19 @@ export function SettingsContainer({ provider, onProviderChange }: SettingsContai
   };
 
   return (
-    <>
-      <button
-        onClick={() => {
-          Logger.infoService(`[SettingsContainer] Settings button clicked`);
-          setIsModalOpen(true);
-        }}
-        style={{
-          background: 'none',
-          border: 'none',
-          cursor: 'pointer',
-          padding: '8px',
-          color: 'white',
-          fontWeight: 'bold',
-          minWidth: '40px',
-          minHeight: '40px',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          borderRadius: '6px',
-          transition: 'background-color 0.2s ease',
-        }}
-        onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.1)')}
-        onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = 'transparent')}
-        title="Settings"
-      >
-        <FiSettings size={20} />
-      </button>
-
-      <Modal isOpen={isModalOpen} title="" onClose={() => {
+    <SettingsModalView
+      isOpen={isModalOpen}
+      onClose={() => {
         Logger.infoService(`[SettingsContainer] Closing settings modal`);
-        setIsModalOpen(false);
-      }}>
-        <SettingsView
-          currentProvider={provider}
-          onProviderChange={onProviderChange}
-          models={models as any}
-          downloadingModel={downloadingModel}
-          downloadProgress={downloadProgress}
-          onDownload={handleDownloadModel}
-          error={error}
-        />
-      </Modal>
-    </>
+        onModalClose();
+      }}
+      currentProvider={provider}
+      onProviderChange={onProviderChange}
+      models={models as any}
+      downloadingModel={downloadingModel}
+      downloadProgress={downloadProgress}
+      onDownload={handleDownloadModel}
+      error={error}
+    />
   );
 }

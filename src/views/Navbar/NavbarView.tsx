@@ -1,5 +1,6 @@
 import './NavbarView.css';
 import { useState } from 'react';
+import { SettingsButton } from '../../ui/SettingsButton';
 import { SettingsContainer } from '../../components/SettingsContainer';
 
 interface NavbarViewProps {
@@ -9,6 +10,7 @@ interface NavbarViewProps {
 
 export function NavbarView({ currentProvider, onProviderChange }: NavbarViewProps) {
   const [selectedProvider, setSelectedProvider] = useState(currentProvider);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleProviderChange = (provider: 'transformers' | 'webllm') => {
     setSelectedProvider(provider);
@@ -38,9 +40,12 @@ export function NavbarView({ currentProvider, onProviderChange }: NavbarViewProp
         </div>
 
         <div className="navbar-actions">
+          <SettingsButton onClick={() => setIsModalOpen(true)} />
           <SettingsContainer
             provider={selectedProvider}
             onProviderChange={handleProviderChange}
+            isModalOpen={isModalOpen}
+            onModalClose={() => setIsModalOpen(false)}
           />
         </div>
       </div>

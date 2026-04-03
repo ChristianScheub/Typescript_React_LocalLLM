@@ -1,5 +1,6 @@
 import './SettingsView.css';
 import { FiCheck, FiDownload, FiArrowRight } from 'react-icons/fi';
+import { featureFlag_Debug_View } from '../../config/featureFlags';
 
 interface Model {
   id: string;
@@ -69,37 +70,41 @@ export function SettingsView({
             )}
           </div>
 
-          <div className="engine-divider">
-            <span className="divider-text">
-              <FiArrowRight size={16} />
-            </span>
-          </div>
+          {featureFlag_Debug_View && (
+            <>
+              <div className="engine-divider">
+                <span className="divider-text">
+                  <FiArrowRight size={16} />
+                </span>
+              </div>
 
-          <div
-            className={`engine-card ${currentProvider === 'transformers' ? 'active' : ''}`}
-            onClick={() => onProviderChange('transformers')}
-          >
-            {currentProvider === 'transformers' && (
-              <div className="card-badge">
-                <FiCheck size={20} />
+              <div
+                className={`engine-card ${currentProvider === 'transformers' ? 'active' : ''}`}
+                onClick={() => onProviderChange('transformers')}
+              >
+                {currentProvider === 'transformers' && (
+                  <div className="card-badge">
+                    <FiCheck size={20} />
+                  </div>
+                )}
+                <div className="engine-icon">
+                  <div className="icon-circle">⚙</div>
+                </div>
+                <h3>Transformers v3 - NOT WORKING</h3>
+                <p className="engine-description">
+                  Max compatibility runtime using WASM kernels. Ideal for legacy systems and diverse environments.
+                </p>
+                {currentProvider === 'transformers' && (
+                  <span className="active-badge">ACTIVE</span>
+                )}
+                {currentProvider === 'transformers' && (
+                  <div className="recommendation">
+                    CPU-Optimized Fallback
+                  </div>
+                )}
               </div>
-            )}
-            <div className="engine-icon">
-              <div className="icon-circle">⚙</div>
-            </div>
-            <h3>Transformers v3 - NOT WORKING</h3>
-            <p className="engine-description">
-              Max compatibility runtime using WASM kernels. Ideal for legacy systems and diverse environments.
-            </p>
-            {currentProvider === 'transformers' && (
-              <span className="active-badge">ACTIVE</span>
-            )}
-            {currentProvider === 'transformers' && (
-              <div className="recommendation">
-                CPU-Optimized Fallback
-              </div>
-            )}
-          </div>
+            </>
+          )}
         </div>
       </section>
 

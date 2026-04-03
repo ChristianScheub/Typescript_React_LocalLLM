@@ -285,7 +285,56 @@ if (fs.existsSync(servicesDir)) {
       if (pattern.test(content)) {
         violations.push(
           `Layer Boundary Check (services): File '${relFile}' imports from forbidden layer '${label}'. ` +
-          `Services must not depend on UI layers.`
+          `Services are pure business logic and must not know about UI, components, or views.`
+        );
+      }
+    });
+  });
+}
+
+// components/ (containers) must not import from ui/
+// Containers are "directors" - they should only render Views or other Containers, never UI components directly
+const FORBIDDEN_IMPORTS_IN_COMPONENTS = [
+  { pattern: /from\s+['"][^'"]*\/ui\//, label: 'ui/' },
+];
+
+if (fs.existsSync(componentsDir)) {
+  walkDir(componentsDir, (file) => {
+    if (!file.endsWith('.ts') && !file.endsWith('.tsx')) return;
+
+    const relFile = path.relative(projectRoot, file).split(path.sep).join('/');
+    const content = fs.readFileSync(file, 'utf8');
+
+    FORBIDDEN_IMPORTS_IN_COMPONENTS.forEach(({ pattern, label }) => {
+      if (pattern.test(content)) {
+        violations.push(
+          `Layer Boundary Check (containers): File '${relFile}' imports from forbidden layer '${label}'. ` +
+          `Containers must not directly import UI components. All UI must flow through Views to maintain clean architecture.`
+        );
+      }
+    });
+  });
+}
+
+// ui/ must not import from services/, components/, or views/
+const FORBIDDEN_IMPORTS_IN_UI = [
+  { pattern: /from\s+['"][^'"]*\/services\//, label: 'services/' },
+  { pattern: /from\s+['"][^'"]*\/components\//, label: 'components/' },
+  { pattern: /from\s+['"][^'"]*\/views\//, label: 'views/' },
+];
+
+if (fs.existsSync(uiDir)) {
+  walkDir(uiDir, (file) => {
+    if (!file.endsWith('.ts') && !file.endsWith('.tsx')) return;
+
+    const relFile = path.relative(projectRoot, file).split(path.sep).join('/');
+    const content = fs.readFileSync(file, 'utf8');
+
+    FORBIDDEN_IMPORTS_IN_UI.forEach(({ pattern, label }) => {
+      if (pattern.test(content)) {
+        violations.push(
+          `Layer Boundary Check (ui): File '${relFile}' imports from forbidden layer '${label}'. ` +
+          `UI components are pure presentational and must not depend on services, containers, or views.`
         );
       }
     });
@@ -375,6 +424,62 @@ walkDir(srcDir, (file) => {
 if (consoleLogViolations.length > 0) {
   violations.push(...consoleLogViolations);
 }
+
+// 11. Style Tags & Div/P/Span Tag Count Check
+console.log('Checking for style tags and div/p/span tag limits...');
+
+const STYLE_AND_TAG_CHECK_FOLDERS = ['ui', 'components'];
+
+STYLE_AND_TAG_CHECK_FOLDERS.forEach((folderName) => {
+  const folderPath = path.join(srcDir, folderName);
+  if (!fs.existsSync(folderPath)) return;
+
+  walkDir(folderPath, (file) => {
+    if (!file.endsWith('.tsx')) return;
+
+    const relFile = path.relative(projectRoot, file).split(path.sep).join('/');
+    const content = fs.readFileSync(file, 'utf8');
+    const lines = content.split('\n');
+
+    // 1. Check for style tags (aber nicht className)
+    if (/<style[\s>]/.test(content)) {
+      violations.push(
+        `Style Tags Check (${folderName}): File '${relFile}' contains <style> tags. ` +
+        `Use CSS classes instead of inline style tags.`
+      );
+    }
+
+    // 2. Check for forbidden input and button tags in Container files
+    if (file.endsWith('Container.tsx')) {
+      if (/<input[\s>]/i.test(content)) {
+        violations.push(
+          `Input Tag Check (containers): File '${relFile}' contains <input> tags. ` +
+          `Input fields must be in UI components, not in Container components.`
+        );
+      }
+      if (/<button[\s>]/i.test(content)) {
+        violations.push(
+          `Button Tag Check (containers): File '${relFile}' contains <button> tags. ` +
+          `Buttons must be in UI components, not in Container components.`
+        );
+      }
+    }
+
+    // 3. Check div, p, span, label, h1, h2 tag count
+    const tagMatches = content.match(/<(div|p|span|label|h1|h2)[\s>]/g) || [];
+    const tagCount = tagMatches.length;
+    const lineCount = lines.length;
+    const maxAllowed = Math.max(5, Math.ceil(lineCount * 0.1));
+
+    if (tagCount > maxAllowed) {
+      violations.push(
+        `Tag Count Check (${folderName}): File '${relFile}' has ${tagCount} div/p/span/label/h1/h2 tags, ` +
+        `but maximum allowed is ${maxAllowed} (10 or 10% of ${lineCount} lines). ` +
+        `Consider breaking this component into smaller sub-components or even better stupid UI components with views.`
+      );
+    }
+  });
+});
 
 // Output results
 if (violations.length > 0) {
