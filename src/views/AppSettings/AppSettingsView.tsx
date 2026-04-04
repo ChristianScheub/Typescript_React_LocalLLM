@@ -1,121 +1,177 @@
 import { FiTrash2, FiBook, FiGithub, FiCheckCircle } from 'react-icons/fi';
 import { useTranslation } from 'react-i18next';
 import { Modal } from '@ui/Modal';
-import { SettingsOptionItem } from '@ui/SettingsOptionItem';
+import { MobileSettingItem } from '@ui/mobileOnly/MobileSettingItem';
 import Datenschutz from '../../legal/datenschutz';
 import Impressum from '../../legal/impressum';
 import UsedLibsListContainer from '../../legal/usedLibs/container_usedLibList';
 import './AppSettingsView.css';
+import '../mobileOnly/MobileSettings/MobileSettingsView.css';
 
 interface AppSettingsViewProps {
-  expandedOptions: Set<string>;
   showConfirmDelete: string | null;
   successMessage: string | null;
   isDeleting: boolean;
-  onToggleExpand: (id: string) => void;
-  onToggleConfirm: (id: string | null) => void;
   onDeleteAllData: () => void;
   onDeleteModels: () => void;
-  onCloseSuccess: () => void;
+  expandedInfo: string | null;
+  onInfoOpen: (info: string) => void;
+  onInfoClose: () => void;
+  onConfirmClose: () => void;
 }
 
 export function AppSettingsView({
-  expandedOptions,
   showConfirmDelete,
   successMessage,
   isDeleting,
-  onToggleExpand,
-  onToggleConfirm,
   onDeleteAllData,
   onDeleteModels,
-  onCloseSuccess,
+  expandedInfo,
+  onInfoOpen,
+  onInfoClose,
+  onConfirmClose,
 }: AppSettingsViewProps) {
   const { t } = useTranslation();
 
+  const dangerSections = [
+    {
+      id: 'delete-all',
+      title: t('settings.deleteAllData'),
+      icon: <FiTrash2 size={20} />,
+      description: t('settings.deleteAllDataDescription'),
+      action: () => showConfirmDelete !== 'delete-all' && onInfoOpen('delete-all'),
+      isDanger: true
+    },
+    {
+      id: 'delete-models',
+      title: t('settings.deleteModels'),
+      icon: <FiTrash2 size={20} />,
+      description: t('settings.deleteModelsDescription'),
+      action: () => showConfirmDelete !== 'delete-models' && onInfoOpen('delete-models'),
+      isDanger: true
+    },
+  ];
+
+  const infoSections = [
+    {
+      id: 'privacy',
+      title: t('settings.privacy'),
+      icon: <FiBook size={20} />,
+      description: t('settings.privacyDescription'),
+      action: () => onInfoOpen('privacy'),
+      isDanger: false
+    },
+    {
+      id: 'impressum',
+      title: t('settings.impressum'),
+      icon: <FiBook size={20} />,
+      description: t('settings.impressumDescription'),
+      action: () => onInfoOpen('impressum'),
+      isDanger: false
+    },
+    {
+      id: 'libraries',
+      title: t('settings.libraries'),
+      icon: <FiBook size={20} />,
+      description: t('settings.librariesDescription'),
+      action: () => onInfoOpen('libraries'),
+      isDanger: false
+    },
+    {
+      id: 'github',
+      title: t('settings.github'),
+      icon: <FiGithub size={20} />,
+      description: t('settings.githubDescription'),
+      action: () => window.open(t('settings.githubLink'), '_blank'),
+      isDanger: false
+    }
+  ];
+
   return (
-    <>
-      <div className="app-settings-view">
-        <div className="settings-header">
-          <h2>{t('settings.appSettings')}</h2>
-          <p className="settings-description">{t('settings.appSettingsDescription')}</p>
+    <div className="mobile-settings-view">
+      <div className="settings-header">
+        <h2>{t('settings.appSettings')}</h2>
+      </div>
+
+      <div className="settings-content">
+        <div className="danger-section">
+          {dangerSections.map((section) => (
+            <MobileSettingItem
+              key={section.id}
+              icon={section.icon}
+              title={section.title}
+              description={section.description}
+              isDanger={section.isDanger}
+              onClick={section.action}
+            />
+          ))}
         </div>
 
-        <div className="settings-options">
-          <SettingsOptionItem
-            id="delete-all-data"
-            icon={<FiTrash2 size={24} />}
-            titleKey="settings.deleteAllData"
-            descriptionKey="settings.deleteAllDataDescription"
-            isDangerous={true}
-            showConfirm={showConfirmDelete === 'delete-all-data'}
-            onToggleConfirm={onToggleConfirm}
-            onAction={onDeleteAllData}
-          />
-
-          <SettingsOptionItem
-            id="delete-models"
-            icon={<FiTrash2 size={24} />}
-            titleKey="settings.deleteModels"
-            descriptionKey="settings.deleteModelsDescription"
-            isDangerous={true}
-            showConfirm={showConfirmDelete === 'delete-models'}
-            onToggleConfirm={onToggleConfirm}
-            onAction={onDeleteModels}
-          />
-
-          <SettingsOptionItem
-            id="privacy"
-            icon={<FiBook size={24} />}
-            titleKey="settings.privacy"
-            descriptionKey="settings.privacyDescription"
-            isExpanded={expandedOptions.has('privacy')}
-            onToggleExpand={onToggleExpand}
-          >
-            <Datenschutz />
-          </SettingsOptionItem>
-
-          <SettingsOptionItem
-            id="impressum"
-            icon={<FiBook size={24} />}
-            titleKey="settings.impressum"
-            descriptionKey="settings.impressumDescription"
-            isExpanded={expandedOptions.has('impressum')}
-            onToggleExpand={onToggleExpand}
-          >
-            <Impressum />
-          </SettingsOptionItem>
-
-          <SettingsOptionItem
-            id="libraries"
-            icon={<FiBook size={24} />}
-            titleKey="settings.libraries"
-            descriptionKey="settings.librariesDescription"
-            isExpanded={expandedOptions.has('libraries')}
-            onToggleExpand={onToggleExpand}
-          >
-            <UsedLibsListContainer />
-          </SettingsOptionItem>
-
-          <SettingsOptionItem
-            id="github"
-            icon={<FiGithub size={24} />}
-            titleKey="settings.github"
-            descriptionKey="settings.githubDescription"
-            hasLink={true}
-            link={"https://github.com/ChristianScheub/Typescript_React_LocalLLM"}
-          />
+        <div className="info-section">
+          {infoSections.map((section) => (
+            <MobileSettingItem
+              key={section.id}
+              icon={section.icon}
+              title={section.title}
+              description={section.description}
+              isDanger={section.isDanger}
+              onClick={section.action}
+            />
+          ))}
         </div>
       </div>
 
       {successMessage && (
-        <Modal isOpen={true} title={t('common.success')} onClose={onCloseSuccess}>
-          <div className="settings-success-content">
-            <FiCheckCircle size={48} className="settings-success-icon" />
+        <Modal isOpen={true} title={t('common.success')} onClose={onConfirmClose}>
+          <div className="confirm-dialog">
+            <FiCheckCircle size={48} style={{ color: '#10b981', marginBottom: '16px' }} />
             <h3>{successMessage}</h3>
-            {isDeleting && <p className="settings-reloading">{t('settings.reloadingPage')}</p>}
+            {isDeleting && <p style={{ marginTop: '16px', color: '#6b7280' }}>{t('settings.reloadingPage')}</p>}
           </div>
         </Modal>
       )}
-    </>
+
+      {showConfirmDelete && (
+        <Modal isOpen={true} title={t('settings.confirm')} onClose={onConfirmClose}>
+          <div className="confirm-dialog">
+            <h3>
+              {showConfirmDelete === 'delete-all' 
+                ? t('settings.confirmDeleteAllData')
+                : t('settings.confirmDeleteModels')}
+            </h3>
+            <p>
+              {showConfirmDelete === 'delete-all'
+                ? t('settings.confirmDeleteAllDataDesc')
+                : t('settings.confirmDeleteModelsDesc')}
+            </p>
+            <div className="dialog-actions">
+              <button 
+                className="btn-cancel"
+                onClick={onConfirmClose}
+              >
+                {t('common.cancel')}
+              </button>
+              <button 
+                className="btn-confirm"
+                onClick={showConfirmDelete === 'delete-all' ? onDeleteAllData : onDeleteModels}
+                disabled={isDeleting}
+              >
+                {isDeleting ? t('common.deleting') : t('common.delete')}
+              </button>
+            </div>
+          </div>
+        </Modal>
+      )}
+
+      {expandedInfo && expandedInfo !== 'delete-all' && expandedInfo !== 'delete-models' && (
+        <Modal isOpen={true} title={expandedInfo === 'privacy' ? t('settings.privacy') : expandedInfo === 'impressum' ? t('settings.impressum') : t('settings.libraries')} onClose={onInfoClose}>
+          <div className="info-modal">
+            {expandedInfo === 'privacy' && <Datenschutz />}
+            {expandedInfo === 'impressum' && <Impressum />}
+            {expandedInfo === 'libraries' && <UsedLibsListContainer />}
+          </div>
+        </Modal>
+      )}
+    </div>
   );
 }

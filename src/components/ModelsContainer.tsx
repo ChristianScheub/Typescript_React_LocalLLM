@@ -3,6 +3,7 @@ import { modelService } from '@services/model';
 import { modelStateManager } from '@services/modelStateManager';
 import Logger from '@services/logger';
 import { SettingsView } from '@views/settings/SettingsView';
+import { useDevicePlatform } from '@hooks/useDevicePlatform';
 
 interface ModelsContainerProps {
   provider: 'transformers' | 'webllm';
@@ -10,6 +11,7 @@ interface ModelsContainerProps {
 }
 
 export function ModelsContainer({ provider, onProviderChange }: ModelsContainerProps) {
+  const { isMobile } = useDevicePlatform();
   const [downloadingModel, setDownloadingModel] = useState<string | null>(null);
   const [downloadProgress, setDownloadProgress] = useState(0);
   const [error, setError] = useState<string | null>(null);
@@ -68,7 +70,6 @@ export function ModelsContainer({ provider, onProviderChange }: ModelsContainerP
       
       Logger.infoService(`[ModelsContainer.handleDownloadModel] Download complete for model: ${modelId}`);
       Logger.infoService(`[ModelsContainer.handleDownloadModel] Marking model as loaded in state: ${modelId}`);
-      // Mark model as loaded in the global state
       modelStateManager.markModelAsLoaded(provider, modelId);
       Logger.infoService(`[ModelsContainer.handleDownloadModel] Model marked as loaded successfully`);
     } catch (err) {
@@ -82,6 +83,22 @@ export function ModelsContainer({ provider, onProviderChange }: ModelsContainerP
       setStatusMessage(null);
     }
   };
+
+  if (isMobile) {
+    return (
+      <SettingsView
+        currentProvider={provider}
+        onProviderChange={onProviderChange}
+        models={models as { id: string; name: string; description: string; size: string; downloaded: boolean }[]}
+        downloadingModel={downloadingModel}
+        downloadProgress={downloadProgress}
+        onDownload={handleDownloadModel}
+        error={error}
+        statusMessage={statusMessage}
+        isMobile={true}
+      />
+    );
+  }
 
   return (
     <SettingsView

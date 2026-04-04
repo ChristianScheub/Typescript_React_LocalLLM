@@ -1,7 +1,10 @@
 import './SettingsView.css';
+import '../mobileOnly/MobileModels/MobileModelsView.css';
 import { FiCheck, FiDownload, FiArrowRight } from 'react-icons/fi';
 import { useTranslation } from 'react-i18next';
 import { featureFlag_Debug_View } from '@config/featureFlags';
+import { MobileModelCard } from '@ui/mobileOnly/MobileModelCard';
+import { MobileEngineSelector } from '@ui/mobileOnly/MobileEngineSelector';
 
 interface Model {
   id: string;
@@ -20,6 +23,7 @@ interface SettingsViewProps {
   onDownload: (modelId: string) => void;
   error: string | null;
   statusMessage?: string | null;
+  isMobile?: boolean;
 }
 
 export function SettingsView({
@@ -31,8 +35,51 @@ export function SettingsView({
   onDownload,
   error,
   statusMessage,
+  isMobile = false,
 }: SettingsViewProps) {
   const { t } = useTranslation();
+
+  const handleToggleProvider = () => {
+    onProviderChange(currentProvider === 'webllm' ? 'transformers' : 'webllm');
+  };
+
+  if (isMobile) {
+    return (
+      <div className="mobile-models-view">
+        <div className="models-header">
+          <h2>{t('models.engineArchitecture')}</h2>
+          <p>{t('models.selectRuntime')}</p>
+        </div>
+
+        <MobileEngineSelector 
+          currentProvider={currentProvider}
+          onToggle={handleToggleProvider}
+        />
+
+        <div className="models-section">
+          <h3>{t('models.availableModels')}</h3>
+          <p className="models-subtitle">{t('models.modelsSubtitle')}</p>
+
+          <div className="models-list">
+            {models.map((model) => (
+              <MobileModelCard
+                key={model.id}
+                name={model.name}
+                description={model.description}
+                size={model.size}
+                isDownloaded={model.downloaded}
+                isDownloading={downloadingModel === model.id}
+                downloadProgress={downloadProgress}
+                statusMessage={statusMessage || undefined}
+                error={error || undefined}
+                onDownload={() => onDownload(model.id)}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="settings-view">

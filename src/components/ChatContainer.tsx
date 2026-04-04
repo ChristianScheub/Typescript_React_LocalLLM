@@ -3,20 +3,27 @@ import type { ChatMessage as ChatMessageType, ChatSettings } from '@types';
 import { modelService } from '@services/model';
 import { modelStateManager } from '@services/modelStateManager';
 import Logger from '@services/logger';
+import { useLogCounts } from '@hooks/useLogCounts';
+import { useDevicePlatform } from '@hooks/useDevicePlatform';
 import { ChatView } from '@views/Chat/ChatView';
+import { MobileChatView } from '@views/mobileOnly/MobileChat/MobileChatView';
 
 interface ChatContainerProps {
   provider: 'transformers' | 'webllm';
   chatSettings: ChatSettings;
+  onSettingsChange?: (settings: ChatSettings) => void;
 }
 
-export function ChatContainer({ provider, chatSettings }: ChatContainerProps) {
+export function ChatContainer({ provider, chatSettings, onSettingsChange }: ChatContainerProps) {
+  const { isMobile } = useDevicePlatform();
   const [messages, setMessages] = useState<ChatMessageType[]>([]);
   const [inputValue, setInputValue] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [currentModel, setCurrentModel] = useState<string | null>(null);
   const [isModelLoaded, setIsModelLoaded] = useState(false);
+  const [showSettings, setShowSettings] = useState(false);
+  const logCounts = useLogCounts();
 
   useEffect(() => {
     Logger.infoService(`[ChatContainer] Initializing for provider: ${provider}`);
@@ -26,7 +33,6 @@ export function ChatContainer({ provider, chatSettings }: ChatContainerProps) {
       const loaded = modelStateManager.getLoadedModels(provider);
       Logger.infoService(`[ChatContainer] Loaded models: ${loaded.size > 0 ? Array.from(loaded).join(', ') : 'none'}`);
       
-      // Check if any model is loaded
       if (loaded.size > 0) {
         const firstLoadedModel = Array.from(loaded)[0];
         Logger.infoService(`[ChatContainer] Setting current model to: ${firstLoadedModel}`);
@@ -96,6 +102,28 @@ export function ChatContainer({ provider, chatSettings }: ChatContainerProps) {
       setIsLoading(false);
     }
   };
+
+  if (isMobile && onSettingsChange) {
+    return (
+      <div className="mobile-chat-container">
+        <MobileChatView
+          messages={messages}
+          inputValue={inputValue}
+          onInputChange={setInputValue}
+          onSendMessage={handleSendMessage}
+          isLoading={isLoading}
+          error={error}
+          currentModel={currentModel}
+          isModelLoaded={isModelLoaded}
+          chatSettings={chatSettings}
+          onSettingsChange={onSettingsChange}
+          showSettings={showSettings}
+          onShowSettings={setShowSettings}
+          logCounts={logCounts}
+        />
+      </div>
+    );
+  }
 
   return (
     <ChatView

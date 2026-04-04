@@ -2,30 +2,14 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { deletionService } from '@services/deletion';
 import Logger from '@services/logger';
-import { Modal } from '@ui/Modal';
 import { AppSettingsView } from '@views/AppSettings/AppSettingsView';
 
-interface SettingsContainerProps {
-  isModalOpen?: boolean;
-  onModalClose?: () => void;
-}
-
-export function SettingsContainer({ isModalOpen = false, onModalClose }: SettingsContainerProps) {
+export function SettingsContainer() {
   const { t } = useTranslation();
   const [showConfirmDelete, setShowConfirmDelete] = useState<string | null>(null);
-  const [expandedOptions, setExpandedOptions] = useState<Set<string>>(new Set());
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
   const [isDeleting, setIsDeleting] = useState(false);
-
-  const toggleExpanded = (id: string) => {
-    const newExpanded = new Set(expandedOptions);
-    if (newExpanded.has(id)) {
-      newExpanded.delete(id);
-    } else {
-      newExpanded.add(id);
-    }
-    setExpandedOptions(newExpanded);
-  };
+  const [expandedInfo, setExpandedInfo] = useState<string | null>(null);
 
   const handleDeleteAllData = async () => {
     setIsDeleting(true);
@@ -67,18 +51,16 @@ export function SettingsContainer({ isModalOpen = false, onModalClose }: Setting
   };
 
   return (
-    <Modal isOpen={isModalOpen} title={t('settings.appSettings')} onClose={onModalClose || (() => {})}>
-      <AppSettingsView
-        expandedOptions={expandedOptions}
-        showConfirmDelete={showConfirmDelete}
-        successMessage={successMessage}
-        isDeleting={isDeleting}
-        onToggleExpand={toggleExpanded}
-        onToggleConfirm={setShowConfirmDelete}
-        onDeleteAllData={handleDeleteAllData}
-        onDeleteModels={handleDeleteModels}
-        onCloseSuccess={() => setSuccessMessage(null)}
-      />
-    </Modal>
+    <AppSettingsView
+      showConfirmDelete={showConfirmDelete}
+      successMessage={successMessage}
+      isDeleting={isDeleting}
+      onDeleteAllData={handleDeleteAllData}
+      onDeleteModels={handleDeleteModels}
+      expandedInfo={expandedInfo}
+      onInfoOpen={setExpandedInfo}
+      onInfoClose={() => setExpandedInfo(null)}
+      onConfirmClose={() => setShowConfirmDelete(null)}
+    />
   );
 }

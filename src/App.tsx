@@ -8,10 +8,7 @@ import { SidebarContainer } from '@components/SidebarContainer';
 import { ContextExplorerContainer } from '@components/ContextExplorerContainer';
 import { ModelsContainer } from '@components/ModelsContainer';
 import { SettingsContainer } from '@components/SettingsContainer';
-import { MobileChatContainer } from '@components/mobileOnly/MobileChatContainer';
-import { MobileModelsContainer } from '@components/mobileOnly/MobileModelsContainer';
-import { MobileSettingsContainer } from '@components/mobileOnly/MobileSettingsContainer';
-import { MobileBottomNav } from '@ui/mobileOnly/MobileBottomNav';
+import { SidebarNavigation } from '@ui/SidebarNavigation';
 import './App.css';
 
 function App() {
@@ -46,16 +43,16 @@ function App() {
       <div className="app-mobile">
         <main className="mobile-main">
           {currentView === 'chat' && (
-            <MobileChatContainer key={provider} provider={provider} chatSettings={chatSettings} onSettingsChange={handleSettingsChange} />
+            <ChatContainer key={provider} provider={provider} chatSettings={chatSettings} onSettingsChange={handleSettingsChange} />
           )}
           {currentView === 'models' && (
-            <MobileModelsContainer provider={provider} onProviderChange={handleProviderChange} />
+            <ModelsContainer provider={provider} onProviderChange={handleProviderChange} />
           )}
           {currentView === 'info' && (
-            <MobileSettingsContainer />
+            <SettingsContainer />
           )}
         </main>
-        <MobileBottomNav currentView={currentView} onViewChange={setCurrentView} />
+        <SidebarNavigation currentView={currentView} onViewChange={setCurrentView} isMobile={true} />
       </div>
     );
   }
@@ -76,10 +73,7 @@ function App() {
           <ModelsContainer provider={provider} onProviderChange={handleProviderChange} />
         )}
         {currentView === 'info' && (
-          <SettingsContainer 
-            isModalOpen={true}
-            onModalClose={() => setCurrentView('chat')}
-          />
+          <SettingsContainer />
         )}
       </main>
 

@@ -48,6 +48,27 @@ export class WebLLMModels {
         size: '8.9 GB',
         downloaded: false,
       },
+      {
+        id: 'TinyLlama-1.1B-Chat-v1.0-q4f16_1-MLC',
+        name: 'TinyLlama Chat 1.1B',
+        size: '~800MB',
+        description: 'Kleines, schnelles Chat-Modell für lokale Verwendung',
+        downloaded: false,
+      },
+      {
+        id: 'Llama-2-7b-chat-hf-q4f16_1-MLC',
+        name: 'Llama 2 7B Chat',
+        size: '~4GB',
+        description: 'Leistungsstarkes Chat-Modell (mehr Speicher erforderlich)',
+        downloaded: false
+      },
+      {
+        id: 'Phi-3-mini-4k-instruct-q4f16_1-MLC',
+        name: 'Phi-3 Mini 4K',
+        size: '~2GB',
+        description: 'Microsoft Phi-3 Modell für Instruction Following',
+        downloaded: false
+      }
     ];
   }
 
