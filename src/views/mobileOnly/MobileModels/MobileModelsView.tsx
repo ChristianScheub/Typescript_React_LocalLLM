@@ -1,5 +1,6 @@
 import { MobileModelCard } from '@ui/mobileOnly/MobileModelCard';
 import { MobileEngineSelector } from '@ui/mobileOnly/MobileEngineSelector';
+import { useTranslation } from 'react-i18next';
 import './MobileModelsView.css';
 
 interface Model {
@@ -31,11 +32,13 @@ export function MobileModelsView({
   onDownload,
   onToggleProvider,
 }: MobileModelsViewProps) {
+  const { t } = useTranslation();
+
   return (
     <div className="mobile-models-view">
       <div className="models-header">
-        <h2>Engine-Architektur</h2>
-        <p>Wählen Sie die Laufzeitumgebung, die am besten zu Ihrer Hardware passt</p>
+        <h2>{t('models.engineArchitecture')}</h2>
+        <p>{t('models.selectRuntime')}</p>
       </div>
 
       <MobileEngineSelector 
@@ -44,8 +47,8 @@ export function MobileModelsView({
       />
 
       <div className="models-section">
-        <h3>Verfügbare Modelle</h3>
-        <p className="models-subtitle">Bibliothek von Gewichten, die mit Ihrer aktuellen Engine kompatibel sind.</p>
+        <h3>{t('models.availableModels')}</h3>
+        <p className="models-subtitle">{t('models.modelsSubtitle')}</p>
 
         <div className="models-list">
           {models.map((model) => (

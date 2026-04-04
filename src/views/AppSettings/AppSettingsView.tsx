@@ -108,7 +108,7 @@ export function AppSettingsView({
       </div>
 
       {successMessage && (
-        <Modal isOpen={true} title="✅ Success" onClose={onCloseSuccess}>
+        <Modal isOpen={true} title={t('common.success')} onClose={onCloseSuccess}>
           <div className="settings-success-content">
             <FiCheckCircle size={48} className="settings-success-icon" />
             <h3>{successMessage}</h3>

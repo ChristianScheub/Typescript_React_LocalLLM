@@ -62,13 +62,13 @@ export function MobileChatView({
         {messages.length === 0 ? (
           <div className="empty-state">
             <div className="empty-icon">✨</div>
-            <h1>{t('chat.empty.title', 'Welcome to Chris AI')}</h1>
+            <h1>{t('chat.welcome')}</h1>
             {!isModelLoaded ? (
               <p className="empty-subtitle empty-warning">
-                {t('chat.empty.loadModel', 'Please load an AI Model first by clicking the Models tab')}
+                {t('chat.loadModelWarning')}
               </p>
             ) : (
-              <p className="empty-subtitle">{t('chat.empty.subtitle', 'Start a conversation with your AI assistant')}</p>
+              <p className="empty-subtitle">{t('chat.startConversation')}</p>
             )}
           </div>
         ) : (
@@ -96,7 +96,7 @@ export function MobileChatView({
           value={inputValue}
           onChange={onInputChange}
           onKeyDown={handleKeyDown}
-          placeholder={t('chat.input.placeholder', 'Ask Chris...')}
+          placeholder={t('chat.placeholder')}
           disabled={!isModelLoaded || isLoading}
           className="mobile-chat-input"
         />

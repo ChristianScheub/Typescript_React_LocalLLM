@@ -1,4 +1,5 @@
 import { featureFlag_Debug_View } from '@config/featureFlags';
+import { useTranslation } from 'react-i18next';
 import './MobileEngineSelector.css';
 
 interface MobileEngineSelectorProps {
@@ -7,15 +8,16 @@ interface MobileEngineSelectorProps {
 }
 
 export function MobileEngineSelector({ currentProvider, onToggle }: MobileEngineSelectorProps) {
+  const { t } = useTranslation();
   const isWebllm = currentProvider === 'webllm';
 
   return (
     <div className="engine-selector">
       <div className={`engine-option ${isWebllm ? 'active' : ''}`}>
         <span className="engine-icon">⚡</span>
-        <h3>Web-LLM</h3>
-        <p>WebGPU-Beschleunigung für neuronale Inferenzen</p>
-        {isWebllm && <span className="active-badge">AKTIV</span>}
+        <h3>{t('models.webllm')}</h3>
+        <p>{t('models.webllmDescription')}</p>
+        {isWebllm && <span className="active-badge">{t('models.active')}</span>}
       </div>
 
       {featureFlag_Debug_View && (
@@ -23,7 +25,7 @@ export function MobileEngineSelector({ currentProvider, onToggle }: MobileEngine
           className="toggle-provider-btn"
           onClick={onToggle}
         >
-          Zu {isWebllm ? 'Transformers' : 'Web-LLM'} wechseln
+          {t('models.switchTo', { engine: isWebllm ? 'Transformers' : 'Web-LLM' })}
         </button>
       )}
     </div>

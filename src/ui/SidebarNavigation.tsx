@@ -1,4 +1,5 @@
 import { FiMessageSquare, FiDatabase, FiInfo } from 'react-icons/fi';
+import { useTranslation } from 'react-i18next';
 
 interface SidebarNavigationProps {
   currentView: 'chat' | 'models' | 'info';
@@ -6,6 +7,8 @@ interface SidebarNavigationProps {
 }
 
 export function SidebarNavigation({ currentView, onViewChange }: SidebarNavigationProps) {
+  const { t } = useTranslation();
+
   return (
     <nav className="sidebar-nav">
       <button
@@ -13,7 +16,7 @@ export function SidebarNavigation({ currentView, onViewChange }: SidebarNavigati
         onClick={() => onViewChange('chat')}
       >
         <FiMessageSquare size={20} />
-        <span>Chat</span>
+        <span>{t('sidebar.chat')}</span>
       </button>
 
       <button
@@ -21,7 +24,7 @@ export function SidebarNavigation({ currentView, onViewChange }: SidebarNavigati
         onClick={() => onViewChange('models')}
       >
         <FiDatabase size={20} />
-        <span>Models</span>
+        <span>{t('sidebar.models')}</span>
       </button>
 
       <button
@@ -29,7 +32,7 @@ export function SidebarNavigation({ currentView, onViewChange }: SidebarNavigati
         onClick={() => onViewChange('info')}
       >
         <FiInfo size={20} />
-        <span>App Info</span>
+        <span>{t('sidebar.appInfo')}</span>
       </button>
     </nav>
   );

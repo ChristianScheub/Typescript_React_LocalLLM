@@ -3,6 +3,7 @@ import { ChatSettingsContainer } from '@components/ChatSettingsContainer';
 import { NeuralOscillationChart } from '@ui/NeuralOscillationChart';
 import { LivePipelineLog } from '@ui/LivePipelineLog';
 import { FiX } from 'react-icons/fi';
+import { useTranslation } from 'react-i18next';
 import './MobileChatSettingsPanel.css';
 
 interface ActivityLog {
@@ -30,12 +31,14 @@ export function MobileChatSettingsPanel({
   logCounts,
   logsEndRef,
 }: MobileChatSettingsPanelProps) {
+  const { t } = useTranslation();
+
   return (
     <>
       <div className={`mobile-settings-overlay${isOpen ? ' open' : ''}`} onClick={onClose} />
       <div className={`mobile-chat-settings-panel${isOpen ? ' open' : ''}`}>
         <div className="panel-header">
-          <h2>Chat Settings</h2>
+          <h2>{t('chat.chatSettings')}</h2>
           <button className="close-button" onClick={onClose}>
             <FiX size={24} />
           </button>

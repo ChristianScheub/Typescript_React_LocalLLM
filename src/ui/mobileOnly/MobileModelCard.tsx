@@ -1,5 +1,6 @@
 import { MobileModelCardInfo } from './MobileModelCardInfo';
 import { MobileModelCardProgress } from './MobileModelCardProgress';
+import { useTranslation } from 'react-i18next';
 import './MobileModelCard.css';
 
 interface MobileModelCardProps {
@@ -25,6 +26,8 @@ export function MobileModelCard({
   error,
   onDownload,
 }: MobileModelCardProps) {
+  const { t } = useTranslation();
+
   return (
     <div className="model-card">
       <MobileModelCardInfo
@@ -46,7 +49,7 @@ export function MobileModelCard({
           onClick={onDownload}
           disabled={isDownloaded}
         >
-          {isDownloaded ? '✓ HERUNTERGELADEN' : '⬇ HERUNTERLADEN'}
+          {isDownloaded ? t('models.downloaded') : t('models.download')}
         </button>
       )}
     </div>

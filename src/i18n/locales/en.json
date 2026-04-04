@@ -94,6 +94,43 @@
     "expandLabel": "Expand",
     "collapseLabel": "Collapse"
   },
+  "sidebar": {
+    "chat": "Chat",
+    "models": "Models",
+    "appInfo": "App Info",
+    "logoText": "The Chris"
+  },
+  "chat": {
+    "activeModel": "ACTIVE MODEL",
+    "search": "Search",
+    "profile": "Profile",
+    "welcomeIcon": "✨",
+    "welcome": "Welcome to Chris AI",
+    "loadModelWarning": "Please load an AI Model first by clicking the Models tab",
+    "startConversation": "Start a conversation with your AI assistant",
+    "generatingResponse": "Generating response...",
+    "placeholder": "Ask Chris anything...",
+    "loadingChat": "Loading Chat...",
+    "pleaseWait": "Please wait while we set up your chat",
+    "chatSettings": "Chat Settings"
+  },
+  "models": {
+    "engineArchitecture": "Engine Architecture",
+    "selectRuntime": "Select the runtime environment that best fits your hardware",
+    "webllm": "Web-LLM",
+    "webllmDescription": "WebGPU acceleration for neural inference",
+    "active": "ACTIVE",
+    "switchTo": "Switch to {{engine}}",
+    "availableModels": "Available Models",
+    "modelsSubtitle": "Library of weights compatible with your current engine.",
+    "downloaded": "✓ DOWNLOADED",
+    "download": "⬇ DOWNLOAD",
+    "ready": "● READY",
+    "notLoaded": "○ NOT LOADED"
+  },
+  "common": {
+    "success": "✅ Success"
+  },
   "chatSettings": {
     "mode": "Mode",
     "modeOptions": {
@@ -110,5 +147,71 @@
     "maxTokensHint": "Maximum length of the answer",
     "presencePenalty": "Presence Penalty",
     "presencePenaltyHint": "Controls the repetition of topics"
-  }
+  },
+     "setting_Menu_OpenSourceModulList": "Used Libraries",
+  "setting_OpenSurceModulListTItle": "Used NPM-Libraries",
+  "setting_OpenSourceModulListClose": "Close",
+  "settings_Datenschutz": "Privacy",
+  "settings_Impressum": "Imprint",
+  "settings_GitHubRepo": "GitHub Repository",
+  "privacy.line_1": "<strong>This privacy policy is available in English and other languages.</strong>",
+
+"privacy.line_2": "<strong>For a different language, please simply change the language on your device.</strong> <br /> <br />",
+
+"privacy.line_3": "<strong>Website/App Privacy Policy</strong> <br /><br />",
+
+"privacy.line_4": "Thank you for visiting our website/app. We take the protection of your data very seriously. In this statement, we inform you about how we handle data in accordance with the General Data Protection Regulation (GDPR) and the California Consumer Privacy Act (CCPA). Our application follows a privacy-by-design approach: The actual data processing takes place locally on your device. <br /> <br />",
+
+"privacy.line_5": "<strong>1. Responsible entity</strong><br />",
+
+"privacy.line_6": "The entity responsible for processing your data and the publisher of this app is: <br />",
+
+"privacy.line_7": "Christian Scheub <br />",
+
+"privacy.line_8": "Ziegeläcker 56 <br />",
+
+"privacy.line_9": "71560 Sulzbach an der Murr <br /> <br />",
+
+"privacy.line_10": "Contact phone: +49 176 21674883 <br />",
+
+"privacy.line_11": "Managing Director/Owner: Christian Scheub <br />",
+
+"privacy.line_12": "If you have any questions or concerns regarding data protection, please feel free to contact us at christian.developer.app@gmail.com.",
+
+"privacy.line_13": "Link to legal notice: https://kind-dune-0dfff9903.4.azurestaticapps.net/imprint <br /> <br />",
+
+"privacy.line_14": "<strong>2. Local Data Storage (IndexedDB & LocalStorage)</strong><br />",
+
+"privacy.line_15": "This app stores data exclusively locally on your device. We use technologies such as IndexedDB and LocalStorage for this purpose. <br />",
+
+"privacy.line_16": "The following information is stored locally: <br />",
+
+"privacy.line_17": "- Your saved loyalty cards <br />- The selected display language <br />- The app's technical log level (for troubleshooting) <br /><br /> This data remains on your device and is not transferred to our servers. You can completely delete all locally stored data at any time within the app under 'Info' using the 'Delete all data' button. <br /> <br />",
+
+"privacy.line_18": "<strong>3. Use of AI Models (MLC-AI)</strong><br />",
+
+"privacy.line_19": "This app uses the NPM package <strong>mlc-ai</strong> to provide AI functions. When starting the app or using certain functions, the app downloads necessary AI model parameters from external repositories (e.g., Hugging Face or GitHub) on the internet. <br />",
+
+"privacy.line_20": "A connection to these platforms is briefly established, and for technical reasons, your IP address is transmitted to the respective provider. However, the actual calculation of the AI ​​responses (inference) takes place **locally on your device**. No text or private content you enter is sent to external servers or to us for analysis. <br /> <br />",
+
+"privacy.line_24": "<strong>4. Sale and Sharing of Data</strong><br />",
+
+"privacy.line_25": "We do not sell any of your data. Since we do not store any data centrally, your personal information is not shared with advertising networks or other third parties. <br /> <br />",
+
+"privacy.line_26": "<strong>5. Your Rights</strong><br />",
+
+"privacy.line_27": "In accordance with the GDPR, you have the right to access, rectify, or erase your data. Since all data (customer cards, language settings, logs) is stored locally on your device, you can exercise these rights directly by using the data deletion function in the app or by deleting the app data in your browser settings. <br /> <br />",
+
+"privacy.line_28": "<strong>6. Data Security</strong><br />",
+
+"privacy.line_29": "We rely on state-of-the-art web technologies to create a secure local environment for your data. By processing data locally, we minimize the risk of data interception during transmission. <br /> <br />",
+
+"privacy.line_30": "<strong>7. Definitions Used</strong><br />",
+
+"privacy.line_31": "Personal data is information relating to an identified or identifiable natural person. In this app, such data (such as the contents of loyalty cards) is processed strictly locally. <br /> <br />",
+
+"privacy.line_32": "<strong>8. Changes to this Privacy Policy</strong><br />",
+
+"privacy.line_33": "We reserve the right to amend this policy if technical processes change. Please check this policy regularly. <br />", 
+"privacy.line_34": "Date: April 4, 2026 <br /> <br />"
 }

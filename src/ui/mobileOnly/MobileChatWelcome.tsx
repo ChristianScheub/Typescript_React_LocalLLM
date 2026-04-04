@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import './MobileChatWelcome.css';
 
 interface MobileChatWelcomeProps {
@@ -5,11 +6,13 @@ interface MobileChatWelcomeProps {
 }
 
 export function MobileChatWelcome({ isLoading = false }: MobileChatWelcomeProps) {
+  const { t } = useTranslation();
+
   return (
     <div className="welcome-content">
       <div className="welcome-icon">{isLoading ? '⏳' : '✨'}</div>
-      <h1>{isLoading ? 'Loading Chat...' : 'Welcome to Chris AI'}</h1>
-      <p>{isLoading ? 'Please wait while we set up your chat' : 'Start a conversation with your AI assistant'}</p>
+      <h1>{isLoading ? t('chat.loadingChat') : t('chat.welcome')}</h1>
+      <p>{isLoading ? t('chat.pleaseWait') : t('chat.startConversation')}</p>
     </div>
   );
 }

@@ -5,6 +5,7 @@ import { Input } from '@ui/Input';
 import { Button } from '@ui/Button';
 import { Spinner } from '@ui/Spinner';
 import { FiArrowUp, FiSearch, FiUser } from 'react-icons/fi';
+import { useTranslation, Trans } from 'react-i18next';
 
 interface ChatViewProps {
   messages: ChatMessageType[];
@@ -28,6 +29,8 @@ export function ChatView({
   currentModel,
   isModelLoaded,
 }: ChatViewProps) {
+  const { t } = useTranslation();
+
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault();
@@ -39,7 +42,7 @@ export function ChatView({
     <div className="chat-container">
       <div className="chat-header">
         <div className="header-left">
-          <h2>ACTIVE MODEL</h2>
+          <h2>{t('chat.activeModel')}</h2>
           {currentModel && (
             <span className="active-model-badge">
               <span className="model-indicator"></span>
@@ -48,10 +51,10 @@ export function ChatView({
           )}
         </div>
         <div className="header-right">
-          <button className="header-icon-btn" title="Search">
+          <button className="header-icon-btn" title={t('chat.search')}>
             <FiSearch size={18} />
           </button>
-          <button className="header-icon-btn" title="Profile">
+          <button className="header-icon-btn" title={t('chat.profile')}>
             <FiUser size={18} />
           </button>
         </div>
@@ -63,13 +66,13 @@ export function ChatView({
             {messages.length === 0 ? (
               <div className="empty-state">
                 <div className="empty-icon">✨</div>
-                <p>Welcome to Chris AI</p>
+                <p>{t('chat.welcome')}</p>
                 {!isModelLoaded ? (
                   <p className="empty-subtitle empty-warning">
-                    Please load an AI Model first by clicking the <strong>Models</strong> tab
+                    <Trans i18nKey="chat.loadModelWarning" components={{ strong: <strong /> }} />
                   </p>
                 ) : (
-                  <p className="empty-subtitle">Start a conversation with your AI assistant</p>
+                  <p className="empty-subtitle">{t('chat.startConversation')}</p>
                 )}
               </div>
             ) : (
@@ -78,7 +81,7 @@ export function ChatView({
             {isLoading && (
               <div className="loading-state">
                 <Spinner size="medium" />
-                <p>Generating response...</p>
+                <p>{t('chat.generatingResponse')}</p>
               </div>
             )}
           </div>
@@ -90,7 +93,7 @@ export function ChatView({
               value={inputValue}
               onChange={onInputChange}
               onKeyDown={handleKeyDown}
-              placeholder="Ask Chris anything..."
+              placeholder={t('chat.placeholder')}
               disabled={!isModelLoaded || isLoading}
               className="chat-input"
             />

@@ -1,6 +1,7 @@
 import './SidebarView.css';
 import { SidebarHeader } from '@ui/SidebarHeader';
 import { SidebarNavigation } from '@ui/SidebarNavigation';
+import { useTranslation } from 'react-i18next';
 
 interface SidebarViewProps {
   currentView: 'chat' | 'models' | 'info';
@@ -8,9 +9,11 @@ interface SidebarViewProps {
 }
 
 export function SidebarView({ currentView, onViewChange }: SidebarViewProps) {
+  const { t } = useTranslation();
+
   return (
     <aside className="sidebar">
-      <SidebarHeader logoIcon="⚡" logoText="The Chris" />
+      <SidebarHeader logoIcon="⚡" logoText={t('sidebar.logoText')} />
       <SidebarNavigation currentView={currentView} onViewChange={onViewChange} />
     </aside>
   );

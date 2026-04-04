@@ -251,6 +251,33 @@ export function checkCodeQuality() {
     const folderPath = path.join(srcDir, folderName);
     if (!fs.existsSync(folderPath)) return;
 
+    // Helper to determine if a string looks like user-facing hardcoded text
+    function isHardcodedText(str) {
+      if (!str || str.length < 3) return false;
+      if (ALLOWED_HARDCODED.has(str)) return false;
+      if (str.startsWith('--')) return false; // CSS custom properties
+      // HTML attribute values (rel, target, type values)
+      if (/^(noopener|noreferrer|nofollow|_blank|_self|submit|button|reset|text|password|email|number)(\s+(noopener|noreferrer|nofollow|_blank|_self))*$/.test(str)) return false;
+      // CSS class names (kebab-case)
+      if (/^[a-z0-9]([a-z0-9-]*[a-z0-9])?$/.test(str) && str.includes('-')) return false;
+      // Translation keys (namespace.key format)
+      if (str.includes('.') && /^[a-zA-Z][a-zA-Z0-9._]*$/.test(str)) return false;
+      // Template literals with interpolation
+      if (str.includes('${')) return false;
+      // URLs or paths
+      if (str.startsWith('http') || str.startsWith('/') || str.startsWith('.')) return false;
+      // File extensions or format codes (e.g. ".json", "SHA256")
+      if (/^\.[a-z]+$/.test(str) || /^[A-Z0-9]+$/.test(str)) return false;
+      // Locale format strings (e.g. "2-digit", "en-US")
+      if (/^[a-z]+-[a-z0-9]+$/i.test(str) && str.length < 15) return false;
+      // Must contain at least one letter
+      if (!/[a-zA-ZäöüÄÖÜß]/.test(str)) return false;
+      // Single-word variable/identifier names (camelCase, PascalCase, snake_case)
+      if (/^[a-zA-Z_][a-zA-Z0-9_]*$/.test(str)) return false;
+      // If we get here, the string has multiple words or special characters → likely user-facing
+      return true;
+    }
+
     walkDir(folderPath, (file) => {
       if (!file.endsWith('.tsx') && !file.endsWith('.ts')) return;
       if (HARDCODED_TEXT_IGNORE_PATTERNS.some((p) => p.test(file))) return;
@@ -289,65 +316,51 @@ export function checkCodeQuality() {
           return;
         }
 
-        // Find string literals: "..." or '...'
-        // Match strings longer than 2 characters that look like user-facing text
-        const stringRegex = /(['"`])([^'"` ]{3,}?)\1/g;
+        // --- Check A: String literals in quotes (props like title="...", placeholder="...") ---
+        // Use lookbehind to ensure we match actual string values (after =, (, :, ,, [, or whitespace)
+        // This prevents matching text between two separate JSX attributes
+        const stringRegex = /(?<=[=(,:\[\s])(['"])([^'"]{3,}?)\1/g;
         let match;
 
         while ((match = stringRegex.exec(line)) !== null) {
-          const stringContent = match[2];
+          const stringContent = match[2].trim();
 
           // Skip if it's in comment
           if (line.substring(0, match.index).includes('//')) continue;
 
-          // Skip allowed patterns
-          if (ALLOWED_HARDCODED.has(stringContent)) continue;
-
-          // Skip CSS custom properties/variables (--something)
-          if (stringContent.startsWith('--')) continue;
-
-          // Skip CSS class names (kebab-case, all lowercase with hyphens)
-          // e.g., "settings-group", "modal-overlay", "chart-label"
-          if (/^[a-z0-9]([a-z0-9-]*[a-z0-9])?$/.test(stringContent) && stringContent.includes('-')) {
-            continue; // This looks like a CSS class name
-          }
-
-          // Skip translation keys (i18n.key or namespace.key format)
-          if (stringContent.includes('.') && /^[a-zA-Z][a-zA-Z0-9._]*$/.test(stringContent)) {
-            continue; // Looks like an i18n key like "settings.deleteAllData"
-          }
-
-          // Skip if it contains interpolation markers
-          if (stringContent.includes('${') || stringContent.includes('${')) continue;
-
-          // Skip if it's a URL or path
-          if (stringContent.startsWith('http') || stringContent.startsWith('/') || stringContent.startsWith('.')) continue;
-
-          // Skip if it's a file extension or format code
-          if (stringContent.match(/^\.[a-z]+$/) || stringContent.match(/^[A-Z0-9]+$/)) continue;
-
-          // Skip locale format strings (like "2-digit", "en-US")
-          if (stringContent.match(/^[a-z]+-[a-z0-9]+$/i) && stringContent.length < 15) continue;
-
-          // Skip very short strings or pure numbers  
-          if (stringContent.length < 3) continue;
-
-          // Check if it looks like user-facing text (contains letters)
-          if (/[a-zA-ZäöüÄÖÜß]/.test(stringContent)) {
-            // Check for common patterns of legitimate code strings
-            if (stringContent.match(/^[a-zA-Z_][a-zA-Z0-9_]*$/)) {
-              // Looks like a variable name, skip
-              continue;
-            }
-
-            // Potential hardcoded text found - this is real user-facing content
-            // (not CSS, not variable names, not format strings)
+          if (isHardcodedText(stringContent)) {
             violations.push(
               `Hardcoded Text Check (${folderName}): File '${relFile}' line ${idx + 1} contains potential hardcoded text: "${stringContent}". ` +
               `Use i18next translation function instead: t('namespace.key'). ` +
               `Add the text to src/i18n/locales/de.json and en.json, then use useTranslation() hook to access it.`
             );
           }
+        }
+
+        // --- Check B: JSX text content between tags (e.g. <p>Some text</p>) ---
+        const jsxTextRegex = />([^<>{}`]+)</g;
+        let jsxMatch;
+
+        while ((jsxMatch = jsxTextRegex.exec(line)) !== null) {
+          const textContent = jsxMatch[1].trim();
+
+          // Skip empty, whitespace-only, or very short
+          if (textContent.length < 3) continue;
+
+          // Skip if it's only special chars, numbers, or braces
+          if (!/[a-zA-ZäöüÄÖÜß]/.test(textContent)) continue;
+
+          // Skip single-word camelCase/PascalCase identifiers (component text like {variable})
+          if (/^[a-zA-Z_][a-zA-Z0-9_]*$/.test(textContent)) continue;
+
+          // Skip if the line already uses t() translation
+          if (/\bt\(['"]/m.test(line)) continue;
+
+          violations.push(
+            `Hardcoded JSX Text Check (${folderName}): File '${relFile}' line ${idx + 1} contains hardcoded JSX text: "${textContent}". ` +
+            `Use i18next translation function instead: {t('namespace.key')}. ` +
+            `Add the text to src/i18n/locales/de.json and en.json, then use useTranslation() hook to access it.`
+          );
         }
       });
     });

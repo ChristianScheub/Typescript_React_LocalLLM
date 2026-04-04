@@ -121,7 +121,7 @@ export function MobileSettingsView({
       </div>
 
       {successMessage && (
-        <Modal isOpen={true} title="✅ Success" onClose={onConfirmClose}>
+        <Modal isOpen={true} title={t('common.success')} onClose={onConfirmClose}>
           <div className="confirm-dialog">
             <FiCheckCircle size={48} style={{ color: '#10b981', marginBottom: '16px' }} />
             <h3>{successMessage}</h3>
