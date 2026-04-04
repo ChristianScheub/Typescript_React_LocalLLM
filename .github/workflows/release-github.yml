@@ -1,0 +1,69 @@
+name: Build & GitHub Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build web app
+        run: npm run build
+
+      - name: Add Android platform
+        run: npx cap add android
+
+      - name: Sync Capacitor
+        run: npx cap sync android
+
+      - name: Make gradlew executable
+        run: chmod +x android/gradlew
+
+      - name: Build APK (release)
+        working-directory: android
+        run: ./gradlew assembleRelease
+
+      - name: Build AAB (release)
+        working-directory: android
+        run: ./gradlew bundleRelease
+
+      - name: Rename artifacts
+        run: |
+          VERSION="${GITHUB_REF_NAME:-dev}"
+          cp android/app/build/outputs/apk/release/app-release-unsigned.apk \
+             "localAI-${VERSION}.apk"
+          cp android/app/build/outputs/bundle/release/app-release.aab \
+             "localAI-${VERSION}.aab"
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          generate_release_notes: true
+          files: |
+            localAI-*.apk
+            localAI-*.aab
