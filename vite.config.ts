@@ -18,11 +18,9 @@ export default defineConfig({
   },
   server: {},
   optimizeDeps: {
-    exclude: ['@capacitor/device', '@capacitor/core', '@capacitor/app'],
+    exclude: [],
   },
   build: {
-    rollupOptions: {
-      external: ['@capacitor/device', '@capacitor/core', '@capacitor/app'],
-    },
+    rollupOptions: {},
   },
 })

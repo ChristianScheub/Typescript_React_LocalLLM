@@ -167,6 +167,16 @@ export function checkCodeQuality() {
         continue; // External package - allowed
       }
 
+      // Skip scoped npm packages (e.g. @capacitor/core, @capgo/navigation-bar)
+      // These start with @ but are not project aliases - they exist in node_modules
+      const scopedPkgMatch = importPath.match(/^(@[^/]+\/[^/]+)/);
+      if (scopedPkgMatch) {
+        const pkgDir = path.join(projectRoot, 'node_modules', scopedPkgMatch[1]);
+        if (fs.existsSync(pkgDir)) {
+          continue; // Scoped npm package - allowed
+        }
+      }
+
       // Check 1: No relative paths allowed (../, ./, /)
       if (importPath.startsWith('../') || importPath.startsWith('./') || importPath.startsWith('/')) {
         violations.push(

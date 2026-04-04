@@ -30,12 +30,10 @@ export function MobileChatSettingsPanel({
   logCounts,
   logsEndRef,
 }: MobileChatSettingsPanelProps) {
-  if (!isOpen) return null;
-
   return (
     <>
-      <div className="mobile-settings-overlay" onClick={onClose} />
-      <div className="mobile-chat-settings-panel">
+      <div className={`mobile-settings-overlay${isOpen ? ' open' : ''}`} onClick={onClose} />
+      <div className={`mobile-chat-settings-panel${isOpen ? ' open' : ''}`}>
         <div className="panel-header">
           <h2>Chat Settings</h2>
           <button className="close-button" onClick={onClose}>

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import type { ChatSettings } from '@types';
 import Logger from '@services/logger';
+import { statusBarService } from '@services/statusBar';
 import { useDevicePlatform } from './hooks/useDevicePlatform';
 import { ChatContainer } from '@components/ChatContainer';
 import { SidebarContainer } from '@components/SidebarContainer';
@@ -25,6 +26,7 @@ function App() {
   });
 
   useEffect(() => {
+    statusBarService.configureStatusBar();
     Logger.infoService(`[App] Application initialized with provider: ${provider} on platform: ${deviceInfo.platform}`);
   }, [provider, deviceInfo.platform]);
 

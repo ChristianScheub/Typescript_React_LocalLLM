@@ -2,7 +2,7 @@ import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
   appId: 'de.scheub.localAI',
-  appName: 'typescript-react-localllm',
+  appName: 'ChrisAI Chat',
   webDir: 'dist'
 };
 
