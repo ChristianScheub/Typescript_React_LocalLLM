@@ -1,8 +1,7 @@
 import './SettingsView.css';
 import '../mobileOnly/MobileModels/MobileModelsView.css';
-import { FiCheck, FiDownload, FiArrowRight, FiSearch } from 'react-icons/fi';
+import { FiSearch } from 'react-icons/fi';
 import { useTranslation } from 'react-i18next';
-import { featureFlag_Debug_View } from '@config/featureFlags';
 import { MobileModelCard } from '@ui/mobileOnly/MobileModelCard';
 import { MobileEngineSelector } from '@ui/mobileOnly/MobileEngineSelector';
 import type { ModelFamily } from '@services/webllm/IWebllmService';
