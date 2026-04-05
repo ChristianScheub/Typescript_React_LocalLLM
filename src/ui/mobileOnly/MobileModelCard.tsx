@@ -8,6 +8,7 @@ interface MobileModelCardProps {
   description: string;
   size: string;
   isDownloaded: boolean;
+  isCached?: boolean;
   isDownloading: boolean;
   downloadProgress?: number;
   statusMessage?: string;
@@ -20,6 +21,7 @@ export function MobileModelCard({
   description,
   size,
   isDownloaded,
+  isCached,
   isDownloading,
   downloadProgress = 0,
   statusMessage,
@@ -45,11 +47,11 @@ export function MobileModelCard({
         />
       ) : (
         <button 
-          className={`download-btn ${isDownloaded ? 'downloaded' : ''}`}
+          className={`download-btn ${isDownloaded ? 'downloaded' : isCached ? 'cached' : ''}`}
           onClick={onDownload}
           disabled={isDownloaded}
         >
-          {isDownloaded ? t('models.downloaded') : t('models.download')}
+          {isDownloaded ? t('models.downloaded') : isCached ? t('models.cached', '↻ IM CACHE') : t('models.download')}
         </button>
       )}
     </div>

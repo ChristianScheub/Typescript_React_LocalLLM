@@ -4,6 +4,7 @@ import { modelStateManager } from '@services/modelStateManager';
 import Logger from '@services/logger';
 import { SettingsView } from '@views/settings/SettingsView';
 import { useDevicePlatform } from '@hooks/useDevicePlatform';
+import { useModelFilters } from '@hooks/useModelFilters';
 
 interface ModelsContainerProps {
   provider: 'transformers' | 'webllm';
@@ -16,7 +17,35 @@ export function ModelsContainer({ provider, onProviderChange }: ModelsContainerP
   const [downloadProgress, setDownloadProgress] = useState(0);
   const [error, setError] = useState<string | null>(null);
   const [loadedModels, setLoadedModels] = useState<Set<string>>(new Set());
+  const [cachedModelIds, setCachedModelIds] = useState<Set<string>>(new Set());
   const [statusMessage, setStatusMessage] = useState<string | null>(null);
+
+  useEffect(() => {
+    const detectCachedModels = async () => {
+      try {
+        const { hasModelInCache } = await import('@mlc-ai/web-llm');
+        const { webllmAllModels } = await import('@services/webllm/logic/webllm-modelsAll');
+        const appConfig = { model_list: webllmAllModels };
+        const allModels = modelService.getModelsByProvider(provider);
+        const cached = new Set<string>();
+
+        for (const model of allModels) {
+          try {
+            const inCache = await hasModelInCache(model.id, appConfig);
+            if (inCache) cached.add(model.id);
+          } catch {
+            // Model not found in config, skip
+          }
+        }
+
+        setCachedModelIds(cached);
+        Logger.infoService(`[ModelsContainer] Found ${cached.size} cached models via hasModelInCache`);
+      } catch (err) {
+        Logger.errorStack('[ModelsContainer] Error detecting cached models', err instanceof Error ? err : new Error(String(err)));
+      }
+    };
+    detectCachedModels();
+  }, [provider]);
 
   useEffect(() => {
     Logger.infoService(`[ModelsContainer] Initializing for provider: ${provider}`);
@@ -39,12 +68,24 @@ export function ModelsContainer({ provider, onProviderChange }: ModelsContainerP
 
   const models = modelService.getModelsByProvider(provider).map(model => {
     const isLoaded = loadedModels.has(model.id);
-    Logger.cache(`[ModelsContainer] Model ${model.id}: ${isLoaded ? 'loaded' : 'not loaded'}`);
+    const isCached = cachedModelIds.has(model.id);
+    if (isLoaded || isCached) {
+      Logger.cache(`[ModelsContainer] Model ${model.id}: ${isLoaded ? 'loaded' : 'cached'}`);
+    }
     return {
       ...model,
-      downloaded: isLoaded
+      downloaded: isLoaded,
+      isCached: isCached && !isLoaded,
     };
   });
+
+  const {
+    searchQuery, setSearchQuery,
+    activeFamily, setActiveFamily,
+    maxVram, setMaxVram,
+    availableFamilies,
+    filteredModels,
+  } = useModelFilters(models);
 
   const handleDownloadModel = async (modelId: string) => {
     Logger.infoService(`[ModelsContainer.handleDownloadModel] Starting download for model: ${modelId} (provider: ${provider})`);
@@ -89,13 +130,20 @@ export function ModelsContainer({ provider, onProviderChange }: ModelsContainerP
       <SettingsView
         currentProvider={provider}
         onProviderChange={onProviderChange}
-        models={models as { id: string; name: string; description: string; size: string; downloaded: boolean }[]}
+        models={filteredModels}
         downloadingModel={downloadingModel}
         downloadProgress={downloadProgress}
         onDownload={handleDownloadModel}
         error={error}
         statusMessage={statusMessage}
         isMobile={true}
+        searchQuery={searchQuery}
+        onSearchChange={setSearchQuery}
+        activeFamily={activeFamily}
+        onFamilyChange={setActiveFamily}
+        availableFamilies={availableFamilies}
+        maxVram={maxVram}
+        onMaxVramChange={setMaxVram}
       />
     );
   }
@@ -104,12 +152,19 @@ export function ModelsContainer({ provider, onProviderChange }: ModelsContainerP
     <SettingsView
       currentProvider={provider}
       onProviderChange={onProviderChange}
-      models={models as { id: string; name: string; description: string; size: string; downloaded: boolean }[]}
+      models={filteredModels}
       downloadingModel={downloadingModel}
       downloadProgress={downloadProgress}
       onDownload={handleDownloadModel}
       error={error}
       statusMessage={statusMessage}
+      searchQuery={searchQuery}
+      onSearchChange={setSearchQuery}
+      activeFamily={activeFamily}
+      onFamilyChange={setActiveFamily}
+      availableFamilies={availableFamilies}
+      maxVram={maxVram}
+      onMaxVramChange={setMaxVram}
     />
   );
 }

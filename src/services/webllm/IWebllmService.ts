@@ -1,9 +1,12 @@
+export type ModelFamily = 'Llama' | 'Phi' | 'Qwen' | 'Ministral' | 'Mistral' | 'DeepSeek' | 'Gemma' | 'SmolLM' | 'StableLM' | 'RedPajama' | 'WizardMath' | 'Hermes' | 'Snowflake' | 'GPT' | 'Other';
+
 export interface WebLLMModel {
   id: string;
   name: string;
   description: string;
   size: string;
   downloaded: boolean;
+  family: ModelFamily;
 }
 
 export interface WebLLMGenerateOptions {

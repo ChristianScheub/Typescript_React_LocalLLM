@@ -32,6 +32,8 @@
       "downloading": "WIRD HERUNTERGELADEN",
       "loaded": "GELADEN",
       "download": "HERUNTERLADEN",
+      "cached": "IM CACHE",
+      "initCached": "INITIALISIEREN",
       "quant": "Quant",
       "q4_k_m": "Q4_K_M",
       "size": "Größe",
@@ -124,8 +126,14 @@
     "modelsSubtitle": "Bibliothek von Gewichten, die mit Ihrer aktuellen Engine kompatibel sind.",
     "downloaded": "✓ HERUNTERGELADEN",
     "download": "⬇ HERUNTERLADEN",
+    "cached": "↻ IM CACHE",
     "ready": "● BEREIT",
-    "notLoaded": "○ NICHT GELADEN"
+    "notLoaded": "○ NICHT GELADEN",
+    "searchPlaceholder": "Modelle suchen...",
+    "filterAll": "Alle",
+    "vramFilter": "Max. VRAM",
+    "vramMin": "1 GB",
+    "vramMax": "16 GB"
   },
   "common": {
     "success": "✅ Erfolg"

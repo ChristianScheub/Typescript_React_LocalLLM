@@ -1,9 +1,12 @@
+import type { ModelFamily } from '@services/webllm/IWebllmService';
+
 export interface TransformersModel {
   id: string;
   name: string;
   description: string;
   size: string;
   downloaded: boolean;
+  family: ModelFamily;
 }
 
 export interface TransformersGenerateOptions {

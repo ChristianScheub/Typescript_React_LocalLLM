@@ -32,6 +32,8 @@
       "downloading": "DOWNLOADING",
       "loaded": "LOADED",
       "download": "DOWNLOAD",
+      "cached": "CACHED",
+      "initCached": "INITIALIZE",
       "quant": "Quant",
       "q4_k_m": "Q4_K_M",
       "size": "Size",
@@ -125,8 +127,14 @@
     "modelsSubtitle": "Library of weights compatible with your current engine.",
     "downloaded": "✓ DOWNLOADED",
     "download": "⬇ DOWNLOAD",
+    "cached": "↻ CACHED",
     "ready": "● READY",
-    "notLoaded": "○ NOT LOADED"
+    "notLoaded": "○ NOT LOADED",
+    "searchPlaceholder": "Search models...",
+    "filterAll": "All",
+    "vramFilter": "Max. VRAM",
+    "vramMin": "1 GB",
+    "vramMax": "16 GB"
   },
   "common": {
     "success": "✅ Success"

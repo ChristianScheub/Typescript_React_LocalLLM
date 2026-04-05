@@ -1,75 +1,50 @@
 import Logger from '@services/logger';
 import { WebLLMInitializer } from '@services/webllm/logic/WebLLMInitializer';
-import type { WebLLMModel } from '@services/webllm/IWebllmService';
+import type { WebLLMModel, ModelFamily } from '@services/webllm/IWebllmService';
+import { webllmAllModels } from './webllm-modelsAll';
+
+const familyPatterns: [RegExp, ModelFamily][] = [
+  [/DeepSeek/i, 'DeepSeek'],
+  [/Llama|TinyLlama/i, 'Llama'],
+  [/Phi/i, 'Phi'],
+  [/Qwen/i, 'Qwen'],
+  [/Ministral/i, 'Ministral'],
+  [/Mistral/i, 'Mistral'],
+  [/[Gg]emma/i, 'Gemma'],
+  [/SmolLM/i, 'SmolLM'],
+  [/[Ss]table[Ll][Mm]/i, 'StableLM'],
+  [/RedPajama/i, 'RedPajama'],
+  [/WizardMath/i, 'WizardMath'],
+  [/Hermes/i, 'Hermes'],
+  [/snowflake/i, 'Snowflake'],
+];
+
+function detectFamily(modelId: string): ModelFamily {
+  for (const [pattern, family] of familyPatterns) {
+    if (pattern.test(modelId)) return family;
+  }
+  return 'Other';
+}
+
+function formatSize(vramMB: number | undefined): string {
+  if (!vramMB) return 'N/A';
+  if (vramMB >= 1024) return `${(vramMB / 1024).toFixed(1)} GB`;
+  return `${Math.round(vramMB)} MB`;
+}
 
 export class WebLLMModels {
   static getAvailableModels(): WebLLMModel[] {
     Logger.infoService(`[webllmService.getAvailableModels] Returning available models`);
-    return [
-      {
-        id: 'Phi-3.5-mini-instruct-q4f16_1-MLC',
-        name: 'Phi-3.5 Mini (Q4, 3.8B)',
-        description: 'Exzellente Logik und Reasoning bei sehr geringem Speicherverbrauch.',
-        size: '3.6 GB',
+    return webllmAllModels
+      .filter(m => !m.model_id.includes('//')) // skip commented-out entries
+      .map(m => ({
+        id: m.model_id,
+        name: m.model_id,
+        description: '',
+        size: formatSize(m.vram_required_MB),
         downloaded: false,
-      },
-      {
-        id: 'Llama-3.2-3B-Instruct-q4f32_1-MLC',
-        name: 'Llama 3.2 3B (Q4, 3.2B)',
-        description: 'Sehr stabiler und schneller Allrounder von Meta.',
-        size: '2.9 GB',
-        downloaded: false,
-      },
-      {
-        id: 'Qwen3-4B-q4f32_1-MLC',
-        name: 'Qwen 3 Coder (Q4, 4B)',
-        description: 'Spezialisiert auf Coding; schlägt oft deutlich größere Modelle.',
-        size: '4.2 GB',
-        downloaded: false,
-      },
-      {
-        id: 'Ministral-3-3B-Instruct-2512-BF16-q4f16_1-MLC',
-        name: 'Ministral 3 3B (Q4, 3B)',
-        description: 'Die neueste Generation kompakter Modelle von Mistral (Ende 2025).',
-        size: '3.1 GB',
-        downloaded: false,
-      },
-      {
-        id: 'Llama-3.4-8B-Instruct-q4f16_1-MLC',
-        name: 'Llama 3.4 8B (Q4, 8B)',
-        description: 'Maximale Intelligenz für komplexe Aufgaben (erfordert min. 8GB RAM).',
-        size: '4.9 GB',
-        downloaded: false,
-      },
-      {
-        id: 'Llama-2-7b-hf-q4f32_1-MLC',
-        name: 'Llama-2 7B (Q4, 7B)',
-        description: 'Klassisches Modell (Legacy), deutlich langsamer als Llama 3.x.',
-        size: '8.9 GB',
-        downloaded: false,
-      },
-      {
-        id: 'TinyLlama-1.1B-Chat-v1.0-q4f16_1-MLC',
-        name: 'TinyLlama Chat 1.1B',
-        size: '~800MB',
-        description: 'Kleines, schnelles Chat-Modell für lokale Verwendung',
-        downloaded: false,
-      },
-      {
-        id: 'Llama-2-7b-chat-hf-q4f16_1-MLC',
-        name: 'Llama 2 7B Chat',
-        size: '~4GB',
-        description: 'Leistungsstarkes Chat-Modell (mehr Speicher erforderlich)',
-        downloaded: false
-      },
-      {
-        id: 'Phi-3-mini-4k-instruct-q4f16_1-MLC',
-        name: 'Phi-3 Mini 4K',
-        size: '~2GB',
-        description: 'Microsoft Phi-3 Modell für Instruction Following',
-        downloaded: false
-      }
-    ];
+        family: detectFamily(m.model_id),
+      }));
   }
 
   static async downloadModel(_currentModel: { value: string | null }, _isLoading: { value: boolean }, modelName: string, onProgress?: (progress: number) => void): Promise<void> {

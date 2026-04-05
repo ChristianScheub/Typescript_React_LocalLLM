@@ -12,6 +12,7 @@ export class TransformersModels {
         description: 'Der Super-Schnelle - 82M params, blitzschnell für Tests',
         size: '150 MB',
         downloaded: false,
+        family: 'GPT',
       },
       {
         id: 'gpt2',
@@ -19,6 +20,7 @@ export class TransformersModels {
         description: 'Der Klassiker - 124M params, gute Balance zwischen Speed & Qualität',
         size: '500 MB',
         downloaded: false,
+        family: 'GPT',
       },
       {
         id: 'gpt2-medium',
@@ -26,6 +28,7 @@ export class TransformersModels {
         description: 'Der Ausgewogene - 355M params, bessere Qualität, etwas langsamer',
         size: '1.5 GB',
         downloaded: false,
+        family: 'GPT',
       },
       {
         id: 'gpt2-large',
@@ -33,6 +36,7 @@ export class TransformersModels {
         description: 'Der Große - 774M params, beste Qualität, braucht Zeit zum Laden',
         size: '3.0 GB',
         downloaded: false,
+        family: 'GPT',
       },
     ];
   }

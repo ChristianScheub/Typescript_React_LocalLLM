@@ -13,6 +13,7 @@ import './App.css';
 
 function App() {
   const deviceInfo = useDevicePlatform();
+  const isIPhone = /iPhone/i.test(navigator.userAgent);
   const [provider, setProvider] = useState<'transformers' | 'webllm'>('webllm');
   const [currentView, setCurrentView] = useState<'chat' | 'models' | 'info'>('chat');
   const [chatSettings, setChatSettings] = useState<ChatSettings>({
@@ -40,7 +41,7 @@ function App() {
   // Mobile Layout
   if (deviceInfo.isMobile) {
     return (
-      <div className="app-mobile">
+      <div className="app-mobile" style={isIPhone ? { paddingTop: '3vh' } : undefined}>
         <main className="mobile-main">
           {currentView === 'chat' && (
             <ChatContainer key={provider} provider={provider} chatSettings={chatSettings} onSettingsChange={handleSettingsChange} />
@@ -59,7 +60,7 @@ function App() {
 
   // Desktop Layout
   return (
-    <div className="app">
+    <div className="app" style={isIPhone ? { marginTop: '10vh' } : undefined}>
       <SidebarContainer 
         currentView={currentView} 
         onViewChange={setCurrentView}

@@ -1,4 +1,5 @@
 import Logger from '@services/logger';
+import { webllmAllModels } from './webllm-modelsAll';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 let engine: any = null;
@@ -21,6 +22,9 @@ export class WebLLMInitializer {
         
         Logger.infoService(`[webllmService] Creating MLCEngine instance for model: ${modelName}`);
         engine = new MLCEngine({
+          appConfig: {
+            model_list: webllmAllModels,
+          },
           initProgressCallback: (progress: any) => {
             const message = progress.text || 'Initializing model...';
             Logger.cache(`[webllmService.initializeModel] MLCEngine init progress: ${message}`);
