@@ -61,6 +61,7 @@ export function SettingsContainer() {
       onInfoOpen={setExpandedInfo}
       onInfoClose={() => setExpandedInfo(null)}
       onConfirmClose={() => setShowConfirmDelete(null)}
+      onShowConfirmDelete={setShowConfirmDelete}
     />
   );
 }

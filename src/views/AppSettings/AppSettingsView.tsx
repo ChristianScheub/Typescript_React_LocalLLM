@@ -18,6 +18,7 @@ interface AppSettingsViewProps {
   onInfoOpen: (info: string) => void;
   onInfoClose: () => void;
   onConfirmClose: () => void;
+  onShowConfirmDelete: (id: string) => void;
 }
 
 export function AppSettingsView({
@@ -30,6 +31,7 @@ export function AppSettingsView({
   onInfoOpen,
   onInfoClose,
   onConfirmClose,
+  onShowConfirmDelete,
 }: AppSettingsViewProps) {
   const { t } = useTranslation();
 
@@ -39,7 +41,7 @@ export function AppSettingsView({
       title: t('settings.deleteAllData'),
       icon: <FiTrash2 size={20} />,
       description: t('settings.deleteAllDataDescription'),
-      action: () => showConfirmDelete !== 'delete-all' && onInfoOpen('delete-all'),
+      action: () => onShowConfirmDelete('delete-all'),
       isDanger: true
     },
     {
@@ -47,7 +49,7 @@ export function AppSettingsView({
       title: t('settings.deleteModels'),
       icon: <FiTrash2 size={20} />,
       description: t('settings.deleteModelsDescription'),
-      action: () => showConfirmDelete !== 'delete-models' && onInfoOpen('delete-models'),
+      action: () => onShowConfirmDelete('delete-models'),
       isDanger: true
     },
   ];

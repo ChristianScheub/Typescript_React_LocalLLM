@@ -136,7 +136,6 @@ export function ModelsContainer({ provider, onProviderChange }: ModelsContainerP
         onDownload={handleDownloadModel}
         error={error}
         statusMessage={statusMessage}
-        isMobile={true}
         searchQuery={searchQuery}
         onSearchChange={setSearchQuery}
         activeFamily={activeFamily}
