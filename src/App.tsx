@@ -18,9 +18,9 @@ function App() {
   const [currentView, setCurrentView] = useState<'chat' | 'models' | 'info'>('chat');
   const [chatSettings, setChatSettings] = useState<ChatSettings>({
     temperature: 0.7,
-    maxTokens: 200,
+    maxTokens: 1024,
     presencePenalty: 0,
-    mode: 'fast',
+    mode: 'expert',
   });
 
   useEffect(() => {

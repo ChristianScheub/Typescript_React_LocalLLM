@@ -13,6 +13,7 @@ export interface GenerationOptions {
   maxTokens?: number;
   presencePenalty?: number;
   mode?: 'fast' | 'expert';
+  conversationHistory?: Array<{ role: 'user' | 'assistant'; content: string }>;
 }
 
 export interface IModelService {

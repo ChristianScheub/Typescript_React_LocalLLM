@@ -83,6 +83,7 @@ export function ChatContainer({ provider, chatSettings, onSettingsChange }: Chat
         maxTokens: chatSettings.maxTokens,
         presencePenalty: chatSettings.presencePenalty,
         mode: chatSettings.mode,
+        conversationHistory: messages.map(m => ({ role: m.role, content: m.content })),
       });
       Logger.infoService(`[ChatContainer.handleSendMessage] Response received, length: ${response.length}`);
       

@@ -17,7 +17,7 @@ export interface WebLLMGenerateOptions {
 
 export interface IWebllmService {
   initializeModel(modelName: string, onStatusMessage?: (message: string) => void): Promise<void>;
-  generate(prompt: string, options?: { temperature?: number; maxTokens?: number; presencePenalty?: number; mode?: 'fast' | 'expert' }): Promise<string>;
+  generate(prompt: string, options?: { temperature?: number; maxTokens?: number; presencePenalty?: number; mode?: 'fast' | 'expert'; systemPrompt?: string; conversationHistory?: Array<{ role: 'user' | 'assistant'; content: string }> }): Promise<string>;
   downloadModel(modelName: string, onProgress?: (progress: number) => void): Promise<void>;
   isModelLoaded(): boolean;
   getCurrentModel(): string | null;

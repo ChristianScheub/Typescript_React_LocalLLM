@@ -2,7 +2,7 @@ import Logger from '@services/logger';
 import { WebLLMInitializer } from '@services/webllm/logic/WebLLMInitializer';
 
 export class WebLLMGenerator {
-  static async generate(currentModel: { value: string | null }, isLoading: { value: boolean }, prompt: string, options?: { temperature?: number; maxTokens?: number; presencePenalty?: number; mode?: 'fast' | 'expert' }): Promise<string> {
+  static async generate(currentModel: { value: string | null }, isLoading: { value: boolean }, prompt: string, options?: { temperature?: number; maxTokens?: number; presencePenalty?: number; mode?: 'fast' | 'expert'; systemPrompt?: string; conversationHistory?: Array<{ role: 'user' | 'assistant'; content: string }> }): Promise<string> {
     Logger.infoService(`[webllmService.generate] Starting generation for prompt: "${prompt.substring(0, 100)}..."`);
     
     if (!currentModel.value || isLoading.value) {
@@ -17,17 +17,24 @@ export class WebLLMGenerator {
     }
 
     const temperature = options?.temperature ?? 0.7;
-    const maxTokens = options?.maxTokens ?? 200;
-    
+    const maxTokens = options?.maxTokens ?? 1024;
+
     Logger.infoService(`[webllmService.generate] Engine ready. Model: ${currentModel.value}`);
     Logger.infoService(`[webllmService.generate] Generating with max_tokens: ${maxTokens}, temperature: ${temperature}`);
-    
-    const messages = [
-      {
-        role: 'user' as const,
-        content: prompt,
-      },
-    ];
+
+    const messages: Array<{ role: 'system' | 'user' | 'assistant'; content: string }> = [];
+
+    if (options?.systemPrompt) {
+      messages.push({ role: 'system', content: options.systemPrompt });
+    }
+
+    if (options?.conversationHistory) {
+      for (const msg of options.conversationHistory) {
+        messages.push({ role: msg.role, content: msg.content });
+      }
+    }
+
+    messages.push({ role: 'user', content: prompt });
 
     let fullResponse = '';
     Logger.infoService(`[webllmService.generate] Starting streaming generation...`);

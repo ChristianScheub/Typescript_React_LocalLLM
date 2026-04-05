@@ -49,28 +49,26 @@ export class ModelServiceImpl {
     Logger.infoService(`[modelService.generateResponse] Generating response with provider: ${provider}`);
     Logger.infoService(`[modelService.generateResponse] Prompt length: ${prompt.length} characters`);
     
-    let enhancedPrompt = prompt;
+    let systemPrompt: string | undefined;
     if (options?.mode) {
-      const prefix = options.mode === 'fast'
-        ? 'Du bist ein hilfreicher Assistent. Antworte immer extrem kurz und prägnant, maximal in zwei Sätzen.\n\n'
-        : 'Du bist ein Experte. Erkläre Konzepte ausführlich, nutze Bullet Points und gehe tief ins Detail.\n\n';
-      
-      const suffix = options.mode === 'fast'
-        ? '\n\nAntworte kurz und prägnant.'
-        : '\n\nBitte ausführlich antworten.';
-      
-      enhancedPrompt = prefix + prompt + suffix;
-      Logger.infoService(`[modelService.generateResponse] Enhanced prompt with ${options.mode} mode`);
+      systemPrompt = options.mode === 'fast'
+        ? 'Du bist ein hilfreicher Assistent. Antworte prägnant und verständlich.'
+        : 'Du bist ein Experte. Erkläre Konzepte ausführlich, nutze Bullet Points und gehe tief ins Detail.';
+      Logger.infoService(`[modelService.generateResponse] System prompt set for ${options.mode} mode`);
     }
-    
+
     try {
       let response: string;
       if (provider === 'transformers') {
         Logger.infoService(`[modelService.generateResponse] Using transformersService`);
-        response = await transformersService.generate(enhancedPrompt, options);
+        response = await transformersService.generate(prompt, options);
       } else {
         Logger.infoService(`[modelService.generateResponse] Using webllmService`);
-        response = await webllmService.generate(enhancedPrompt, options);
+        response = await webllmService.generate(prompt, {
+          ...options,
+          systemPrompt,
+          conversationHistory: options?.conversationHistory,
+        });
       }
       Logger.infoService(`[modelService.generateResponse] Response generated. Length: ${response.length} characters`);
       return response;
