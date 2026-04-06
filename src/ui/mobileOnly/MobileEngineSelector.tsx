@@ -41,7 +41,7 @@ export function MobileEngineSelector({ currentProvider, onToggle }: MobileEngine
   };
 
   return (
-    <div className="engine-selector" style={{ position: 'relative' }}>
+    <div className="engine-selector">
       <EngineCard
         icon="⚡"
         nameKey="models.webllm"
