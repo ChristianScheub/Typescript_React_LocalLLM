@@ -824,3 +824,19 @@
     width: 100%;
   }
 }
+
+.vram-warning-banner {
+  background: #2a1f00;
+  border: 1px solid #f5a623;
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-bottom: 12px;
+  color: #f5a623;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.vram-warning-text {
+  margin: 4px 0 0;
+  color: #e0d6c2;
+}

@@ -109,25 +109,11 @@ export function SettingsView({
           </div>
         </div>
 
-        <div
-          className="vram-warning-banner"
-          style={{
-            background: "#2a1f00",
-            border: "1px solid #f5a623",
-            borderRadius: "8px",
-            padding: "12px 16px",
-            marginBottom: "12px",
-            color: "#f5a623",
-            fontSize: "0.85rem",
-            lineHeight: 1.5,
-          }}
-        >
+        <div className="vram-warning-banner">
           <strong>⚠️ {t("models.vramWarningTitle", "Hinweis")}</strong>
-          <p style={{ margin: "4px 0 0", color: "#e0d6c2" }}>
+          <p className="vram-warning-text">
             {t(
-              "models.vramWarningText",
-              "Wir empfehlen Modelle mit unter 2 GB VRAM für die beste Kompatibilität. Die Unterstützung unterscheidet sich je nach Gerät und verfügbarem RAM.",
-            )}
+              "models.vramWarningText"            )}
           </p>
         </div>
 

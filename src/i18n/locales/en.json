@@ -141,7 +141,8 @@
     "filterAll": "All",
     "vramFilter": "Max. VRAM",
     "vramMin": "1 GB",
-    "vramMax": "16 GB"
+    "vramMax": "16 GB",
+    "vramWarningText": "We recommend models with less than 2 GB VRAM for optimal compatibility. Support varies depending on the device and available RAM."
   },
   "common": {
     "success": "✅ Success",
