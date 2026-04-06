@@ -17,9 +17,9 @@
         "recommendation": "Recommended for M1/M2/M3 & RTX Series"
       },
       "transformers": {
-        "name": "Transformers v3 - NOT WORKING",
-        "description": "Max compatibility runtime using WASM kernels. Ideal for legacy systems and diverse environments.",
-        "recommendation": "CPU-Optimized Fallback"
+        "name": "Transformers.js v3",
+        "description": "ONNX/WASM runtime for Gemma 3, SmolLM2, Qwen 2.5 and more. Runs entirely locally in the browser.",
+        "recommendation": "Recommended for Gemma & SmolLM2 models"
       },
       "active": "ACTIVE"
     },
@@ -83,12 +83,13 @@
       },
       {
         "name": "Transformers.js",
-        "version": "2.17.2",
+        "version": "3.5.0",
         "license": "Apache 2.0"
       }
     ],
     "github": "GitHub Repository",
     "githubDescription": "View the source code and contribute on GitHub",
+    "githubLink": "https://github.com/christopherscheub/ReactLocalLLM",
     "confirmDelete": "Are you sure?",
     "confirmDeleteMessage": "This action cannot be undone.",
     "confirmDeleteAllData": "Delete all data?",
@@ -124,7 +125,9 @@
     "engineArchitecture": "Engine Architecture",
     "selectRuntime": "Select the runtime environment that best fits your hardware",
     "webllm": "Web-LLM",
-    "webllmDescription": "WebGPU acceleration for neural inference",
+    "webllmDescription": "WebGPU acceleration · Llama, Phi, Qwen, …",
+    "transformers": "Transformers.js v3",
+    "transformersDescription": "ONNX/WASM · Gemma 3, SmolLM2, Qwen 2.5, …",
     "active": "ACTIVE",
     "switchTo": "Switch to {{engine}}",
     "availableModels": "Available Models",
@@ -141,7 +144,19 @@
     "vramMax": "16 GB"
   },
   "common": {
-    "success": "✅ Success"
+    "success": "✅ Success",
+    "edit": "Edit",
+    "remove": "Remove",
+    "save": "Save",
+    "saving": "Saving...",
+    "cancel": "Cancel"
+  },
+  "huggingfaceAuth": {
+    "huggingfaceDescription": "Provide a Hugging Face token to access private models and increase download limits.",
+    "authenticationConfigured": "Authentication configured",
+    "tokenSaved": "✓ Token saved successfully",
+    "tokenInvalid": "✗ Invalid token",
+    "huggingfaceHint": "Get your token from "
   },
   "chatSettings": {
     "mode": "Mode",

@@ -4,6 +4,7 @@ import { FiSearch } from 'react-icons/fi';
 import { useTranslation } from 'react-i18next';
 import { MobileModelCard } from '@ui/mobileOnly/MobileModelCard';
 import { MobileEngineSelector } from '@ui/mobileOnly/MobileEngineSelector';
+import { HuggingFaceAuthContainer } from '@components/HuggingFaceAuthContainer';
 import type { ModelFamily } from '@services/webllm/IWebllmService';
 
 interface Model {
@@ -54,7 +55,11 @@ export function SettingsView({
   const { t } = useTranslation();
 
   const handleToggleProvider = () => {
-    onProviderChange(currentProvider === 'webllm' ? 'transformers' : 'webllm');
+    if (currentProvider === 'webllm') {
+      onProviderChange('transformers');
+    } else if (currentProvider === 'transformers') {
+      onProviderChange('webllm');
+    }
   };
 
   return (
@@ -68,6 +73,10 @@ export function SettingsView({
           currentProvider={currentProvider}
           onToggle={handleToggleProvider}
         />
+
+        {currentProvider === 'transformers' && (
+          <HuggingFaceAuthContainer />
+        )}
 
         <div className="models-section">
           <h3>{t('models.availableModels')}</h3>

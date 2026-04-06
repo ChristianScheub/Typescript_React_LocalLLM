@@ -21,6 +21,11 @@ export function ModelsContainer({ provider, onProviderChange }: ModelsContainerP
   const [statusMessage, setStatusMessage] = useState<string | null>(null);
 
   useEffect(() => {
+    if (provider !== 'webllm') {
+      setCachedModelIds(new Set());
+      return;
+    }
+
     const detectCachedModels = async () => {
       try {
         const { hasModelInCache } = await import('@mlc-ai/web-llm');

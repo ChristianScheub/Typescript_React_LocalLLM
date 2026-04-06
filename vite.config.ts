@@ -4,6 +4,7 @@ import path from 'path'
 
 // https://vite.dev/config/
 export default defineConfig({
+  assetsInclude: ['**/*.wasm'],
   plugins: [react()],
   resolve: {
     alias: {
@@ -16,9 +17,18 @@ export default defineConfig({
       '@hooks': path.resolve(__dirname, './src/hooks'),
     },
   },
-  server: {},
+  server: {
+    headers: {
+      'Cross-Origin-Opener-Policy': 'same-origin',
+      'Cross-Origin-Embedder-Policy': 'credentialless',
+    },
+    fs: {
+      // Allow serving onnxruntime-web WASM/MJS files from node_modules
+      allow: ['..'],
+    },
+  },
   optimizeDeps: {
-    exclude: [],
+    exclude: ['@huggingface/transformers', 'onnxruntime-web'],
   },
   build: {
     rollupOptions: {},

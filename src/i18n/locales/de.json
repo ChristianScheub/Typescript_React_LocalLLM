@@ -17,9 +17,9 @@
         "recommendation": "Empfohlen für M1/M2/M3 & RTX Series"
       },
       "transformers": {
-        "name": "Transformers v3 - FUNKTIONIERT NICHT",
-        "description": "Max Kompatibilitäts-Runtime mit WASM-Kerneln. Ideal für Legacy-Systeme und diverse Umgebungen.",
-        "recommendation": "CPU-optimierter Fallback"
+        "name": "Transformers.js v3",
+        "description": "ONNX/WASM Runtime für Gemma 3, SmolLM2, Qwen 2.5 und mehr. Läuft vollständig lokal im Browser.",
+        "recommendation": "Empfohlen für Gemma & SmolLM2 Modelle"
       },
       "active": "AKTIV"
     },
@@ -82,12 +82,13 @@
       },
       {
         "name": "Transformers.js",
-        "version": "2.17.2",
+        "version": "3.5.0",
         "license": "Apache 2.0"
       }
     ],
     "github": "GitHub Repository",
     "githubDescription": "Sehen Sie sich den Quellcode an und tragen Sie auf GitHub bei",
+    "githubLink": "https://github.com/christopherscheub/ReactLocalLLM",
     "confirmDelete": "Sind Sie sicher?",
     "confirmDeleteMessage": "Diese Aktion kann nicht rückgängig gemacht werden.",
     "confirmDeleteAllData": "Alle Daten löschen?",
@@ -123,7 +124,9 @@
     "engineArchitecture": "Engine-Architektur",
     "selectRuntime": "Wählen Sie die Laufzeitumgebung, die am besten zu Ihrer Hardware passt",
     "webllm": "Web-LLM",
-    "webllmDescription": "WebGPU-Beschleunigung für neuronale Inferenzen",
+    "webllmDescription": "WebGPU-Beschleunigung · Llama, Phi, Qwen, …",
+    "transformers": "Transformers.js v3",
+    "transformersDescription": "ONNX/WASM · Gemma 3, SmolLM2, Qwen 2.5, …",
     "active": "AKTIV",
     "switchTo": "Zu {{engine}} wechseln",
     "availableModels": "Verfügbare Modelle",
@@ -140,7 +143,19 @@
     "vramMax": "16 GB"
   },
   "common": {
-    "success": "✅ Erfolg"
+    "success": "✅ Erfolg",
+    "edit": "Bearbeiten",
+    "remove": "Entfernen",
+    "save": "Speichern",
+    "saving": "Wird gespeichert...",
+    "cancel": "Abbrechen"
+  },
+  "huggingfaceAuth": {
+    "huggingfaceDescription": "Geben Sie ein Hugging Face-Token an, um auf private Modelle zuzugreifen und Download-Limits zu erhöhen.",
+    "authenticationConfigured": "Authentifizierung konfiguriert",
+    "tokenSaved": "✓ Token erfolgreich gespeichert",
+    "tokenInvalid": "✗ Ungültiges Token",
+    "huggingfaceHint": "Holen Sie sich Ihr Token von "
   },
   "chatSettings": {
     "mode": "Modus",

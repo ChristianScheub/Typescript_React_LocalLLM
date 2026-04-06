@@ -61,7 +61,11 @@ export class ModelServiceImpl {
       let response: string;
       if (provider === 'transformers') {
         Logger.infoService(`[modelService.generateResponse] Using transformersService`);
-        response = await transformersService.generate(prompt, options);
+        response = await transformersService.generate(prompt, {
+          ...options,
+          systemPrompt,
+          conversationHistory: options?.conversationHistory,
+        });
       } else {
         Logger.infoService(`[modelService.generateResponse] Using webllmService`);
         response = await webllmService.generate(prompt, {
