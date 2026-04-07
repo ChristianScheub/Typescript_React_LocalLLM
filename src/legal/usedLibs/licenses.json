@@ -4,8 +4,8 @@
     "repository": "https://github.com/babel/babel",
     "publisher": "The Babel Team",
     "url": "https://babel.dev/team",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\@babel\\runtime",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\@babel\\runtime\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@babel/runtime",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@babel/runtime/LICENSE"
   },
   "@capacitor/android@8.3.0": {
     "licenses": "MIT",
@@ -13,8 +13,8 @@
     "publisher": "Ionic Team",
     "email": "hi@ionic.io",
     "url": "https://ionic.io",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\@capacitor\\android",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\@capacitor\\android\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@capacitor/android",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@capacitor/android/LICENSE"
   },
   "@capacitor/cli@8.3.0": {
     "licenses": "MIT",
@@ -22,8 +22,8 @@
     "publisher": "Ionic Team",
     "email": "hi@ionic.io",
     "url": "https://ionic.io",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\@capacitor\\cli",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\@capacitor\\cli\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@capacitor/cli",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@capacitor/cli/LICENSE"
   },
   "@capacitor/core@8.3.0": {
     "licenses": "MIT",
@@ -31,8 +31,16 @@
     "publisher": "Ionic Team",
     "email": "hi@ionic.io",
     "url": "https://ionic.io",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\@capacitor\\core",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\@capacitor\\core\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@capacitor/core",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@capacitor/core/LICENSE"
+  },
+  "@capacitor/device@8.0.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/ionic-team/capacitor-plugins",
+    "publisher": "Ionic",
+    "email": "hi@ionicframework.com",
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@capacitor/device",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@capacitor/device/LICENSE"
   },
   "@capacitor/ios@8.3.0": {
     "licenses": "MIT",
@@ -40,15 +48,60 @@
     "publisher": "Ionic Team",
     "email": "hi@ionic.io",
     "url": "https://ionic.io",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\@capacitor\\ios",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\@capacitor\\ios\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@capacitor/ios",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@capacitor/ios/LICENSE"
   },
-  "@huggingface/jinja@0.2.2": {
+  "@capacitor/status-bar@8.0.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/ionic-team/capacitor-plugins",
+    "publisher": "Ionic",
+    "email": "hi@ionicframework.com",
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@capacitor/status-bar",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@capacitor/status-bar/LICENSE"
+  },
+  "@capgo/capacitor-navigation-bar@8.0.25": {
+    "licenses": "MPL-2.0",
+    "repository": "https://github.com/Cap-go/capacitor-navigation-bar",
+    "publisher": "Cap-go",
+    "email": "contact@capgo.app",
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@capgo/capacitor-navigation-bar",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@capgo/capacitor-navigation-bar/LICENSE"
+  },
+  "@huggingface/jinja@0.5.6": {
     "licenses": "MIT",
     "repository": "https://github.com/huggingface/huggingface.js",
     "publisher": "Hugging Face",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\@huggingface\\jinja",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\@huggingface\\jinja\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@huggingface/transformers/node_modules/@huggingface/jinja",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@huggingface/transformers/node_modules/@huggingface/jinja/LICENSE"
+  },
+  "@huggingface/transformers@3.8.1": {
+    "licenses": "Apache-2.0",
+    "repository": "https://github.com/huggingface/transformers.js",
+    "publisher": "Hugging Face",
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@huggingface/transformers",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@huggingface/transformers/LICENSE"
+  },
+  "@img/colour@1.1.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/lovell/colour",
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@img/colour",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@img/colour/LICENSE.md"
+  },
+  "@img/sharp-darwin-arm64@0.34.5": {
+    "licenses": "Apache-2.0",
+    "repository": "https://github.com/lovell/sharp",
+    "publisher": "Lovell Fuller",
+    "email": "npm@lovell.info",
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@img/sharp-darwin-arm64",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@img/sharp-darwin-arm64/LICENSE"
+  },
+  "@img/sharp-libvips-darwin-arm64@1.2.4": {
+    "licenses": "LGPL-3.0-or-later",
+    "repository": "https://github.com/lovell/sharp-libvips",
+    "publisher": "Lovell Fuller",
+    "email": "npm@lovell.info",
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@img/sharp-libvips-darwin-arm64",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@img/sharp-libvips-darwin-arm64/README.md"
   },
   "@ionic/cli-framework-output@2.2.8": {
     "licenses": "MIT",
@@ -56,8 +109,8 @@
     "publisher": "Ionic Team",
     "email": "hi@ionic.io",
     "url": "https://ionicframework.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\@ionic\\cli-framework-output",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\@ionic\\cli-framework-output\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@ionic/cli-framework-output",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@ionic/cli-framework-output/LICENSE"
   },
   "@ionic/utils-array@2.1.6": {
     "licenses": "MIT",
@@ -65,8 +118,8 @@
     "publisher": "Ionic Team",
     "email": "hi@ionic.io",
     "url": "https://ionic.io",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\@ionic\\utils-array",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\@ionic\\utils-array\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@ionic/utils-array",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@ionic/utils-array/LICENSE"
   },
   "@ionic/utils-fs@3.1.7": {
     "licenses": "MIT",
@@ -74,8 +127,8 @@
     "publisher": "Ionic Team",
     "email": "hi@ionic.io",
     "url": "https://ionic.io",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\@ionic\\utils-fs",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\@ionic\\utils-fs\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@ionic/utils-fs",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@ionic/utils-fs/LICENSE"
   },
   "@ionic/utils-object@2.1.6": {
     "licenses": "MIT",
@@ -83,8 +136,8 @@
     "publisher": "Ionic Team",
     "email": "hi@ionic.io",
     "url": "https://ionic.io",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\@ionic\\utils-object",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\@ionic\\utils-object\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@ionic/utils-object",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@ionic/utils-object/LICENSE"
   },
   "@ionic/utils-process@2.1.12": {
     "licenses": "MIT",
@@ -92,8 +145,8 @@
     "publisher": "Ionic Team",
     "email": "hi@ionic.io",
     "url": "https://ionic.io",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\@ionic\\utils-process",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\@ionic\\utils-process\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@ionic/utils-process",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@ionic/utils-process/LICENSE"
   },
   "@ionic/utils-stream@3.1.7": {
     "licenses": "MIT",
@@ -101,8 +154,8 @@
     "publisher": "Ionic Team",
     "email": "hi@ionic.io",
     "url": "https://ionic.io",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\@ionic\\utils-stream",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\@ionic\\utils-stream\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@ionic/utils-stream",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@ionic/utils-stream/LICENSE"
   },
   "@ionic/utils-subprocess@3.0.1": {
     "licenses": "MIT",
@@ -110,8 +163,8 @@
     "publisher": "Ionic Team",
     "email": "hi@ionic.io",
     "url": "https://ionic.io",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\@ionic\\utils-subprocess",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\@ionic\\utils-subprocess\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@ionic/utils-subprocess",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@ionic/utils-subprocess/LICENSE"
   },
   "@ionic/utils-terminal@2.3.5": {
     "licenses": "MIT",
@@ -119,146 +172,133 @@
     "publisher": "Ionic Team",
     "email": "hi@ionic.io",
     "url": "https://ionic.io",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\@ionic\\utils-terminal",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\@ionic\\utils-terminal\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@ionic/utils-terminal",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@ionic/utils-terminal/LICENSE"
   },
   "@isaacs/fs-minipass@4.0.1": {
     "licenses": "ISC",
     "repository": "https://github.com/npm/fs-minipass",
     "publisher": "Isaac Z. Schlueter",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\@isaacs\\fs-minipass",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\@isaacs\\fs-minipass\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@isaacs/fs-minipass",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@isaacs/fs-minipass/LICENSE"
   },
   "@mlc-ai/web-llm@0.2.82": {
     "licenses": "Apache-2.0",
     "repository": "https://github.com/mlc-ai/web-llm",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\@mlc-ai\\web-llm",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\@mlc-ai\\web-llm\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@mlc-ai/web-llm",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@mlc-ai/web-llm/LICENSE"
   },
   "@protobufjs/aspromise@1.1.2": {
     "licenses": "BSD-3-Clause",
     "repository": "https://github.com/dcodeIO/protobuf.js",
     "publisher": "Daniel Wirtz",
     "email": "dcode+protobufjs@dcode.io",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\@protobufjs\\aspromise",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\@protobufjs\\aspromise\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@protobufjs/aspromise",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@protobufjs/aspromise/LICENSE"
   },
   "@protobufjs/base64@1.1.2": {
     "licenses": "BSD-3-Clause",
     "repository": "https://github.com/dcodeIO/protobuf.js",
     "publisher": "Daniel Wirtz",
     "email": "dcode+protobufjs@dcode.io",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\@protobufjs\\base64",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\@protobufjs\\base64\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@protobufjs/base64",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@protobufjs/base64/LICENSE"
   },
   "@protobufjs/codegen@2.0.4": {
     "licenses": "BSD-3-Clause",
     "repository": "https://github.com/dcodeIO/protobuf.js",
     "publisher": "Daniel Wirtz",
     "email": "dcode+protobufjs@dcode.io",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\@protobufjs\\codegen",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\@protobufjs\\codegen\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@protobufjs/codegen",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@protobufjs/codegen/LICENSE"
   },
   "@protobufjs/eventemitter@1.1.0": {
     "licenses": "BSD-3-Clause",
     "repository": "https://github.com/dcodeIO/protobuf.js",
     "publisher": "Daniel Wirtz",
     "email": "dcode+protobufjs@dcode.io",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\@protobufjs\\eventemitter",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\@protobufjs\\eventemitter\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@protobufjs/eventemitter",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@protobufjs/eventemitter/LICENSE"
   },
   "@protobufjs/fetch@1.1.0": {
     "licenses": "BSD-3-Clause",
     "repository": "https://github.com/dcodeIO/protobuf.js",
     "publisher": "Daniel Wirtz",
     "email": "dcode+protobufjs@dcode.io",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\@protobufjs\\fetch",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\@protobufjs\\fetch\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@protobufjs/fetch",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@protobufjs/fetch/LICENSE"
   },
   "@protobufjs/float@1.0.2": {
     "licenses": "BSD-3-Clause",
     "repository": "https://github.com/dcodeIO/protobuf.js",
     "publisher": "Daniel Wirtz",
     "email": "dcode+protobufjs@dcode.io",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\@protobufjs\\float",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\@protobufjs\\float\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@protobufjs/float",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@protobufjs/float/LICENSE"
   },
   "@protobufjs/inquire@1.1.0": {
     "licenses": "BSD-3-Clause",
     "repository": "https://github.com/dcodeIO/protobuf.js",
     "publisher": "Daniel Wirtz",
     "email": "dcode+protobufjs@dcode.io",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\@protobufjs\\inquire",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\@protobufjs\\inquire\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@protobufjs/inquire",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@protobufjs/inquire/LICENSE"
   },
   "@protobufjs/path@1.1.2": {
     "licenses": "BSD-3-Clause",
     "repository": "https://github.com/dcodeIO/protobuf.js",
     "publisher": "Daniel Wirtz",
     "email": "dcode+protobufjs@dcode.io",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\@protobufjs\\path",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\@protobufjs\\path\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@protobufjs/path",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@protobufjs/path/LICENSE"
   },
   "@protobufjs/pool@1.1.0": {
     "licenses": "BSD-3-Clause",
     "repository": "https://github.com/dcodeIO/protobuf.js",
     "publisher": "Daniel Wirtz",
     "email": "dcode+protobufjs@dcode.io",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\@protobufjs\\pool",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\@protobufjs\\pool\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@protobufjs/pool",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@protobufjs/pool/LICENSE"
   },
   "@protobufjs/utf8@1.1.0": {
     "licenses": "BSD-3-Clause",
     "repository": "https://github.com/dcodeIO/protobuf.js",
     "publisher": "Daniel Wirtz",
     "email": "dcode+protobufjs@dcode.io",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\@protobufjs\\utf8",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\@protobufjs\\utf8\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@protobufjs/utf8",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@protobufjs/utf8/LICENSE"
   },
   "@types/fs-extra@8.1.5": {
     "licenses": "MIT",
     "repository": "https://github.com/DefinitelyTyped/DefinitelyTyped",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\@types\\fs-extra",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\@types\\fs-extra\\LICENSE"
-  },
-  "@types/long@4.0.2": {
-    "licenses": "MIT",
-    "repository": "https://github.com/DefinitelyTyped/DefinitelyTyped",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\@types\\long",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\@types\\long\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@types/fs-extra",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@types/fs-extra/LICENSE"
   },
   "@types/node@24.12.2": {
     "licenses": "MIT",
     "repository": "https://github.com/DefinitelyTyped/DefinitelyTyped",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\@types\\node",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\@types\\node\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@types/node",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@types/node/LICENSE"
   },
   "@types/slice-ansi@4.0.0": {
     "licenses": "MIT",
     "repository": "https://github.com/DefinitelyTyped/DefinitelyTyped",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\@types\\slice-ansi",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\@types\\slice-ansi\\LICENSE"
-  },
-  "@xenova/transformers@2.17.2": {
-    "licenses": "Apache-2.0",
-    "repository": "https://github.com/xenova/transformers.js",
-    "publisher": "Xenova",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\@xenova\\transformers",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\@xenova\\transformers\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@types/slice-ansi",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@types/slice-ansi/LICENSE"
   },
   "@xmldom/xmldom@0.8.12": {
     "licenses": "MIT",
     "repository": "https://github.com/xmldom/xmldom",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\@xmldom\\xmldom",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\@xmldom\\xmldom\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@xmldom/xmldom",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@xmldom/xmldom/LICENSE"
   },
   "abbrev@1.1.1": {
     "licenses": "ISC",
     "repository": "https://github.com/isaacs/abbrev-js",
     "publisher": "Isaac Z. Schlueter",
     "email": "i@izs.me",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\abbrev",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\abbrev\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/abbrev",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/abbrev/LICENSE"
   },
   "ansi-regex@5.0.1": {
     "licenses": "MIT",
@@ -266,8 +306,8 @@
     "publisher": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
     "url": "sindresorhus.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\ansi-regex",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\ansi-regex\\license"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/ansi-regex",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/ansi-regex/license"
   },
   "ansi-styles@3.2.1": {
     "licenses": "MIT",
@@ -275,8 +315,8 @@
     "publisher": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
     "url": "sindresorhus.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\license-checker\\node_modules\\ansi-styles",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\license-checker\\node_modules\\ansi-styles\\license"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/license-checker/node_modules/ansi-styles",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/license-checker/node_modules/ansi-styles/license"
   },
   "ansi-styles@4.3.0": {
     "licenses": "MIT",
@@ -284,8 +324,8 @@
     "publisher": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
     "url": "sindresorhus.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\ansi-styles",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\ansi-styles\\license"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/ansi-styles",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/ansi-styles/license"
   },
   "array-find-index@1.0.2": {
     "licenses": "MIT",
@@ -293,14 +333,14 @@
     "publisher": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
     "url": "sindresorhus.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\array-find-index",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\array-find-index\\license"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/array-find-index",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/array-find-index/license"
   },
   "asap@2.0.6": {
     "licenses": "MIT",
     "repository": "https://github.com/kriskowal/asap",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\asap",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\asap\\LICENSE.md"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/asap",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/asap/LICENSE.md"
   },
   "astral-regex@2.0.0": {
     "licenses": "MIT",
@@ -308,23 +348,16 @@
     "publisher": "Kevin Mårtensson",
     "email": "kevinmartensson@gmail.com",
     "url": "github.com/kevva",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\astral-regex",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\astral-regex\\license"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/astral-regex",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/astral-regex/license"
   },
   "at-least-node@1.0.0": {
     "licenses": "ISC",
     "repository": "https://github.com/RyanZim/at-least-node",
     "publisher": "Ryan Zimmerman",
     "email": "opensrc@ryanzim.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\at-least-node",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\at-least-node\\LICENSE"
-  },
-  "b4a@1.8.0": {
-    "licenses": "Apache-2.0",
-    "repository": "https://github.com/holepunchto/b4a",
-    "publisher": "Holepunch",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\b4a",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\b4a\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/at-least-node",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/at-least-node/LICENSE"
   },
   "balanced-match@1.0.2": {
     "licenses": "MIT",
@@ -332,87 +365,44 @@
     "publisher": "Julian Gruber",
     "email": "mail@juliangruber.com",
     "url": "http://juliangruber.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\balanced-match",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\balanced-match\\LICENSE.md"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/balanced-match",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/balanced-match/LICENSE.md"
   },
   "balanced-match@4.0.4": {
     "licenses": "MIT",
     "repository": "https://github.com/juliangruber/balanced-match",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\rimraf\\node_modules\\balanced-match",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\rimraf\\node_modules\\balanced-match\\LICENSE.md"
-  },
-  "bare-events@2.8.2": {
-    "licenses": "Apache-2.0",
-    "repository": "https://github.com/holepunchto/bare-events",
-    "publisher": "Holepunch",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\bare-events",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\bare-events\\LICENSE"
-  },
-  "bare-fs@4.6.0": {
-    "licenses": "Apache-2.0",
-    "repository": "https://github.com/holepunchto/bare-fs",
-    "publisher": "Holepunch",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\bare-fs",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\bare-fs\\LICENSE"
-  },
-  "bare-os@3.8.7": {
-    "licenses": "Apache-2.0",
-    "repository": "https://github.com/holepunchto/bare-os",
-    "publisher": "Holepunch",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\bare-os",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\bare-os\\LICENSE"
-  },
-  "bare-path@3.0.0": {
-    "licenses": "Apache-2.0",
-    "repository": "https://github.com/holepunchto/bare-path",
-    "publisher": "Holepunch",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\bare-path",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\bare-path\\LICENSE",
-    "noticeFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\bare-path\\NOTICE"
-  },
-  "bare-stream@2.12.0": {
-    "licenses": "Apache-2.0",
-    "repository": "https://github.com/holepunchto/bare-stream",
-    "publisher": "Holepunch",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\bare-stream",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\bare-stream\\LICENSE"
-  },
-  "bare-url@2.4.0": {
-    "licenses": "Apache-2.0",
-    "repository": "https://github.com/holepunchto/bare-url",
-    "publisher": "Holepunch",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\bare-url",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\bare-url\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/rimraf/node_modules/balanced-match",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/rimraf/node_modules/balanced-match/LICENSE.md"
   },
   "base64-js@1.5.1": {
     "licenses": "MIT",
     "repository": "https://github.com/beatgammit/base64-js",
     "publisher": "T. Jameson Little",
     "email": "t.jameson.little@gmail.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\base64-js",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\base64-js\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/base64-js",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/base64-js/LICENSE"
   },
   "big-integer@1.6.52": {
     "licenses": "Unlicense",
     "repository": "https://github.com/peterolson/BigInteger.js",
     "publisher": "Peter Olson",
     "email": "peter.e.c.olson+npm@gmail.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\big-integer",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\big-integer\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/big-integer",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/big-integer/LICENSE"
   },
-  "bl@4.1.0": {
+  "boolean@3.2.0": {
     "licenses": "MIT",
-    "repository": "https://github.com/rvagg/bl",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\bl",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\bl\\LICENSE.md"
+    "repository": "https://github.com/thenativeweb/boolean",
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/boolean",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/boolean/LICENSE.txt"
   },
   "bplist-parser@0.3.2": {
     "licenses": "MIT",
     "repository": "https://github.com/nearinfinity/node-bplist-parser",
     "publisher": "Joe Ferner",
     "email": "joe.ferner@nearinfinity.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\bplist-parser",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\bplist-parser\\README.md"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/bplist-parser",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/bplist-parser/README.md"
   },
   "brace-expansion@1.1.13": {
     "licenses": "MIT",
@@ -420,46 +410,28 @@
     "publisher": "Julian Gruber",
     "email": "mail@juliangruber.com",
     "url": "http://juliangruber.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\brace-expansion",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\brace-expansion\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/brace-expansion",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/brace-expansion/LICENSE"
   },
   "brace-expansion@5.0.5": {
     "licenses": "MIT",
     "repository": "https://github.com/juliangruber/brace-expansion",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\rimraf\\node_modules\\brace-expansion",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\rimraf\\node_modules\\brace-expansion\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/rimraf/node_modules/brace-expansion",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/rimraf/node_modules/brace-expansion/LICENSE"
   },
   "buffer-crc32@0.2.13": {
     "licenses": "MIT",
     "repository": "https://github.com/brianloveswords/buffer-crc32",
     "publisher": "Brian J. Brennan",
     "email": "brianloveswords@gmail.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\buffer-crc32",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\buffer-crc32\\LICENSE"
-  },
-  "buffer@5.7.1": {
-    "licenses": "MIT",
-    "repository": "https://github.com/feross/buffer",
-    "publisher": "Feross Aboukhadijeh",
-    "email": "feross@feross.org",
-    "url": "https://feross.org",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\buffer",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\buffer\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/buffer-crc32",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/buffer-crc32/LICENSE"
   },
   "chalk@2.4.2": {
     "licenses": "MIT",
     "repository": "https://github.com/chalk/chalk",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\license-checker\\node_modules\\chalk",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\license-checker\\node_modules\\chalk\\license"
-  },
-  "chownr@1.1.4": {
-    "licenses": "ISC",
-    "repository": "https://github.com/isaacs/chownr",
-    "publisher": "Isaac Z. Schlueter",
-    "email": "i@izs.me",
-    "url": "http://blog.izs.me/",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\prebuild-install\\node_modules\\chownr",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\prebuild-install\\node_modules\\chownr\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/license-checker/node_modules/chalk",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/license-checker/node_modules/chalk/license"
   },
   "chownr@3.0.0": {
     "licenses": "BlueOak-1.0.0",
@@ -467,62 +439,48 @@
     "publisher": "Isaac Z. Schlueter",
     "email": "i@izs.me",
     "url": "http://blog.izs.me/",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\chownr",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\chownr\\LICENSE.md"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/chownr",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/chownr/LICENSE.md"
   },
   "color-convert@1.9.3": {
     "licenses": "MIT",
     "repository": "https://github.com/Qix-/color-convert",
     "publisher": "Heather Arthur",
     "email": "fayearthur@gmail.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\license-checker\\node_modules\\color-convert",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\license-checker\\node_modules\\color-convert\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/license-checker/node_modules/color-convert",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/license-checker/node_modules/color-convert/LICENSE"
   },
   "color-convert@2.0.1": {
     "licenses": "MIT",
     "repository": "https://github.com/Qix-/color-convert",
     "publisher": "Heather Arthur",
     "email": "fayearthur@gmail.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\color-convert",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\color-convert\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/color-convert",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/color-convert/LICENSE"
   },
   "color-name@1.1.3": {
     "licenses": "MIT",
     "repository": "https://github.com/dfcreative/color-name",
     "publisher": "DY",
     "email": "dfcreative@gmail.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\license-checker\\node_modules\\color-name",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\license-checker\\node_modules\\color-name\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/license-checker/node_modules/color-name",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/license-checker/node_modules/color-name/LICENSE"
   },
   "color-name@1.1.4": {
     "licenses": "MIT",
     "repository": "https://github.com/colorjs/color-name",
     "publisher": "DY",
     "email": "dfcreative@gmail.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\color-name",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\color-name\\LICENSE"
-  },
-  "color-string@1.9.1": {
-    "licenses": "MIT",
-    "repository": "https://github.com/Qix-/color-string",
-    "publisher": "Heather Arthur",
-    "email": "fayearthur@gmail.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\color-string",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\color-string\\LICENSE"
-  },
-  "color@4.2.3": {
-    "licenses": "MIT",
-    "repository": "https://github.com/Qix-/color",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\color",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\color\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/color-name",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/color-name/LICENSE"
   },
   "commander@12.1.0": {
     "licenses": "MIT",
     "repository": "https://github.com/tj/commander.js",
     "publisher": "TJ Holowaychuk",
     "email": "tj@vision-media.ca",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\commander",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\commander\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/commander",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/commander/LICENSE"
   },
   "concat-map@0.0.1": {
     "licenses": "MIT",
@@ -530,57 +488,48 @@
     "publisher": "James Halliday",
     "email": "mail@substack.net",
     "url": "http://substack.net",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\concat-map",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\concat-map\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/concat-map",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/concat-map/LICENSE"
   },
   "cross-spawn@7.0.6": {
     "licenses": "MIT",
     "repository": "https://github.com/moxystudio/node-cross-spawn",
     "publisher": "André Cruz",
     "email": "andre@moxy.studio",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\cross-spawn",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\cross-spawn\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/cross-spawn",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/cross-spawn/LICENSE"
   },
   "debug@3.2.7": {
     "licenses": "MIT",
     "repository": "https://github.com/visionmedia/debug",
     "publisher": "TJ Holowaychuk",
     "email": "tj@vision-media.ca",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\license-checker\\node_modules\\debug",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\license-checker\\node_modules\\debug\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/license-checker/node_modules/debug",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/license-checker/node_modules/debug/LICENSE"
   },
   "debug@4.4.3": {
     "licenses": "MIT",
     "repository": "https://github.com/debug-js/debug",
     "publisher": "Josh Junon",
     "url": "https://github.com/qix-",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\debug",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\debug\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/debug",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/debug/LICENSE"
   },
   "debuglog@1.0.1": {
     "licenses": "MIT",
     "repository": "https://github.com/sam-github/node-debuglog",
     "publisher": "Sam Roberts",
     "email": "sam@strongloop.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\debuglog",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\debuglog\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/debuglog",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/debuglog/LICENSE"
   },
-  "decompress-response@6.0.0": {
+  "define-data-property@1.1.4": {
     "licenses": "MIT",
-    "repository": "https://github.com/sindresorhus/decompress-response",
-    "publisher": "Sindre Sorhus",
-    "email": "sindresorhus@gmail.com",
-    "url": "https://sindresorhus.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\decompress-response",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\decompress-response\\license"
-  },
-  "deep-extend@0.6.0": {
-    "licenses": "MIT",
-    "repository": "https://github.com/unclechu/node-deep-extend",
-    "publisher": "Viacheslav Lotsmanov",
-    "email": "lotsmanov89@gmail.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\deep-extend",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\deep-extend\\LICENSE"
+    "repository": "https://github.com/ljharb/define-data-property",
+    "publisher": "Jordan Harband",
+    "email": "ljharb@gmail.com",
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/define-data-property",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/define-data-property/LICENSE"
   },
   "define-lazy-prop@2.0.0": {
     "licenses": "MIT",
@@ -588,16 +537,31 @@
     "publisher": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
     "url": "sindresorhus.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\define-lazy-prop",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\define-lazy-prop\\license"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/define-lazy-prop",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/define-lazy-prop/license"
+  },
+  "define-properties@1.2.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/ljharb/define-properties",
+    "publisher": "Jordan Harband",
+    "email": "ljharb@gmail.com",
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/define-properties",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/define-properties/LICENSE"
   },
   "detect-libc@2.1.2": {
     "licenses": "Apache-2.0",
     "repository": "https://github.com/lovell/detect-libc",
     "publisher": "Lovell Fuller",
     "email": "npm@lovell.info",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\detect-libc",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\detect-libc\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/detect-libc",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/detect-libc/LICENSE"
+  },
+  "detect-node@2.1.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/iliakan/detect-node",
+    "publisher": "Ilya Kantor",
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/detect-node",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/detect-node/LICENSE"
   },
   "dezalgo@1.0.4": {
     "licenses": "ISC",
@@ -605,32 +569,24 @@
     "publisher": "Isaac Z. Schlueter",
     "email": "i@izs.me",
     "url": "http://blog.izs.me/",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\dezalgo",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\dezalgo\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/dezalgo",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/dezalgo/LICENSE"
   },
   "elementtree@0.1.7": {
     "licenses": "Apache-2.0",
     "repository": "https://github.com/racker/node-elementtree",
     "publisher": "Rackspace US, Inc.",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\elementtree",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\elementtree\\LICENSE.txt",
-    "noticeFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\elementtree\\NOTICE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/elementtree",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/elementtree/LICENSE.txt",
+    "noticeFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/elementtree/NOTICE"
   },
   "emoji-regex@8.0.0": {
     "licenses": "MIT",
     "repository": "https://github.com/mathiasbynens/emoji-regex",
     "publisher": "Mathias Bynens",
     "url": "https://mathiasbynens.be/",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\emoji-regex",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\emoji-regex\\LICENSE-MIT.txt"
-  },
-  "end-of-stream@1.4.5": {
-    "licenses": "MIT",
-    "repository": "https://github.com/mafintosh/end-of-stream",
-    "publisher": "Mathias Buus",
-    "email": "mathiasbuus@gmail.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\end-of-stream",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\end-of-stream\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/emoji-regex",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/emoji-regex/LICENSE-MIT.txt"
   },
   "env-paths@2.2.1": {
     "licenses": "MIT",
@@ -638,8 +594,31 @@
     "publisher": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
     "url": "sindresorhus.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\env-paths",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\env-paths\\license"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/env-paths",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/env-paths/license"
+  },
+  "es-define-property@1.0.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/ljharb/es-define-property",
+    "publisher": "Jordan Harband",
+    "email": "ljharb@gmail.com",
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/es-define-property",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/es-define-property/LICENSE"
+  },
+  "es-errors@1.3.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/ljharb/es-errors",
+    "publisher": "Jordan Harband",
+    "email": "ljharb@gmail.com",
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/es-errors",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/es-errors/LICENSE"
+  },
+  "es6-error@4.1.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/bjyoungblood/es6-error",
+    "publisher": "Ben Youngblood",
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/es6-error",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/es6-error/LICENSE.md"
   },
   "escape-string-regexp@1.0.5": {
     "licenses": "MIT",
@@ -647,70 +626,48 @@
     "publisher": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
     "url": "sindresorhus.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\license-checker\\node_modules\\escape-string-regexp",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\license-checker\\node_modules\\escape-string-regexp\\license"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/license-checker/node_modules/escape-string-regexp",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/license-checker/node_modules/escape-string-regexp/license"
   },
-  "events-universal@1.0.1": {
-    "licenses": "Apache-2.0",
-    "repository": "https://github.com/holepunchto/events-universal",
-    "publisher": "Holepunch",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\events-universal",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\events-universal\\LICENSE"
-  },
-  "expand-template@2.0.3": {
-    "licenses": "(MIT OR WTFPL)",
-    "repository": "https://github.com/ralphtheninja/expand-template",
-    "publisher": "LM",
-    "email": "ralphtheninja@riseup.net",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\expand-template",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\expand-template\\LICENSE"
-  },
-  "fast-fifo@1.3.2": {
+  "escape-string-regexp@4.0.0": {
     "licenses": "MIT",
-    "repository": "https://github.com/mafintosh/fast-fifo",
-    "publisher": "Mathias Buus",
-    "url": "@mafintosh",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\fast-fifo",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\fast-fifo\\LICENSE"
+    "repository": "https://github.com/sindresorhus/escape-string-regexp",
+    "publisher": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "https://sindresorhus.com",
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/escape-string-regexp",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/escape-string-regexp/license"
   },
   "fd-slicer@1.1.0": {
     "licenses": "MIT",
     "repository": "https://github.com/andrewrk/node-fd-slicer",
     "publisher": "Andrew Kelley",
     "email": "superjoe30@gmail.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\fd-slicer",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\fd-slicer\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/fd-slicer",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/fd-slicer/LICENSE"
   },
-  "flatbuffers@1.12.0": {
-    "licenses": "Apache*",
+  "flatbuffers@25.9.23": {
+    "licenses": "Apache-2.0",
     "repository": "https://github.com/google/flatbuffers",
     "publisher": "The FlatBuffers project",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\flatbuffers",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\flatbuffers\\LICENSE.txt"
-  },
-  "fs-constants@1.0.0": {
-    "licenses": "MIT",
-    "repository": "https://github.com/mafintosh/fs-constants",
-    "publisher": "Mathias Buus",
-    "url": "@mafintosh",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\fs-constants",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\fs-constants\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/flatbuffers",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/flatbuffers/LICENSE"
   },
   "fs-extra@11.3.4": {
     "licenses": "MIT",
     "repository": "https://github.com/jprichardson/node-fs-extra",
     "publisher": "JP Richardson",
     "email": "jprichardson@gmail.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\fs-extra",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\fs-extra\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/fs-extra",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/fs-extra/LICENSE"
   },
   "fs-extra@9.1.0": {
     "licenses": "MIT",
     "repository": "https://github.com/jprichardson/node-fs-extra",
     "publisher": "JP Richardson",
     "email": "jprichardson@gmail.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\@ionic\\utils-fs\\node_modules\\fs-extra",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\@ionic\\utils-fs\\node_modules\\fs-extra\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@ionic/utils-fs/node_modules/fs-extra",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@ionic/utils-fs/node_modules/fs-extra/LICENSE"
   },
   "fs.realpath@1.0.0": {
     "licenses": "ISC",
@@ -718,25 +675,16 @@
     "publisher": "Isaac Z. Schlueter",
     "email": "i@izs.me",
     "url": "http://blog.izs.me/",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\fs.realpath",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\fs.realpath\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/fs.realpath",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/fs.realpath/LICENSE"
   },
   "function-bind@1.1.2": {
     "licenses": "MIT",
     "repository": "https://github.com/Raynos/function-bind",
     "publisher": "Raynos",
     "email": "raynos2@gmail.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\function-bind",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\function-bind\\LICENSE"
-  },
-  "github-from-package@0.0.0": {
-    "licenses": "MIT",
-    "repository": "https://github.com/substack/github-from-package",
-    "publisher": "James Halliday",
-    "email": "mail@substack.net",
-    "url": "http://substack.net",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\github-from-package",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\github-from-package\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/function-bind",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/function-bind/LICENSE"
   },
   "glob@13.0.6": {
     "licenses": "BlueOak-1.0.0",
@@ -744,8 +692,8 @@
     "publisher": "Isaac Z. Schlueter",
     "email": "i@izs.me",
     "url": "https://blog.izs.me/",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\rimraf\\node_modules\\glob",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\rimraf\\node_modules\\glob\\LICENSE.md"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/rimraf/node_modules/glob",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/rimraf/node_modules/glob/LICENSE.md"
   },
   "glob@7.2.3": {
     "licenses": "ISC",
@@ -753,21 +701,46 @@
     "publisher": "Isaac Z. Schlueter",
     "email": "i@izs.me",
     "url": "http://blog.izs.me/",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\glob",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\glob\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/glob",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/glob/LICENSE"
+  },
+  "global-agent@3.0.0": {
+    "licenses": "BSD-3-Clause",
+    "repository": "https://github.com/gajus/global-agent",
+    "publisher": "Gajus Kuizinas",
+    "email": "gajus@gajus.com",
+    "url": "http://gajus.com",
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/global-agent",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/global-agent/LICENSE"
+  },
+  "globalthis@1.0.4": {
+    "licenses": "MIT",
+    "repository": "https://github.com/ljharb/System.global",
+    "publisher": "Jordan Harband",
+    "email": "ljharb@gmail.com",
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/globalthis",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/globalthis/LICENSE"
+  },
+  "gopd@1.2.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/ljharb/gopd",
+    "publisher": "Jordan Harband",
+    "email": "ljharb@gmail.com",
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/gopd",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/gopd/LICENSE"
   },
   "graceful-fs@4.2.11": {
     "licenses": "ISC",
     "repository": "https://github.com/isaacs/node-graceful-fs",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\graceful-fs",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\graceful-fs\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/graceful-fs",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/graceful-fs/LICENSE"
   },
   "guid-typescript@1.0.9": {
     "licenses": "ISC",
     "repository": "https://github.com/NicolasDeveloper/guid-typescript",
     "publisher": "nicolas",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\guid-typescript",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\guid-typescript\\README.md"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/guid-typescript",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/guid-typescript/README.md"
   },
   "has-flag@3.0.0": {
     "licenses": "MIT",
@@ -775,16 +748,24 @@
     "publisher": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
     "url": "sindresorhus.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\license-checker\\node_modules\\has-flag",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\license-checker\\node_modules\\has-flag\\license"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/license-checker/node_modules/has-flag",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/license-checker/node_modules/has-flag/license"
+  },
+  "has-property-descriptors@1.0.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/inspect-js/has-property-descriptors",
+    "publisher": "Jordan Harband",
+    "email": "ljharb@gmail.com",
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/has-property-descriptors",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/has-property-descriptors/LICENSE"
   },
   "hasown@2.0.2": {
     "licenses": "MIT",
     "repository": "https://github.com/inspect-js/hasOwn",
     "publisher": "Jordan Harband",
     "email": "ljharb@gmail.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\hasown",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\hasown\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/hasown",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/hasown/LICENSE"
   },
   "hosted-git-info@2.8.9": {
     "licenses": "ISC",
@@ -792,16 +773,16 @@
     "publisher": "Rebecca Turner",
     "email": "me@re-becca.org",
     "url": "http://re-becca.org",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\hosted-git-info",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\hosted-git-info\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/hosted-git-info",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/hosted-git-info/LICENSE"
   },
   "html-parse-stringify@3.0.1": {
     "licenses": "MIT",
     "repository": "https://github.com/henrikjoreteg/html-parse-stringify",
     "publisher": "Henrik Joreteg",
     "email": "henrik@joreteg.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\html-parse-stringify",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\html-parse-stringify\\README.md"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/html-parse-stringify",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/html-parse-stringify/README.md"
   },
   "i18next-browser-languagedetector@8.2.1": {
     "licenses": "MIT",
@@ -809,8 +790,8 @@
     "publisher": "Jan Mühlemann",
     "email": "jan.muehlemann@gmail.com",
     "url": "https://github.com/jamuhl",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\i18next-browser-languagedetector",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\i18next-browser-languagedetector\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/i18next-browser-languagedetector",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/i18next-browser-languagedetector/LICENSE"
   },
   "i18next@26.0.3": {
     "licenses": "MIT",
@@ -818,17 +799,8 @@
     "publisher": "Jan Mühlemann",
     "email": "jan.muehlemann@gmail.com",
     "url": "https://github.com/jamuhl",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\i18next",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\i18next\\LICENSE"
-  },
-  "ieee754@1.2.1": {
-    "licenses": "BSD-3-Clause",
-    "repository": "https://github.com/feross/ieee754",
-    "publisher": "Feross Aboukhadijeh",
-    "email": "feross@feross.org",
-    "url": "https://feross.org",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\ieee754",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\ieee754\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/i18next",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/i18next/LICENSE"
   },
   "inflight@1.0.6": {
     "licenses": "ISC",
@@ -836,46 +808,29 @@
     "publisher": "Isaac Z. Schlueter",
     "email": "i@izs.me",
     "url": "http://blog.izs.me/",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\inflight",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\inflight\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/inflight",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/inflight/LICENSE"
   },
   "inherits@2.0.4": {
     "licenses": "ISC",
     "repository": "https://github.com/isaacs/inherits",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\inherits",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\inherits\\LICENSE"
-  },
-  "ini@1.3.8": {
-    "licenses": "ISC",
-    "repository": "https://github.com/isaacs/ini",
-    "publisher": "Isaac Z. Schlueter",
-    "email": "i@izs.me",
-    "url": "http://blog.izs.me/",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\rc\\node_modules\\ini",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\rc\\node_modules\\ini\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/inherits",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/inherits/LICENSE"
   },
   "ini@4.1.3": {
     "licenses": "ISC",
     "repository": "https://github.com/npm/ini",
     "publisher": "GitHub Inc.",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\ini",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\ini\\LICENSE"
-  },
-  "is-arrayish@0.3.4": {
-    "licenses": "MIT",
-    "repository": "https://github.com/qix-/node-is-arrayish",
-    "publisher": "Qix",
-    "url": "http://github.com/qix-",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\is-arrayish",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\is-arrayish\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/ini",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/ini/LICENSE"
   },
   "is-core-module@2.16.1": {
     "licenses": "MIT",
     "repository": "https://github.com/inspect-js/is-core-module",
     "publisher": "Jordan Harband",
     "email": "ljharb@gmail.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\is-core-module",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\is-core-module\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/is-core-module",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/is-core-module/LICENSE"
   },
   "is-docker@2.2.1": {
     "licenses": "MIT",
@@ -883,8 +838,8 @@
     "publisher": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
     "url": "https://sindresorhus.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\is-docker",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\is-docker\\license"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/is-docker",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/is-docker/license"
   },
   "is-fullwidth-code-point@3.0.0": {
     "licenses": "MIT",
@@ -892,8 +847,8 @@
     "publisher": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
     "url": "sindresorhus.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\is-fullwidth-code-point",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\is-fullwidth-code-point\\license"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/is-fullwidth-code-point",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/is-fullwidth-code-point/license"
   },
   "is-wsl@2.2.0": {
     "licenses": "MIT",
@@ -901,8 +856,8 @@
     "publisher": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
     "url": "sindresorhus.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\is-wsl",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\is-wsl\\license"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/is-wsl",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/is-wsl/license"
   },
   "isexe@2.0.0": {
     "licenses": "ISC",
@@ -910,24 +865,33 @@
     "publisher": "Isaac Z. Schlueter",
     "email": "i@izs.me",
     "url": "http://blog.izs.me/",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\isexe",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\isexe\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/isexe",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/isexe/LICENSE"
   },
   "json-parse-even-better-errors@2.3.1": {
     "licenses": "MIT",
     "repository": "https://github.com/npm/json-parse-even-better-errors",
     "publisher": "Kat Marchán",
     "email": "kzm@zkat.tech",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\json-parse-even-better-errors",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\json-parse-even-better-errors\\LICENSE.md"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/json-parse-even-better-errors",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/json-parse-even-better-errors/LICENSE.md"
+  },
+  "json-stringify-safe@5.0.1": {
+    "licenses": "ISC",
+    "repository": "https://github.com/isaacs/json-stringify-safe",
+    "publisher": "Isaac Z. Schlueter",
+    "email": "i@izs.me",
+    "url": "http://blog.izs.me",
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/json-stringify-safe",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/json-stringify-safe/LICENSE"
   },
   "jsonfile@6.2.0": {
     "licenses": "MIT",
     "repository": "https://github.com/jprichardson/node-jsonfile",
     "publisher": "JP Richardson",
     "email": "jprichardson@gmail.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\jsonfile",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\jsonfile\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/jsonfile",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/jsonfile/LICENSE"
   },
   "kleur@3.0.3": {
     "licenses": "MIT",
@@ -935,8 +899,8 @@
     "publisher": "Luke Edwards",
     "email": "luke.edwards05@gmail.com",
     "url": "lukeed.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\prompts\\node_modules\\kleur",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\prompts\\node_modules\\kleur\\license"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/prompts/node_modules/kleur",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/prompts/node_modules/kleur/license"
   },
   "kleur@4.1.5": {
     "licenses": "MIT",
@@ -944,16 +908,16 @@
     "publisher": "Luke Edwards",
     "email": "luke.edwards05@gmail.com",
     "url": "https://lukeed.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\kleur",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\kleur\\license"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/kleur",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/kleur/license"
   },
   "license-checker@25.0.1": {
     "licenses": "BSD-3-Clause",
     "repository": "https://github.com/davglass/license-checker",
     "publisher": "Dav Glass",
     "email": "davglass@gmail.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\license-checker",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\license-checker\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/license-checker",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/license-checker/LICENSE"
   },
   "loglevel@1.9.2": {
     "licenses": "MIT",
@@ -961,33 +925,33 @@
     "publisher": "Tim Perry",
     "email": "pimterry@gmail.com",
     "url": "http://tim-perry.co.uk",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\loglevel",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\loglevel\\LICENSE-MIT"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/loglevel",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/loglevel/LICENSE-MIT"
   },
-  "long@4.0.0": {
+  "long@5.3.2": {
     "licenses": "Apache-2.0",
     "repository": "https://github.com/dcodeIO/long.js",
     "publisher": "Daniel Wirtz",
     "email": "dcode@dcode.io",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\long",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\long\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/long",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/long/LICENSE"
   },
   "lru-cache@11.2.7": {
     "licenses": "BlueOak-1.0.0",
     "repository": "https://github.com/isaacs/node-lru-cache",
     "publisher": "Isaac Z. Schlueter",
     "email": "i@izs.me",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\path-scurry\\node_modules\\lru-cache",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\path-scurry\\node_modules\\lru-cache\\LICENSE.md"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/path-scurry/node_modules/lru-cache",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/path-scurry/node_modules/lru-cache/LICENSE.md"
   },
-  "mimic-response@3.1.0": {
+  "matcher@3.0.0": {
     "licenses": "MIT",
-    "repository": "https://github.com/sindresorhus/mimic-response",
+    "repository": "https://github.com/sindresorhus/matcher",
     "publisher": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
     "url": "https://sindresorhus.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\mimic-response",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\mimic-response\\license"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/matcher",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/matcher/license"
   },
   "minimatch@10.2.5": {
     "licenses": "BlueOak-1.0.0",
@@ -995,8 +959,8 @@
     "publisher": "Isaac Z. Schlueter",
     "email": "i@izs.me",
     "url": "http://blog.izs.me",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\rimraf\\node_modules\\minimatch",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\rimraf\\node_modules\\minimatch\\LICENSE.md"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/rimraf/node_modules/minimatch",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/rimraf/node_modules/minimatch/LICENSE.md"
   },
   "minimatch@3.1.5": {
     "licenses": "ISC",
@@ -1004,8 +968,8 @@
     "publisher": "Isaac Z. Schlueter",
     "email": "i@izs.me",
     "url": "http://blog.izs.me",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\minimatch",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\minimatch\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/minimatch",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/minimatch/LICENSE"
   },
   "minimist@1.2.8": {
     "licenses": "MIT",
@@ -1013,8 +977,8 @@
     "publisher": "James Halliday",
     "email": "mail@substack.net",
     "url": "http://substack.net",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\minimist",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\minimist\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/minimist",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/minimist/LICENSE"
   },
   "minipass@7.1.3": {
     "licenses": "BlueOak-1.0.0",
@@ -1022,8 +986,8 @@
     "publisher": "Isaac Z. Schlueter",
     "email": "i@izs.me",
     "url": "http://blog.izs.me/",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\minipass",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\minipass\\LICENSE.md"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/minipass",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/minipass/LICENSE.md"
   },
   "minizlib@3.1.0": {
     "licenses": "MIT",
@@ -1031,16 +995,8 @@
     "publisher": "Isaac Z. Schlueter",
     "email": "i@izs.me",
     "url": "http://blog.izs.me/",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\minizlib",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\minizlib\\LICENSE"
-  },
-  "mkdirp-classic@0.5.3": {
-    "licenses": "MIT",
-    "repository": "https://github.com/mafintosh/mkdirp-classic",
-    "publisher": "Mathias Buus",
-    "url": "@mafintosh",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\mkdirp-classic",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\mkdirp-classic\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/minizlib",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/minizlib/LICENSE"
   },
   "mkdirp@0.5.6": {
     "licenses": "MIT",
@@ -1048,21 +1004,14 @@
     "publisher": "James Halliday",
     "email": "mail@substack.net",
     "url": "http://substack.net",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\mkdirp",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\mkdirp\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/mkdirp",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/mkdirp/LICENSE"
   },
   "ms@2.1.3": {
     "licenses": "MIT",
     "repository": "https://github.com/vercel/ms",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\ms",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\ms\\license.md"
-  },
-  "napi-build-utils@2.0.0": {
-    "licenses": "MIT",
-    "repository": "https://github.com/inspiredware/napi-build-utils",
-    "publisher": "Jim Schlight",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\napi-build-utils",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\napi-build-utils\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/ms",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/ms/license.md"
   },
   "native-run@2.0.3": {
     "licenses": "MIT",
@@ -1070,21 +1019,8 @@
     "publisher": "Ionic Team",
     "email": "hi@ionicframework.com",
     "url": "https://ionicframework.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\native-run",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\native-run\\LICENSE"
-  },
-  "node-abi@3.89.0": {
-    "licenses": "MIT",
-    "repository": "https://github.com/electron/node-abi",
-    "publisher": "Lukas Geiger",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\node-abi",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\node-abi\\LICENSE"
-  },
-  "node-addon-api@6.1.0": {
-    "licenses": "MIT",
-    "repository": "https://github.com/nodejs/node-addon-api",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\node-addon-api",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\node-addon-api\\LICENSE.md"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/native-run",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/native-run/LICENSE"
   },
   "nopt@4.0.3": {
     "licenses": "ISC",
@@ -1092,16 +1028,16 @@
     "publisher": "Isaac Z. Schlueter",
     "email": "i@izs.me",
     "url": "http://blog.izs.me/",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\nopt",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\nopt\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/nopt",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/nopt/LICENSE"
   },
   "normalize-package-data@2.5.0": {
     "licenses": "BSD-2-Clause",
     "repository": "https://github.com/npm/normalize-package-data",
     "publisher": "Meryn Stol",
     "email": "merynstol@gmail.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\normalize-package-data",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\normalize-package-data\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/normalize-package-data",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/normalize-package-data/LICENSE"
   },
   "npm-normalize-package-bin@1.0.1": {
     "licenses": "ISC",
@@ -1109,8 +1045,17 @@
     "publisher": "Isaac Z. Schlueter",
     "email": "i@izs.me",
     "url": "https://izs.me",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\npm-normalize-package-bin",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\npm-normalize-package-bin\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/npm-normalize-package-bin",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/npm-normalize-package-bin/LICENSE"
+  },
+  "object-keys@1.1.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/ljharb/object-keys",
+    "publisher": "Jordan Harband",
+    "email": "ljharb@gmail.com",
+    "url": "http://ljharb.codes",
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/object-keys",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/object-keys/LICENSE"
   },
   "once@1.4.0": {
     "licenses": "ISC",
@@ -1118,36 +1063,50 @@
     "publisher": "Isaac Z. Schlueter",
     "email": "i@izs.me",
     "url": "http://blog.izs.me/",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\once",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\once\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/once",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/once/LICENSE"
   },
-  "onnx-proto@4.0.4": {
-    "licenses": "MIT",
-    "repository": "https://github.com/chaosmail/onnx-proto",
-    "publisher": "Christoph Koerner",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\onnx-proto",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\onnx-proto\\LICENSE"
-  },
-  "onnxruntime-common@1.14.0": {
+  "onnxruntime-common@1.21.0": {
     "licenses": "MIT",
     "repository": "https://github.com/Microsoft/onnxruntime",
     "publisher": "fs-eire",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\onnxruntime-common",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\onnxruntime-common\\README.md"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@huggingface/transformers/node_modules/onnxruntime-common",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@huggingface/transformers/node_modules/onnxruntime-common/README.md"
   },
-  "onnxruntime-node@1.14.0": {
+  "onnxruntime-common@1.22.0-dev.20250409-89f8206ba4": {
     "licenses": "MIT",
     "repository": "https://github.com/Microsoft/onnxruntime",
     "publisher": "fs-eire",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\onnxruntime-node",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\onnxruntime-node\\README.md"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@huggingface/transformers/node_modules/onnxruntime-web/node_modules/onnxruntime-common",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@huggingface/transformers/node_modules/onnxruntime-web/node_modules/onnxruntime-common/README.md"
   },
-  "onnxruntime-web@1.14.0": {
+  "onnxruntime-common@1.24.3": {
     "licenses": "MIT",
     "repository": "https://github.com/Microsoft/onnxruntime",
     "publisher": "fs-eire",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\onnxruntime-web",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\onnxruntime-web\\README.md"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/onnxruntime-common",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/onnxruntime-common/README.md"
+  },
+  "onnxruntime-node@1.21.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/Microsoft/onnxruntime",
+    "publisher": "fs-eire",
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@huggingface/transformers/node_modules/onnxruntime-node",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@huggingface/transformers/node_modules/onnxruntime-node/README.md"
+  },
+  "onnxruntime-web@1.22.0-dev.20250409-89f8206ba4": {
+    "licenses": "MIT",
+    "repository": "https://github.com/Microsoft/onnxruntime",
+    "publisher": "fs-eire",
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@huggingface/transformers/node_modules/onnxruntime-web",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@huggingface/transformers/node_modules/onnxruntime-web/README.md"
+  },
+  "onnxruntime-web@1.24.3": {
+    "licenses": "MIT",
+    "repository": "https://github.com/Microsoft/onnxruntime",
+    "publisher": "fs-eire",
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/onnxruntime-web",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/onnxruntime-web/README.md"
   },
   "open@8.4.2": {
     "licenses": "MIT",
@@ -1155,8 +1114,8 @@
     "publisher": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
     "url": "https://sindresorhus.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\open",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\open\\license"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/open",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/open/license"
   },
   "os-homedir@1.0.2": {
     "licenses": "MIT",
@@ -1164,8 +1123,8 @@
     "publisher": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
     "url": "sindresorhus.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\os-homedir",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\os-homedir\\license"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/os-homedir",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/os-homedir/license"
   },
   "os-tmpdir@1.0.2": {
     "licenses": "MIT",
@@ -1173,8 +1132,8 @@
     "publisher": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
     "url": "sindresorhus.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\os-tmpdir",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\os-tmpdir\\license"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/os-tmpdir",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/os-tmpdir/license"
   },
   "osenv@0.1.5": {
     "licenses": "ISC",
@@ -1182,8 +1141,8 @@
     "publisher": "Isaac Z. Schlueter",
     "email": "i@izs.me",
     "url": "http://blog.izs.me/",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\osenv",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\osenv\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/osenv",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/osenv/LICENSE"
   },
   "package-json-from-dist@1.0.1": {
     "licenses": "BlueOak-1.0.0",
@@ -1191,8 +1150,8 @@
     "publisher": "Isaac Z. Schlueter",
     "email": "i@izs.me",
     "url": "https://izs.me",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\package-json-from-dist",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\package-json-from-dist\\LICENSE.md"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/package-json-from-dist",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/package-json-from-dist/LICENSE.md"
   },
   "path-is-absolute@1.0.1": {
     "licenses": "MIT",
@@ -1200,8 +1159,8 @@
     "publisher": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
     "url": "sindresorhus.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\path-is-absolute",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\path-is-absolute\\license"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/path-is-absolute",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/path-is-absolute/license"
   },
   "path-key@3.1.1": {
     "licenses": "MIT",
@@ -1209,16 +1168,16 @@
     "publisher": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
     "url": "sindresorhus.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\path-key",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\path-key\\license"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/path-key",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/path-key/license"
   },
   "path-parse@1.0.7": {
     "licenses": "MIT",
     "repository": "https://github.com/jbgutierrez/path-parse",
     "publisher": "Javier Blanco",
     "email": "http://jbgutierrez.info",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\path-parse",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\path-parse\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/path-parse",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/path-parse/LICENSE"
   },
   "path-scurry@2.0.2": {
     "licenses": "BlueOak-1.0.0",
@@ -1226,40 +1185,32 @@
     "publisher": "Isaac Z. Schlueter",
     "email": "i@izs.me",
     "url": "https://blog.izs.me",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\path-scurry",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\path-scurry\\LICENSE.md"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/path-scurry",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/path-scurry/LICENSE.md"
   },
   "pend@1.2.0": {
     "licenses": "MIT",
     "repository": "https://github.com/andrewrk/node-pend",
     "publisher": "Andrew Kelley",
     "email": "superjoe30@gmail.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\pend",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\pend\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/pend",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/pend/LICENSE"
   },
   "platform@1.3.6": {
     "licenses": "MIT",
     "repository": "https://github.com/bestiejs/platform.js",
     "publisher": "Benjamin Tan",
     "email": "demoneaux@gmail.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\platform",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\platform\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/platform",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/platform/LICENSE"
   },
   "plist@3.1.0": {
     "licenses": "MIT",
     "repository": "https://github.com/TooTallNate/node-plist",
     "publisher": "Nathan Rajlich",
     "email": "nathan@tootallnate.net",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\plist",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\plist\\LICENSE"
-  },
-  "prebuild-install@7.1.3": {
-    "licenses": "MIT",
-    "repository": "https://github.com/prebuild/prebuild-install",
-    "publisher": "Mathias Buus",
-    "url": "@mafintosh",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\prebuild-install",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\prebuild-install\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/plist",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/plist/LICENSE"
   },
   "prompts@2.4.2": {
     "licenses": "MIT",
@@ -1267,39 +1218,22 @@
     "publisher": "Terkel Gjervig",
     "email": "terkel@terkel.com",
     "url": "https://terkel.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\prompts",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\prompts\\license"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/prompts",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/prompts/license"
   },
-  "protobufjs@6.11.4": {
+  "protobufjs@7.5.4": {
     "licenses": "BSD-3-Clause",
     "repository": "https://github.com/protobufjs/protobuf.js",
     "publisher": "Daniel Wirtz",
     "email": "dcode+protobufjs@dcode.io",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\protobufjs",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\protobufjs\\LICENSE"
-  },
-  "pump@3.0.4": {
-    "licenses": "MIT",
-    "repository": "https://github.com/mafintosh/pump",
-    "publisher": "Mathias Buus Madsen",
-    "email": "mathiasbuus@gmail.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\pump",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\pump\\LICENSE"
-  },
-  "rc@1.2.8": {
-    "licenses": "(BSD-2-Clause OR MIT OR Apache-2.0)",
-    "repository": "https://github.com/dominictarr/rc",
-    "publisher": "Dominic Tarr",
-    "email": "dominic.tarr@gmail.com",
-    "url": "dominictarr.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\rc",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\rc\\LICENSE.APACHE2"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/protobufjs",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/protobufjs/LICENSE"
   },
   "react-dom@19.2.4": {
     "licenses": "MIT",
     "repository": "https://github.com/facebook/react",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\react-dom",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\react-dom\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/react-dom",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/react-dom/LICENSE"
   },
   "react-i18next@17.0.2": {
     "licenses": "MIT",
@@ -1307,21 +1241,21 @@
     "publisher": "Jan Mühlemann",
     "email": "jan.muehlemann@gmail.com",
     "url": "https://github.com/jamuhl",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\react-i18next",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\react-i18next\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/react-i18next",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/react-i18next/LICENSE"
   },
   "react-icons@5.6.0": {
     "licenses": "MIT",
     "repository": "https://github.com/react-icons/react-icons",
     "publisher": "Goran Gajic",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\react-icons",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\react-icons\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/react-icons",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/react-icons/LICENSE"
   },
   "react@19.2.4": {
     "licenses": "MIT",
     "repository": "https://github.com/facebook/react",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\react",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\react\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/react",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/react/LICENSE"
   },
   "read-installed@4.0.3": {
     "licenses": "ISC",
@@ -1329,8 +1263,8 @@
     "publisher": "Isaac Z. Schlueter",
     "email": "i@izs.me",
     "url": "http://blog.izs.me/",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\read-installed",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\read-installed\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/read-installed",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/read-installed/LICENSE"
   },
   "read-package-json@2.1.2": {
     "licenses": "ISC",
@@ -1338,14 +1272,14 @@
     "publisher": "Isaac Z. Schlueter",
     "email": "i@izs.me",
     "url": "http://blog.izs.me/",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\read-package-json",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\read-package-json\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/read-package-json",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/read-package-json/LICENSE"
   },
   "readable-stream@3.6.2": {
     "licenses": "MIT",
     "repository": "https://github.com/nodejs/readable-stream",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\readable-stream",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\readable-stream\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/readable-stream",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/readable-stream/LICENSE"
   },
   "readdir-scoped-modules@1.1.0": {
     "licenses": "ISC",
@@ -1353,8 +1287,8 @@
     "publisher": "Isaac Z. Schlueter",
     "email": "i@izs.me",
     "url": "http://blog.izs.me/",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\readdir-scoped-modules",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\readdir-scoped-modules\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/readdir-scoped-modules",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/readdir-scoped-modules/LICENSE"
   },
   "resolve@1.22.11": {
     "licenses": "MIT",
@@ -1362,8 +1296,8 @@
     "publisher": "James Halliday",
     "email": "mail@substack.net",
     "url": "http://substack.net",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\resolve",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\resolve\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/resolve",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/resolve/LICENSE"
   },
   "rimraf@6.1.3": {
     "licenses": "BlueOak-1.0.0",
@@ -1371,8 +1305,17 @@
     "publisher": "Isaac Z. Schlueter",
     "email": "i@izs.me",
     "url": "http://blog.izs.me/",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\rimraf",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\rimraf\\LICENSE.md"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/rimraf",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/rimraf/LICENSE.md"
+  },
+  "roarr@2.15.4": {
+    "licenses": "BSD-3-Clause",
+    "repository": "https://github.com/gajus/roarr",
+    "publisher": "Gajus Kuizinas",
+    "email": "gajus@gajus.com",
+    "url": "http://gajus.com",
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/roarr",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/roarr/LICENSE"
   },
   "safe-buffer@5.2.1": {
     "licenses": "MIT",
@@ -1380,8 +1323,8 @@
     "publisher": "Feross Aboukhadijeh",
     "email": "feross@feross.org",
     "url": "https://feross.org",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\safe-buffer",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\safe-buffer\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/safe-buffer",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/safe-buffer/LICENSE"
   },
   "sax@1.1.4": {
     "licenses": "ISC",
@@ -1389,36 +1332,54 @@
     "publisher": "Isaac Z. Schlueter",
     "email": "i@izs.me",
     "url": "http://blog.izs.me/",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\sax",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\sax\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/sax",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/sax/LICENSE"
   },
   "scheduler@0.27.0": {
     "licenses": "MIT",
     "repository": "https://github.com/facebook/react",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\scheduler",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\scheduler\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/scheduler",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/scheduler/LICENSE"
+  },
+  "semver-compare@1.0.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/substack/semver-compare",
+    "publisher": "James Halliday",
+    "email": "mail@substack.net",
+    "url": "http://substack.net",
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/semver-compare",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/semver-compare/LICENSE"
   },
   "semver@5.7.2": {
     "licenses": "ISC",
     "repository": "https://github.com/npm/node-semver",
     "publisher": "GitHub Inc.",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\normalize-package-data\\node_modules\\semver",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\normalize-package-data\\node_modules\\semver\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/normalize-package-data/node_modules/semver",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/normalize-package-data/node_modules/semver/LICENSE"
   },
   "semver@7.7.4": {
     "licenses": "ISC",
     "repository": "https://github.com/npm/node-semver",
     "publisher": "GitHub Inc.",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\semver",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\semver\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/semver",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/semver/LICENSE"
   },
-  "sharp@0.32.6": {
+  "serialize-error@7.0.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/sindresorhus/serialize-error",
+    "publisher": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "https://sindresorhus.com",
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/serialize-error",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/serialize-error/license"
+  },
+  "sharp@0.34.5": {
     "licenses": "Apache-2.0",
     "repository": "https://github.com/lovell/sharp",
     "publisher": "Lovell Fuller",
     "email": "npm@lovell.info",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\sharp",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\sharp\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@huggingface/transformers/node_modules/sharp",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@huggingface/transformers/node_modules/sharp/LICENSE"
   },
   "shebang-command@2.0.0": {
     "licenses": "MIT",
@@ -1426,8 +1387,8 @@
     "publisher": "Kevin Mårtensson",
     "email": "kevinmartensson@gmail.com",
     "url": "github.com/kevva",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\shebang-command",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\shebang-command\\license"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/shebang-command",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/shebang-command/license"
   },
   "shebang-regex@3.0.0": {
     "licenses": "MIT",
@@ -1435,42 +1396,16 @@
     "publisher": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
     "url": "sindresorhus.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\shebang-regex",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\shebang-regex\\license"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/shebang-regex",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/shebang-regex/license"
   },
   "signal-exit@3.0.7": {
     "licenses": "ISC",
     "repository": "https://github.com/tapjs/signal-exit",
     "publisher": "Ben Coe",
     "email": "ben@npmjs.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\signal-exit",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\signal-exit\\LICENSE.txt"
-  },
-  "simple-concat@1.0.1": {
-    "licenses": "MIT",
-    "repository": "https://github.com/feross/simple-concat",
-    "publisher": "Feross Aboukhadijeh",
-    "email": "feross@feross.org",
-    "url": "https://feross.org",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\simple-concat",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\simple-concat\\LICENSE"
-  },
-  "simple-get@4.0.1": {
-    "licenses": "MIT",
-    "repository": "https://github.com/feross/simple-get",
-    "publisher": "Feross Aboukhadijeh",
-    "email": "feross@feross.org",
-    "url": "https://feross.org",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\simple-get",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\simple-get\\LICENSE"
-  },
-  "simple-swizzle@0.2.4": {
-    "licenses": "MIT",
-    "repository": "https://github.com/qix-/node-simple-swizzle",
-    "publisher": "Qix",
-    "url": "http://github.com/qix-",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\simple-swizzle",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\simple-swizzle\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/signal-exit",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/signal-exit/LICENSE.txt"
   },
   "sisteransi@1.0.5": {
     "licenses": "MIT",
@@ -1478,14 +1413,14 @@
     "publisher": "Terkel Gjervig",
     "email": "terkel@terkel.com",
     "url": "https://terkel.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\sisteransi",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\sisteransi\\license"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/sisteransi",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/sisteransi/license"
   },
   "slice-ansi@4.0.0": {
     "licenses": "MIT",
     "repository": "https://github.com/chalk/slice-ansi",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\slice-ansi",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\slice-ansi\\license"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/slice-ansi",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/slice-ansi/license"
   },
   "slide@1.1.6": {
     "licenses": "ISC",
@@ -1493,8 +1428,8 @@
     "publisher": "Isaac Z. Schlueter",
     "email": "i@izs.me",
     "url": "http://blog.izs.me/",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\slide",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\slide\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/slide",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/slide/LICENSE"
   },
   "spdx-compare@1.0.0": {
     "licenses": "MIT",
@@ -1502,21 +1437,21 @@
     "publisher": "Kyle E. Mitchell",
     "email": "kyle@kemitchell.com",
     "url": "https://kemitchell.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\spdx-compare",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\spdx-compare\\LICENSE.md"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/spdx-compare",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/spdx-compare/LICENSE.md"
   },
   "spdx-correct@3.2.0": {
     "licenses": "Apache-2.0",
     "repository": "https://github.com/jslicense/spdx-correct.js",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\spdx-correct",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\spdx-correct\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/spdx-correct",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/spdx-correct/LICENSE"
   },
   "spdx-exceptions@2.5.0": {
     "licenses": "CC-BY-3.0",
     "repository": "https://github.com/kemitchell/spdx-exceptions.json",
     "publisher": "The Linux Foundation",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\spdx-exceptions",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\spdx-exceptions\\README.md"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/spdx-exceptions",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/spdx-exceptions/README.md"
   },
   "spdx-expression-parse@3.0.1": {
     "licenses": "MIT",
@@ -1524,23 +1459,23 @@
     "publisher": "Kyle E. Mitchell",
     "email": "kyle@kemitchell.com",
     "url": "https://kemitchell.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\spdx-expression-parse",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\spdx-expression-parse\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/spdx-expression-parse",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/spdx-expression-parse/LICENSE"
   },
   "spdx-license-ids@3.0.23": {
     "licenses": "CC0-1.0",
     "repository": "https://github.com/jslicense/spdx-license-ids",
     "publisher": "Shinnosuke Watanabe",
     "url": "https://github.com/shinnn",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\spdx-license-ids",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\spdx-license-ids\\README.md"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/spdx-license-ids",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/spdx-license-ids/README.md"
   },
   "spdx-ranges@2.1.1": {
     "licenses": "(MIT AND CC-BY-3.0)",
     "repository": "https://github.com/kemitchell/spdx-ranges.js",
     "publisher": "The Linux Foundation",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\spdx-ranges",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\spdx-ranges\\LICENSE.md"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/spdx-ranges",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/spdx-ranges/LICENSE.md"
   },
   "spdx-satisfies@4.0.1": {
     "licenses": "MIT",
@@ -1548,24 +1483,24 @@
     "publisher": "Kyle E. Mitchell",
     "email": "kyle@kemitchell.com",
     "url": "https://kemitchell.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\spdx-satisfies",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\spdx-satisfies\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/spdx-satisfies",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/spdx-satisfies/LICENSE"
   },
   "split2@4.2.0": {
     "licenses": "ISC",
     "repository": "https://github.com/mcollina/split2",
     "publisher": "Matteo Collina",
     "email": "hello@matteocollina.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\split2",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\split2\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/split2",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/split2/LICENSE"
   },
-  "streamx@2.25.0": {
-    "licenses": "MIT",
-    "repository": "https://github.com/mafintosh/streamx",
-    "publisher": "Mathias Buus",
-    "url": "@mafintosh",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\streamx",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\streamx\\LICENSE"
+  "sprintf-js@1.1.3": {
+    "licenses": "BSD-3-Clause",
+    "repository": "https://github.com/alexei/sprintf.js",
+    "publisher": "Alexandru Mărășteanu",
+    "email": "hello@alexei.ro",
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/sprintf-js",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/sprintf-js/LICENSE"
   },
   "string-width@4.2.3": {
     "licenses": "MIT",
@@ -1573,14 +1508,14 @@
     "publisher": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
     "url": "sindresorhus.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\string-width",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\string-width\\license"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/string-width",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/string-width/license"
   },
   "string_decoder@1.3.0": {
     "licenses": "MIT",
     "repository": "https://github.com/nodejs/string_decoder",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\string_decoder",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\string_decoder\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/string_decoder",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/string_decoder/LICENSE"
   },
   "strip-ansi@6.0.1": {
     "licenses": "MIT",
@@ -1588,17 +1523,8 @@
     "publisher": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
     "url": "sindresorhus.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\strip-ansi",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\strip-ansi\\license"
-  },
-  "strip-json-comments@2.0.1": {
-    "licenses": "MIT",
-    "repository": "https://github.com/sindresorhus/strip-json-comments",
-    "publisher": "Sindre Sorhus",
-    "email": "sindresorhus@gmail.com",
-    "url": "sindresorhus.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\rc\\node_modules\\strip-json-comments",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\rc\\node_modules\\strip-json-comments\\license"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/strip-ansi",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/strip-ansi/license"
   },
   "supports-color@5.5.0": {
     "licenses": "MIT",
@@ -1606,68 +1532,23 @@
     "publisher": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
     "url": "sindresorhus.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\license-checker\\node_modules\\supports-color",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\license-checker\\node_modules\\supports-color\\license"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/license-checker/node_modules/supports-color",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/license-checker/node_modules/supports-color/license"
   },
   "supports-preserve-symlinks-flag@1.0.0": {
     "licenses": "MIT",
     "repository": "https://github.com/inspect-js/node-supports-preserve-symlinks-flag",
     "publisher": "Jordan Harband",
     "email": "ljharb@gmail.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\supports-preserve-symlinks-flag",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\supports-preserve-symlinks-flag\\LICENSE"
-  },
-  "tar-fs@2.1.4": {
-    "licenses": "MIT",
-    "repository": "https://github.com/mafintosh/tar-fs",
-    "publisher": "Mathias Buus",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\prebuild-install\\node_modules\\tar-fs",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\prebuild-install\\node_modules\\tar-fs\\LICENSE"
-  },
-  "tar-fs@3.1.2": {
-    "licenses": "MIT",
-    "repository": "https://github.com/mafintosh/tar-fs",
-    "publisher": "Mathias Buus",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\tar-fs",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\tar-fs\\LICENSE"
-  },
-  "tar-stream@2.2.0": {
-    "licenses": "MIT",
-    "repository": "https://github.com/mafintosh/tar-stream",
-    "publisher": "Mathias Buus",
-    "email": "mathiasbuus@gmail.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\prebuild-install\\node_modules\\tar-stream",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\prebuild-install\\node_modules\\tar-stream\\LICENSE"
-  },
-  "tar-stream@3.1.8": {
-    "licenses": "MIT",
-    "repository": "https://github.com/mafintosh/tar-stream",
-    "publisher": "Mathias Buus",
-    "email": "mathiasbuus@gmail.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\tar-stream",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\tar-stream\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/supports-preserve-symlinks-flag",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/supports-preserve-symlinks-flag/LICENSE"
   },
   "tar@7.5.13": {
     "licenses": "BlueOak-1.0.0",
     "repository": "https://github.com/isaacs/node-tar",
     "publisher": "Isaac Z. Schlueter",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\tar",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\tar\\LICENSE.md"
-  },
-  "teex@1.0.1": {
-    "licenses": "MIT",
-    "repository": "https://github.com/mafintosh/teex",
-    "publisher": "Mathias Buus",
-    "url": "@mafintosh",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\teex",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\teex\\LICENSE"
-  },
-  "text-decoder@1.2.7": {
-    "licenses": "Apache-2.0",
-    "repository": "https://github.com/holepunchto/text-decoder",
-    "publisher": "Holepunch",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\text-decoder",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\text-decoder\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/tar",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/tar/LICENSE.md"
   },
   "through2@4.0.2": {
     "licenses": "MIT",
@@ -1675,8 +1556,8 @@
     "publisher": "Rod Vagg",
     "email": "r@va.gg",
     "url": "https://github.com/rvagg",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\through2",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\through2\\LICENSE.md"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/through2",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/through2/LICENSE.md"
   },
   "tree-kill@1.2.2": {
     "licenses": "MIT",
@@ -1684,59 +1565,59 @@
     "publisher": "Peteris Krumins",
     "email": "peteris.krumins@gmail.com",
     "url": "http://www.catonmat.net",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\tree-kill",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\tree-kill\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/tree-kill",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/tree-kill/LICENSE"
   },
   "treeify@1.1.0": {
     "licenses": "MIT",
     "repository": "https://github.com/notatestuser/treeify",
     "publisher": "Luke Plaster",
     "email": "notatestuser@gmail.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\treeify",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\treeify\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/treeify",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/treeify/LICENSE"
   },
   "tslib@2.8.1": {
     "licenses": "0BSD",
     "repository": "https://github.com/Microsoft/tslib",
     "publisher": "Microsoft Corp.",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\tslib",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\tslib\\LICENSE.txt"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/tslib",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/tslib/LICENSE.txt"
   },
-  "tunnel-agent@0.6.0": {
-    "licenses": "Apache-2.0",
-    "repository": "https://github.com/mikeal/tunnel-agent",
-    "publisher": "Mikeal Rogers",
-    "email": "mikeal.rogers@gmail.com",
-    "url": "http://www.futurealoof.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\tunnel-agent",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\tunnel-agent\\LICENSE"
+  "type-fest@0.13.1": {
+    "licenses": "(MIT OR CC0-1.0)",
+    "repository": "https://github.com/sindresorhus/type-fest",
+    "publisher": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "https://sindresorhus.com",
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/type-fest",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/type-fest/license"
   },
   "typescript-react-localllm@0.0.0": {
     "licenses": "UNLICENSED",
     "private": true,
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\README.md"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/README.md"
   },
   "typescript@5.9.3": {
     "licenses": "Apache-2.0",
     "repository": "https://github.com/microsoft/TypeScript",
     "publisher": "Microsoft Corp.",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\typescript",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\typescript\\LICENSE.txt"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/typescript",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/typescript/LICENSE.txt"
   },
   "undici-types@7.16.0": {
     "licenses": "MIT",
     "repository": "https://github.com/nodejs/undici",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\undici-types",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\undici-types\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/undici-types",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/undici-types/LICENSE"
   },
   "universalify@2.0.1": {
     "licenses": "MIT",
     "repository": "https://github.com/RyanZim/universalify",
     "publisher": "Ryan Zimmerman",
     "email": "opensrc@ryanzim.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\universalify",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\universalify\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/universalify",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/universalify/LICENSE"
   },
   "untildify@4.0.0": {
     "licenses": "MIT",
@@ -1744,14 +1625,14 @@
     "publisher": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
     "url": "sindresorhus.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\untildify",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\untildify\\license"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/untildify",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/untildify/license"
   },
   "use-sync-external-store@1.6.0": {
     "licenses": "MIT",
     "repository": "https://github.com/facebook/react",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\use-sync-external-store",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\use-sync-external-store\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/use-sync-external-store",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/use-sync-external-store/LICENSE"
   },
   "util-deprecate@1.0.2": {
     "licenses": "MIT",
@@ -1759,14 +1640,14 @@
     "publisher": "Nathan Rajlich",
     "email": "nathan@tootallnate.net",
     "url": "http://n8.io/",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\util-deprecate",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\util-deprecate\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/util-deprecate",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/util-deprecate/LICENSE"
   },
   "util-extend@1.0.3": {
     "licenses": "MIT",
     "repository": "https://github.com/isaacs/util-extend",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\util-extend",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\util-extend\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/util-extend",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/util-extend/LICENSE"
   },
   "validate-npm-package-license@3.0.4": {
     "licenses": "Apache-2.0",
@@ -1774,15 +1655,15 @@
     "publisher": "Kyle E. Mitchell",
     "email": "kyle@kemitchell.com",
     "url": "https://kemitchell.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\validate-npm-package-license",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\validate-npm-package-license\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/validate-npm-package-license",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/validate-npm-package-license/LICENSE"
   },
   "void-elements@3.1.0": {
     "licenses": "MIT",
     "repository": "https://github.com/pugjs/void-elements",
     "publisher": "hemanth.hm",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\void-elements",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\void-elements\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/void-elements",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/void-elements/LICENSE"
   },
   "which@2.0.2": {
     "licenses": "ISC",
@@ -1790,8 +1671,8 @@
     "publisher": "Isaac Z. Schlueter",
     "email": "i@izs.me",
     "url": "http://blog.izs.me",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\which",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\which\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/which",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/which/LICENSE"
   },
   "wrap-ansi@7.0.0": {
     "licenses": "MIT",
@@ -1799,8 +1680,8 @@
     "publisher": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
     "url": "https://sindresorhus.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\wrap-ansi",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\wrap-ansi\\license"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/wrap-ansi",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/wrap-ansi/license"
   },
   "wrappy@1.0.2": {
     "licenses": "ISC",
@@ -1808,8 +1689,8 @@
     "publisher": "Isaac Z. Schlueter",
     "email": "i@izs.me",
     "url": "http://blog.izs.me/",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\wrappy",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\wrappy\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/wrappy",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/wrappy/LICENSE"
   },
   "xml2js@0.6.2": {
     "licenses": "MIT",
@@ -1817,24 +1698,24 @@
     "publisher": "Marek Kubica",
     "email": "marek@xivilization.net",
     "url": "https://xivilization.net",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\xml2js",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\xml2js\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/xml2js",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/xml2js/LICENSE"
   },
   "xmlbuilder@11.0.1": {
     "licenses": "MIT",
     "repository": "https://github.com/oozcitak/xmlbuilder-js",
     "publisher": "Ozgur Ozcitak",
     "email": "oozcitak@gmail.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\xml2js\\node_modules\\xmlbuilder",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\xml2js\\node_modules\\xmlbuilder\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/xml2js/node_modules/xmlbuilder",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/xml2js/node_modules/xmlbuilder/LICENSE"
   },
   "xmlbuilder@15.1.1": {
     "licenses": "MIT",
     "repository": "https://github.com/oozcitak/xmlbuilder-js",
     "publisher": "Ozgur Ozcitak",
     "email": "oozcitak@gmail.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\xmlbuilder",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\xmlbuilder\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/xmlbuilder",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/xmlbuilder/LICENSE"
   },
   "yallist@5.0.0": {
     "licenses": "BlueOak-1.0.0",
@@ -1842,15 +1723,15 @@
     "publisher": "Isaac Z. Schlueter",
     "email": "i@izs.me",
     "url": "http://blog.izs.me/",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\tar\\node_modules\\yallist",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\tar\\node_modules\\yallist\\LICENSE.md"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/tar/node_modules/yallist",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/tar/node_modules/yallist/LICENSE.md"
   },
   "yauzl@2.10.0": {
     "licenses": "MIT",
     "repository": "https://github.com/thejoshwolfe/yauzl",
     "publisher": "Josh Wolfe",
     "email": "thejoshwolfe@gmail.com",
-    "path": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\yauzl",
-    "licenseFile": "C:\\Users\\chris\\Documents\\Coding\\Typescript_LocalLLM\\Typescript_React_LocalLLM\\node_modules\\yauzl\\LICENSE"
+    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/yauzl",
+    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/yauzl/LICENSE"
   }
 }
