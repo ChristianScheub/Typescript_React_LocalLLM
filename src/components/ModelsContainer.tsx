@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { modelService } from '@services/model';
 import { modelStateManager } from '@services/modelStateManager';
+import { webllmAllModels } from '@services/webllm';
 import Logger from '@services/logger';
 import { SettingsView } from '@views/settings/SettingsView';
 import { useDevicePlatform } from '@hooks/useDevicePlatform';
@@ -31,7 +32,6 @@ export function ModelsContainer({ provider, onProviderChange }: ModelsContainerP
     const detectCachedModels = async () => {
       try {
         const { hasModelInCache } = await import('@mlc-ai/web-llm');
-        const { webllmAllModels } = await import('@services/webllm/logic/webllm-modelsAll');
         const appConfig = { model_list: webllmAllModels };
         const allModels = modelService.getModelsByProvider(provider);
         const cached = new Set<string>();

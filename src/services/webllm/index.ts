@@ -1,6 +1,7 @@
 import { WebLLMInitializer } from '@services/webllm/logic/WebLLMInitializer';
 import { WebLLMGenerator } from '@services/webllm/logic/WebLLMGenerator';
 import { WebLLMModels } from '@services/webllm/logic/WebLLMModels';
+import { webllmAllModels } from '@services/webllm/logic/webllm-modelsAll';
 import type { IWebllmService, WebLLMModel } from '@services/webllm/IWebllmService';
 
 // Internal state references for the facade
@@ -21,5 +22,5 @@ const webllmService: IWebllmService = {
   getStatus: () => WebLLMModels.getStatus(),
 };
 
-export { webllmService };
+export { webllmService, webllmAllModels };
 export type { IWebllmService, WebLLMModel };

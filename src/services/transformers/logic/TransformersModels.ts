@@ -126,12 +126,10 @@ export class TransformersModels {
         modelConfig,
         (msg) => {
           onStatusMessage?.(msg);
-          // Extract percentage and map to progress
-          const match = msg.match(/(\d+)%/);
-          if (match) {
-            const pct = parseInt(match[1], 10);
-            onProgress?.(10 + Math.round(pct * 0.8));
-          }
+        },
+        (progress) => {
+          // Use real download progress from worker
+          onProgress?.(progress);
         },
       );
 

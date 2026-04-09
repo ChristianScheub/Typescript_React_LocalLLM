@@ -17,6 +17,7 @@ export class TransformersInitializer {
     modelKey: string,
     modelConfig: TransformersModelConfig,
     onStatusMessage?: (message: string) => void,
+    onProgress?: (progress: number) => void,
   ): Promise<void> {
     Logger.infoService(`[transformersInitializer] Loading model: ${modelKey} (${modelConfig.label})`);
     isLoading.value = true;
@@ -31,7 +32,7 @@ export class TransformersInitializer {
 
       // Create new worker
       worker = this.createWorker();
-      this.attachWorkerHandlers(worker, onStatusMessage);
+      this.attachWorkerHandlers(worker, onStatusMessage, onProgress);
 
       // Post load message to worker
       worker.postMessage({
@@ -93,9 +94,9 @@ import {
   InterruptableStoppingCriteria,
 } from 'https://cdn.jsdelivr.net/npm/@huggingface/transformers@4/+esm';
 
-env.allowLocalModels  = true;
-env.localModelPath    = '/models/';
+env.allowLocalModels  = false;
 env.allowRemoteModels = true;
+env.cacheDir = 'transformers-cache';
 
 let processor = null;
 let tokenizer = null;
@@ -287,6 +288,7 @@ self.addEventListener('message', async (e) => {
   private static attachWorkerHandlers(
     w: Worker,
     onStatusMessage?: (message: string) => void,
+    onProgress?: (progress: number) => void,
   ) {
     w.addEventListener('error', (e) => {
       Logger.errorStack('[transformersInitializer] Worker error', new Error(e.message));
@@ -294,30 +296,39 @@ self.addEventListener('message', async (e) => {
 
     w.addEventListener('message', (e) => {
       const data = e.data;
+      Logger.cache(`[transformersInitializer] Worker msg type: ${data.type}, data exists: ${!!data.data}`);
 
       if (data.type === 'progress') {
         const p = data.data;
-        if (p.status === 'downloading' || p.status === 'loading') {
-          const pct = p.total ? Math.round((p.loaded / p.total) * 100) : 0;
+        Logger.cache(`[transformersInitializer] Progress - status: ${p?.status}, loaded: ${p?.loaded}, total: ${p?.total}`);
+
+        // Handle Transformers.js progress events
+        // status can be: 'progress', 'progress_total', 'downloading', 'loading', 'initiate'
+        if (p?.loaded && p?.total) {
+          const pct = Math.round((p.loaded / p.total) * 100);
           const fileName = p.file ? p.file.split('/').pop() : 'files';
-          if (p.status === 'downloading' && p.loaded && p.total) {
-            const loadedMB = (p.loaded / 1024 / 1024).toFixed(0);
-            const totalMB = (p.total / 1024 / 1024).toFixed(0);
-            const msg = `Downloading ${fileName} — ${loadedMB} / ${totalMB} MB (${pct}%)`;
-            Logger.cache(`[transformersInitializer] ${msg}`);
-            onStatusMessage?.(msg);
-          } else {
-            const msg = `Loading ${fileName}...`;
-            onStatusMessage?.(msg);
-          }
-        } else if (p.status === 'initiate') {
+
+          const loadedMB = (p.loaded / 1024 / 1024).toFixed(0);
+          const totalMB = (p.total / 1024 / 1024).toFixed(0);
+          const msg = `Downloading ${fileName} — ${loadedMB} / ${totalMB} MB (${pct}%)`;
+          Logger.cache(`[transformersInitializer] ${msg}`);
+          onStatusMessage?.(msg);
+
+          // Pass real download progress: map 0-100% to 10-90%
+          const progressValue = 10 + Math.round(pct * 0.8);
+          Logger.cache(`[transformersInitializer] onProgress(${progressValue})`);
+          onProgress?.(progressValue);
+        } else if (p?.status === 'initiate') {
           const fileName = p.file ? p.file.split('/').pop() : '';
           onStatusMessage?.(`Fetching ${fileName}…`);
         }
       } else if (data.type === 'warmup') {
+        Logger.cache(`[transformersInitializer] Warmup started`);
         onStatusMessage?.('Compiling shaders and warming up...');
+        onProgress?.(95);
       } else if (data.type === 'ready') {
         Logger.infoService('[transformersInitializer] Model ready');
+        onProgress?.(100);
       } else if (data.type === 'error') {
         Logger.errorStack('[transformersInitializer] Model error', new Error(data.message));
       }
