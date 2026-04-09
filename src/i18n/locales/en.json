@@ -18,8 +18,8 @@
       },
       "transformers": {
         "name": "Transformers.js v3",
-        "description": "ONNX/WASM runtime for Gemma 3, SmolLM2, Qwen 2.5 and more. Runs entirely locally in the browser.",
-        "recommendation": "Recommended for Gemma & SmolLM2 models"
+        "description": "ONNX/WASM runtime for Gemma 3 and Gemma 4. Runs entirely locally in the browser.",
+        "recommendation": "Recommended for Gemma models"
       },
       "active": "ACTIVE"
     },
@@ -130,7 +130,7 @@
     "webllm": "Web-LLM",
     "webllmDescription": "WebGPU acceleration · Llama, Phi, Qwen, …",
     "transformers": "Transformers.js v3",
-    "transformersDescription": "ONNX/WASM · Gemma 3, SmolLM2, Qwen 2.5, …",
+    "transformersDescription": "ONNX/WASM · Gemma 3, Gemma 4",
     "active": "ACTIVE",
     "switchTo": "Switch to {{engine}}",
     "availableModels": "Available Models",
@@ -153,14 +153,8 @@
     "remove": "Remove",
     "save": "Save",
     "saving": "Saving...",
-    "cancel": "Cancel"
-  },
-  "huggingfaceAuth": {
-    "huggingfaceDescription": "Provide a Hugging Face token to access private models and increase download limits.",
-    "authenticationConfigured": "Authentication configured",
-    "tokenSaved": "✓ Token saved successfully",
-    "tokenInvalid": "✗ Invalid token",
-    "huggingfaceHint": "Get your token from "
+    "cancel": "Cancel",
+    "delete": "Delete"
   },
   "chatSettings": {
     "mode": "Mode",

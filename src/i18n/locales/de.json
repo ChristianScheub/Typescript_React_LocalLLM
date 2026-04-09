@@ -153,14 +153,8 @@
     "remove": "Entfernen",
     "save": "Speichern",
     "saving": "Wird gespeichert...",
-    "cancel": "Abbrechen"
-  },
-  "huggingfaceAuth": {
-    "huggingfaceDescription": "Geben Sie ein Hugging Face-Token an, um auf private Modelle zuzugreifen und Download-Limits zu erhöhen.",
-    "authenticationConfigured": "Authentifizierung konfiguriert",
-    "tokenSaved": "✓ Token erfolgreich gespeichert",
-    "tokenInvalid": "✗ Ungültiges Token",
-    "huggingfaceHint": "Holen Sie sich Ihr Token von "
+    "cancel": "Abbrechen",
+    "delete": "Löschen"
   },
   "chatSettings": {
     "mode": "Modus",
