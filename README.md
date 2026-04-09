@@ -1,9 +1,6 @@
 # TypeScript React Local LLM
 
 **Language:** English
-Plan:
-- GemmaLocalUse.html zeigt wie wir Gemma Modelle etc. mit transformers mit einfachem javascript lokal laufen lasssen können
-- Hosting mit GitHub Pages ist kostenlos und easy
 ---
 
 ## Overview
