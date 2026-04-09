@@ -175,7 +175,7 @@
     "presencePenalty": "Präsenz-Strafe",
     "presencePenaltyHint": "Kontrolliert die Wiederholung von Themen"
   },
-   "setting_Menu_OpenSourceModulList": "Verwendete Bibliotheken",
+  "setting_Menu_OpenSourceModulList": "Verwendete Bibliotheken",
   "setting_OpenSurceModulListTItle": "Verwendete NPM-Bibliotheken",
   "setting_OpenSourceModulListClose": "Schließen",
   "settings_Datenschutz": "Datenschutz",
@@ -211,5 +211,9 @@
   "privacy.line_31": "Personenbezogene Daten sind Informationen, die sich auf eine identifizierte oder identifizierbare natürliche Person beziehen. In dieser App werden solche Daten (wie etwa der Inhalt von Kundenkarten) strikt lokal verarbeitet. <br /> <br />",
   "privacy.line_32": "<strong>8. Änderungen dieser Datenschutzerklärung</strong><br />",
   "privacy.line_33": "Wir behalten uns vor, diese Erklärung anzupassen, falls sich technische Abläufe ändern. Bitte überprüfen Sie diese Erklärung regelmäßig. <br />",
-  "privacy.line_34": "Datum: 04.04.2026 <br /> <br />"
+  "privacy.line_34": "Datum: 04.04.2026 <br /> <br />",
+  "errors": {
+    "modelLoadingTimeout": "Modellladung hat nach 30 Minuten das Zeitlimit überschritten. Die Modelldateien sind sehr groß - überprüfen Sie Ihre Internetverbindung und versuchen Sie es erneut.",
+    "generationTimeout": "Textgenerierung hat nach 30 Minuten das Zeitlimit überschritten. Versuchen Sie es mit einer kürzeren Eingabeaufforderung oder kleineren Max-Tokens-Einstellung."
+  }
 }

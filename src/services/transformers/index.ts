@@ -10,7 +10,14 @@ const state = {
 };
 
 const transformersService: ITransformersService = {
-  initializeModel: (modelName, onStatusMessage) => TransformersInitializer.initializeModel(state.currentModel, state.isLoading, modelName, onStatusMessage),
+  initializeModel: (modelName, onStatusMessage) => {
+    const modelConfig = TransformersModels.getModelConfig(modelName);
+    if (!modelConfig) {
+      return Promise.reject(new Error(`Model not found: ${modelName}`));
+    }
+    const modelKey = TransformersModels.getModelKeyByIdOrKey(modelName) || modelName;
+    return TransformersInitializer.initializeModel(state.currentModel, state.isLoading, modelKey, modelConfig, onStatusMessage);
+  },
   generate: (prompt, options) => TransformersGenerator.generate(state.currentModel, state.isLoading, prompt, options),
   downloadModel: (modelName, onProgress, onStatusMessage) => TransformersModels.downloadModel(state.currentModel, state.isLoading, modelName, onProgress, onStatusMessage),
   isModelLoaded: () => TransformersModels.isModelLoaded(state.currentModel, state.isLoading),

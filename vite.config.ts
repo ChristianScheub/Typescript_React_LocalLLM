@@ -22,13 +22,9 @@ export default defineConfig({
       'Cross-Origin-Opener-Policy': 'same-origin',
       'Cross-Origin-Embedder-Policy': 'credentialless',
     },
-    fs: {
-      // Allow serving onnxruntime-web WASM/MJS files from node_modules
-      allow: ['..'],
-    },
   },
   optimizeDeps: {
-    exclude: ['@huggingface/transformers', 'onnxruntime-web'],
+    exclude: ['@huggingface/transformers'],
   },
   build: {
     rollupOptions: {},

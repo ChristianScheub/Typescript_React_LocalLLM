@@ -2,169 +2,147 @@ import Logger from '@services/logger';
 import { TransformersInitializer } from '@services/transformers/logic/TransformersInitializer';
 import type { TransformersModel } from '@services/transformers/ITransformersService';
 
-interface TransformersModelConfig extends TransformersModel {
+export interface TransformersModelConfig extends TransformersModel {
+  id: string;
+  label: string;
   dtype: string;
+  type: 'causal' | 'multimodal';
+  multimodal: boolean;
+  contextSize: number;
+  genConfig: {
+    temperature: number;
+    top_k: number;
+    top_p: number;
+    max_new_tokens: number;
+    repetition_penalty?: number;
+  };
 }
 
-const MODELS: TransformersModelConfig[] = [
-  // ── Gemma 4 (Google, ONNX Community) ──────────────────────────────────────
-  {
+// Models exactly as implemented in GemmaLocalUse.html
+// These are ONNX-community models that work with Transformers.js
+const MODELS: Record<string, TransformersModelConfig> = {
+  'gemma3-1b': {
+    id: 'onnx-community/gemma-3-1b-it-ONNX-GQA',
+    name: 'Gemma 3 1B',
+    label: 'Gemma 3 1B',
+    description: 'Fast · 1B parameters · Instruction-tuned · Good for weak hardware',
+    size: '~760 MB',
+    downloaded: false,
+    family: 'Gemma',
+    dtype: 'q4f16',
+    type: 'causal',
+    multimodal: false,
+    contextSize: 4096,
+    genConfig: { temperature: 0.7, top_k: 50, top_p: 0.95, max_new_tokens: 2048 },
+  },
+  'gemma4-e2b': {
     id: 'onnx-community/gemma-4-E2B-it-ONNX',
-    name: 'Gemma 4 E2B Instruct',
-    description: 'Google Gemma 4 · 2B effektive Parameter · Text, Bild, Audio, 128K Kontext',
-    size: '~1.2 GB (q4)',
+    name: 'Gemma 4 E2B',
+    label: 'Gemma 4 E2B',
+    description: 'Multimodal · 2B parameters · Text + Image + Audio · Efficient',
+    size: '~1.5 GB',
     downloaded: false,
     family: 'Gemma',
-    dtype: 'q4',
+    dtype: 'q4f16',
+    type: 'multimodal',
+    multimodal: true,
+    contextSize: 8192,
+    genConfig: { temperature: 0.7, top_k: 40, top_p: 0.95, max_new_tokens: 2048, repetition_penalty: 1.1 },
   },
-  {
+  'gemma4-e4b': {
     id: 'onnx-community/gemma-4-E4B-it-ONNX',
-    name: 'Gemma 4 E4B Instruct',
-    description: 'Google Gemma 4 · 4B effektive Parameter · Text, Bild, Audio, 128K Kontext',
-    size: '~2.3 GB (q4)',
+    name: 'Gemma 4 E4B',
+    label: 'Gemma 4 E4B',
+    description: 'Multimodal · 4B parameters · Text + Image + Audio · High quality',
+    size: '~4.9 GB',
     downloaded: false,
     family: 'Gemma',
-    dtype: 'q4',
+    dtype: 'q4f16',
+    type: 'multimodal',
+    multimodal: true,
+    contextSize: 12288,
+    genConfig: { temperature: 0.7, top_k: 40, top_p: 0.95, max_new_tokens: 2048, repetition_penalty: 1.1 },
   },
-  {
-    id: 'onnx-community/gemma-3n-E2B-it-ONNX',
-    name: 'Gemma 3n E2B Instruct',
-    description: 'Google Gemma 3n · 2B effektive Parameter · Text, Bild, Audio, 32K Kontext',
-    size: '~1.1 GB (q4)',
-    downloaded: false,
-    family: 'Gemma',
-    dtype: 'q4',
-  },
-  {
-    id: 'onnx-community/gemma-2-9b-it-ONNX-DirectML-GenAI-INT4',
-    name: 'Gemma 2.9B DirectML INT4',
-    description: 'Google Gemma 2.9B · DirectML INT4 quantisiert · Windows optimiert',
-    size: '~1.5 GB (int4)',
-    downloaded: false,
-    family: 'Gemma',
-    dtype: 'int4',
-  },
-  // ── Gemma 3 (Google) ──────────────────────────────────────────────────────
-  {
-    id: 'onnx-community/gemma-3-1b-it',
-    name: 'Gemma 3 1B Instruct',
-    description: 'Google Gemma 3 · 1B Parameter · Instruction-tuned · gut für mobile Geräte',
-    size: '~600 MB (q4)',
-    downloaded: false,
-    family: 'Gemma',
-    dtype: 'q4',
-  },
-  {
-    id: 'onnx-community/gemma-3-4b-it',
-    name: 'Gemma 3 4B Instruct',
-    description: 'Google Gemma 3 · 4B Parameter · Instruction-tuned · höchste Qualität im Transformers-Bereich',
-    size: '~2.3 GB (q4)',
-    downloaded: false,
-    family: 'Gemma',
-    dtype: 'q4',
-  },
-
-  // ── SmolLM2 (HuggingFace) ─────────────────────────────────────────────────
-  {
-    id: 'HuggingFaceTB/SmolLM2-135M-Instruct',
-    name: 'SmolLM2 135M Instruct',
-    description: 'Extrem schnell · 135M Parameter · ideal für schwache Hardware',
-    size: '~90 MB',
-    downloaded: false,
-    family: 'SmolLM',
-    dtype: 'fp32',
-  },
-  {
-    id: 'HuggingFaceTB/SmolLM2-360M-Instruct',
-    name: 'SmolLM2 360M Instruct',
-    description: 'Sehr schnell · 360M Parameter · gute Balance aus Speed & Qualität',
-    size: '~200 MB',
-    downloaded: false,
-    family: 'SmolLM',
-    dtype: 'fp32',
-  },
-  {
-    id: 'HuggingFaceTB/SmolLM2-1.7B-Instruct',
-    name: 'SmolLM2 1.7B Instruct',
-    description: 'Ausgewogen · 1.7B Parameter · empfohlen als Standard-Wahl',
-    size: '~1 GB (q4)',
-    downloaded: false,
-    family: 'SmolLM',
-    dtype: 'q4',
-  },
-
-  // ── Qwen 2.5 (Alibaba) ───────────────────────────────────────────────────
-  {
-    id: 'onnx-community/Qwen2.5-0.5B-Instruct',
-    name: 'Qwen 2.5 0.5B Instruct',
-    description: 'Alibaba Qwen 2.5 · 0.5B Parameter · mehrsprachig, sehr schnell',
-    size: '~300 MB',
-    downloaded: false,
-    family: 'Qwen',
-    dtype: 'q4',
-  },
-  {
-    id: 'onnx-community/Qwen2.5-1.5B-Instruct',
-    name: 'Qwen 2.5 1.5B Instruct',
-    description: 'Alibaba Qwen 2.5 · 1.5B Parameter · mehrsprachig, gute Qualität',
-    size: '~900 MB (q4)',
-    downloaded: false,
-    family: 'Qwen',
-    dtype: 'q4',
-  },
-];
+};
 
 export class TransformersModels {
   static getAvailableModels(): TransformersModel[] {
-    Logger.infoService(`[transformersService.getAvailableModels] ${MODELS.length} Modelle verfügbar`);
-    return MODELS;
+    Logger.infoService(`[transformersModels] ${Object.keys(MODELS).length} models available`);
+    return Object.values(MODELS);
   }
 
-  static getDtype(modelId: string): string {
-    return MODELS.find(m => m.id === modelId)?.dtype ?? 'q4';
+  static getModelConfig(modelKeyOrId: string): TransformersModelConfig | undefined {
+    // Try direct lookup by key
+    if (MODELS[modelKeyOrId]) {
+      return MODELS[modelKeyOrId];
+    }
+    // Try lookup by model ID
+    const found = Object.values(MODELS).find(m => m.id === modelKeyOrId);
+    return found;
+  }
+
+  static getModelKeyByIdOrKey(modelKeyOrId: string): string | undefined {
+    // Try direct lookup by key
+    if (MODELS[modelKeyOrId]) {
+      return modelKeyOrId;
+    }
+    // Try lookup by model ID
+    const found = Object.entries(MODELS).find(([_, m]) => m.id === modelKeyOrId);
+    return found?.[0];
+  }
+
+  static getDtype(modelKeyOrId: string): string {
+    const config = this.getModelConfig(modelKeyOrId);
+    return config?.dtype ?? 'q4f16';
   }
 
   static async downloadModel(
     currentModel: { value: string | null },
     isLoading: { value: boolean },
-    modelName: string,
+    modelKeyOrId: string,
     onProgress?: (progress: number) => void,
     onStatusMessage?: (message: string) => void,
   ): Promise<void> {
-    Logger.infoService(`[transformersService.downloadModel] Start: ${modelName}`);
+    Logger.infoService(`[transformersModels] Starting download: ${modelKeyOrId}`);
+
+    const modelConfig = this.getModelConfig(modelKeyOrId);
+    if (!modelConfig) {
+      throw new Error(`Model not found: ${modelKeyOrId}`);
+    }
+
+    const modelKey = this.getModelKeyByIdOrKey(modelKeyOrId);
+    if (!modelKey) {
+      throw new Error(`Could not resolve model key for: ${modelKeyOrId}`);
+    }
 
     try {
-      const dtype = TransformersModels.getDtype(modelName);
-
-      // Animate progress 0→10% while model files are actually streaming
       onProgress?.(5);
-      onStatusMessage?.('Verbinde mit HuggingFace…');
+      onStatusMessage?.('Connecting to HuggingFace…');
 
       await TransformersInitializer.initializeModel(
         currentModel,
         isLoading,
-        modelName,
+        modelKey,
+        modelConfig,
         (msg) => {
-          // Forward status messages and bump progress while downloading
           onStatusMessage?.(msg);
-          // Extract percentage from messages like "Downloading model.onnx: 42%"
+          // Extract percentage and map to progress
           const match = msg.match(/(\d+)%/);
           if (match) {
             const pct = parseInt(match[1], 10);
-            // Map 0-100% download to 10-90% for the UI
             onProgress?.(10 + Math.round(pct * 0.8));
           }
         },
-        dtype as 'q4' | 'fp32' | 'fp16',
       );
 
       onProgress?.(100);
-      onStatusMessage?.('Modell geladen ✅');
-      Logger.infoService(`[transformersService.downloadModel] ✅ Fertig: ${modelName}`);
+      onStatusMessage?.('Model loaded ✅');
+      Logger.infoService(`[transformersModels] ✅ Download complete: ${modelKeyOrId}`);
     } catch (error) {
+      const errorMsg = error instanceof Error ? error.message : String(error);
       Logger.errorStack(
-        `[transformersService.downloadModel] Fehler: ${modelName}`,
-        error instanceof Error ? error : new Error(String(error)),
+        `[transformersModels] Download failed: ${modelKeyOrId}`,
+        error instanceof Error ? error : new Error(errorMsg),
       );
       throw error;
     }
@@ -172,7 +150,7 @@ export class TransformersModels {
 
   static isModelLoaded(currentModel: { value: string | null }, isLoading: { value: boolean }): boolean {
     const loaded = !!currentModel.value && !isLoading.value && !!TransformersInitializer.getPipeline();
-    Logger.cache(`[transformersService.isModelLoaded] ${loaded ? '✅' : '❌'} (${currentModel.value})`);
+    Logger.cache(`[transformersModels] isModelLoaded: ${loaded ? '✅' : '❌'}`);
     return loaded;
   }
 

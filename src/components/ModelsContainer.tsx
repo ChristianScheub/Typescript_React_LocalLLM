@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { modelService } from '@services/model';
 import { modelStateManager } from '@services/modelStateManager';
 import Logger from '@services/logger';
@@ -13,6 +14,7 @@ interface ModelsContainerProps {
 
 export function ModelsContainer({ provider, onProviderChange }: ModelsContainerProps) {
   const { isMobile } = useDevicePlatform();
+  const { t } = useTranslation();
   const [downloadingModel, setDownloadingModel] = useState<string | null>(null);
   const [downloadProgress, setDownloadProgress] = useState(0);
   const [error, setError] = useState<string | null>(null);
@@ -121,7 +123,18 @@ export function ModelsContainer({ provider, onProviderChange }: ModelsContainerP
     } catch (err) {
       const errorMsg = err instanceof Error ? err.message : 'Download failed';
       Logger.errorStack(`[ModelsContainer.handleDownloadModel] Download failed for ${modelId}`, err instanceof Error ? err : new Error(errorMsg));
-      setError(errorMsg);
+
+      // Handle timeout errors with i18next translation
+      let displayError = errorMsg;
+      if (errorMsg === 'MODEL_LOADING_TIMEOUT') {
+        displayError = t('errors.modelLoadingTimeout', 'Model loading timed out after 30 minutes');
+        alert(displayError);
+      } else if (errorMsg === 'GENERATION_TIMEOUT') {
+        displayError = t('errors.generationTimeout', 'Generation timed out after 30 minutes');
+        alert(displayError);
+      }
+
+      setError(displayError);
     } finally {
       Logger.infoService(`[ModelsContainer.handleDownloadModel] Download process complete`);
       setDownloadingModel(null);

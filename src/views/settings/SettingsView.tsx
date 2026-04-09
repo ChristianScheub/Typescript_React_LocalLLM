@@ -4,7 +4,6 @@ import { FiSearch } from "react-icons/fi";
 import { useTranslation } from "react-i18next";
 import { MobileModelCard } from "@ui/mobileOnly/MobileModelCard";
 import { MobileEngineSelector } from "@ui/mobileOnly/MobileEngineSelector";
-import { HuggingFaceAuthContainer } from "@components/HuggingFaceAuthContainer";
 import type { ModelFamily } from "@services/webllm/IWebllmService";
 
 interface Model {
@@ -68,8 +67,6 @@ export function SettingsView({
         <h2>{t("models.engineArchitecture")}</h2>
         <p>{t("models.selectRuntime")}</p>
       </div>
-
-      {currentProvider === "transformers" && <HuggingFaceAuthContainer />}
 
       <div className="models-section">
         <MobileEngineSelector
