@@ -32,6 +32,7 @@ interface SettingsViewProps {
   availableFamilies: ModelFamily[];
   maxVram: number;
   onMaxVramChange: (value: number) => void;
+  showIOSWarning?: boolean;
 }
 
 export function SettingsView({
@@ -50,6 +51,7 @@ export function SettingsView({
   availableFamilies,
   maxVram,
   onMaxVramChange,
+  showIOSWarning,
 }: SettingsViewProps) {
   const { t } = useTranslation();
 
@@ -73,6 +75,14 @@ export function SettingsView({
           currentProvider={currentProvider}
           onToggle={handleToggleProvider}
         />
+
+        {showIOSWarning && (
+          <div className="ios-warning-banner">
+            <strong>{t('settings.iosWarning.title')}</strong>
+            <p>{t('settings.iosWarning.description')}</p>
+          </div>
+        )}
+
         <h3>{t("models.availableModels")}</h3>
         <p className="models-subtitle">{t("models.modelsSubtitle")}</p>
 

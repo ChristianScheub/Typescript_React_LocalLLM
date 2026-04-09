@@ -2,11 +2,12 @@ import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { modelService } from '@services/model';
 import { modelStateManager } from '@services/modelStateManager';
-import { webllmAllModels } from '@services/webllm';
 import Logger from '@services/logger';
 import { SettingsView } from '@views/settings/SettingsView';
 import { useDevicePlatform } from '@hooks/useDevicePlatform';
 import { useModelFilters } from '@hooks/useModelFilters';
+import { useIOSWarning } from '@hooks/useIOSWarning';
+import { useCachedModels } from '@hooks/useCachedModels';
 
 interface ModelsContainerProps {
   provider: 'transformers' | 'webllm';
@@ -16,43 +17,13 @@ interface ModelsContainerProps {
 export function ModelsContainer({ provider, onProviderChange }: ModelsContainerProps) {
   const { isMobile } = useDevicePlatform();
   const { t } = useTranslation();
+  const { showIOSWarning } = useIOSWarning(provider);
+  const cachedModelIds = useCachedModels(provider);
   const [downloadingModel, setDownloadingModel] = useState<string | null>(null);
   const [downloadProgress, setDownloadProgress] = useState(0);
   const [error, setError] = useState<string | null>(null);
   const [loadedModels, setLoadedModels] = useState<Set<string>>(new Set());
-  const [cachedModelIds, setCachedModelIds] = useState<Set<string>>(new Set());
   const [statusMessage, setStatusMessage] = useState<string | null>(null);
-
-  useEffect(() => {
-    if (provider !== 'webllm') {
-      setCachedModelIds(new Set());
-      return;
-    }
-
-    const detectCachedModels = async () => {
-      try {
-        const { hasModelInCache } = await import('@mlc-ai/web-llm');
-        const appConfig = { model_list: webllmAllModels };
-        const allModels = modelService.getModelsByProvider(provider);
-        const cached = new Set<string>();
-
-        for (const model of allModels) {
-          try {
-            const inCache = await hasModelInCache(model.id, appConfig);
-            if (inCache) cached.add(model.id);
-          } catch {
-            // Model not found in config, skip
-          }
-        }
-
-        setCachedModelIds(cached);
-        Logger.infoService(`[ModelsContainer] Found ${cached.size} cached models via hasModelInCache`);
-      } catch (err) {
-        Logger.errorStack('[ModelsContainer] Error detecting cached models', err instanceof Error ? err : new Error(String(err)));
-      }
-    };
-    detectCachedModels();
-  }, [provider]);
 
   useEffect(() => {
     Logger.infoService(`[ModelsContainer] Initializing for provider: ${provider}`);
@@ -161,6 +132,7 @@ export function ModelsContainer({ provider, onProviderChange }: ModelsContainerP
         availableFamilies={availableFamilies}
         maxVram={maxVram}
         onMaxVramChange={setMaxVram}
+        showIOSWarning={showIOSWarning}
       />
     );
   }
@@ -182,6 +154,7 @@ export function ModelsContainer({ provider, onProviderChange }: ModelsContainerP
       availableFamilies={availableFamilies}
       maxVram={maxVram}
       onMaxVramChange={setMaxVram}
+      showIOSWarning={showIOSWarning}
     />
   );
 }

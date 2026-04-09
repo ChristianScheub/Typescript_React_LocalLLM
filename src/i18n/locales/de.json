@@ -14,14 +14,18 @@
       "webllm": {
         "name": "Web-LLM",
         "description": "Native WebGPU-Beschleunigung für hochleistungsfähige neuronale Inferenzen direkt im Browser.",
-        "recommendation": "Empfohlen für M1/M2/M3 & RTX Series"
+        "recommendation": "Empfohlen für alle nicht Gemma Modelle"
       },
       "transformers": {
         "name": "Transformers.js v3",
-        "description": "ONNX/WASM Runtime für Gemma 3, SmolLM2, Qwen 2.5 und mehr. Läuft vollständig lokal im Browser.",
-        "recommendation": "Empfohlen für Gemma & SmolLM2 Modelle"
+        "description": "ONNX/WASM Runtime für Gemma 3 und 4. Läuft vollständig lokal im Browser.",
+        "recommendation": "Empfohlen für neuere Gemma Modelle"
       },
       "active": "AKTIV"
+    },
+    "iosWarning": {
+      "title": "⚠️ iOS-Kompatibilitätshinweis",
+      "description": "Die Transformers.js-Modelle wurden auf älteren iOS-Geräten getestet und keines funktionierte. (Lediglich auf Mac-Geräten funktionierten sie.) Dementsprechend wird von der Nutzung abgeraten. Im Fehlerfall startet die Anwendung neu nach dem Download. Dies variiert je nach Gerät und iOS-Version."
     },
     "availableModels": "Verfügbare Modelle",
     "modelsSubtitle": "Bibliothek von Gewichten, die mit Ihrer aktuellen Engine kompatibel sind.",
@@ -126,7 +130,7 @@
     "webllm": "Web-LLM",
     "webllmDescription": "WebGPU-Beschleunigung · Llama, Phi, Qwen, …",
     "transformers": "Transformers.js v3",
-    "transformersDescription": "ONNX/WASM · Gemma 3, SmolLM2, Qwen 2.5, …",
+    "transformersDescription": "ONNX/WASM · Gemma 3, Gemma 4",
     "active": "AKTIV",
     "switchTo": "Zu {{engine}} wechseln",
     "availableModels": "Verfügbare Modelle",

@@ -491,10 +491,10 @@ export function BadContainer() {
 ```
 services/
 └── model/
-    <br /><br />├── index.ts          ← Main Facade (MUST HAVE ALL EXPORTS)
-    <br /><br />├── IModelService.ts   ← Interface
+    <br /><br /><br /> ├──  index.ts          ← Main Facade (MUST HAVE ALL EXPORTS)
+    <br /><br /><br /> ├──  IModelService.ts   ← Interface
     └── logic/            ← Internal implementation (NOT FOR IMPORTS)
-        <br /><br />├── webllmLogic.ts
+        <br /><br /><br /> ├──  webllmLogic.ts
         └── transformersLogic.ts
 ```
 
@@ -591,45 +591,45 @@ $ npm run build
 
 ```
 src/
-<br /><br />├── components/           # Container Components
-│   <br /><br />├── ChatContainer.tsx
-│   <br /><br />├── ModelsContainer.tsx
-│   <br /><br />├── SettingsContainer.tsx
-│   <br /><br />├── mobileOnly/
+<br /><br /><br /> ├──  components/           # Container Components
+│   <br /><br /><br /> ├──  ChatContainer.tsx
+│   <br /><br /><br /> ├──  ModelsContainer.tsx
+│   <br /><br /><br /> ├──  SettingsContainer.tsx
+│   <br /><br /><br /> ├──  mobileOnly/
 │   └── ...
-<br /><br />├── views/               # Pure View Components (no logic)
-│   <br /><br />├── Chat/
+<br /><br /><br /> ├──  views/               # Pure View Components (no logic)
+│   <br /><br /><br /> ├──  Chat/
 │   │   └── ChatView.tsx
-│   <br /><br />├── Settings/
+│   <br /><br /><br /> ├──  Settings/
 │   └── ...
-<br /><br />├── ui/                  # Reusable UI Components
-│   <br /><br />├── Button.tsx
-│   <br /><br />├── Input.tsx
-│   <br /><br />├── ChatMessage.tsx
+<br /><br /><br /> ├──  ui/                  # Reusable UI Components
+│   <br /><br /><br /> ├──  Button.tsx
+│   <br /><br /><br /> ├──  Input.tsx
+│   <br /><br /><br /> ├──  ChatMessage.tsx
 │   └── ...
-<br /><br />├── services/            # Business Logic (Modular Facade Pattern)
-│   <br /><br />├── model/
-│   │   <br /><br />├── index.ts     (Public Facade)
-│   │   <br /><br />├── IMhatService.ts
+<br /><br /><br /> ├──  services/            # Business Logic (Modular Facade Pattern)
+│   <br /><br /><br /> ├──  model/
+│   │   <br /><br /><br /> ├──  index.ts     (Public Facade)
+│   │   <br /><br /><br /> ├──  IMhatService.ts
 │   │   └── logic/
-│   <br /><br />├── modelStateManager/
-│   <br /><br />├── logger/
-│   <br /><br />├── chat/
+│   <br /><br /><br /> ├──  modelStateManager/
+│   <br /><br /><br /> ├──  logger/
+│   <br /><br /><br /> ├──  chat/
 │   └── ...
-<br /><br />├── config/              # Configuration & Feature Flags
-<br /><br />├── i18n/                # Internationalization
-<br /><br />├── hooks/               # Custom React Hooks
-<br /><br />├── types.ts             # TypeScript Type Definitions
-<br /><br />├── App.tsx              # Main App Component
+<br /><br /><br /> ├──  config/              # Configuration & Feature Flags
+<br /><br /><br /> ├──  i18n/                # Internationalization
+<br /><br /><br /> ├──  hooks/               # Custom React Hooks
+<br /><br /><br /> ├──  types.ts             # TypeScript Type Definitions
+<br /><br /><br /> ├──  App.tsx              # Main App Component
 └── main.tsx             # Entry Point
 
 scripts/                 # Pre-Build & Automation Scripts
-<br /><br />├── prebuild-check.js
-<br /><br />├── workflowAutomation.js
-<br /><br />├── viewUIComponentsChecker.js
-<br /><br />├── containerComponentsChecker.js
-<br /><br />├── serviceComponentsChecker.js
-<br /><br />├── codeQualityChecker.js
+<br /><br /><br /> ├──  prebuild-check.js
+<br /><br /><br /> ├──  workflowAutomation.js
+<br /><br /><br /> ├──  viewUIComponentsChecker.js
+<br /><br /><br /> ├──  containerComponentsChecker.js
+<br /><br /><br /> ├──  serviceComponentsChecker.js
+<br /><br /><br /> ├──  codeQualityChecker.js
 └── checkUtils.js
 ```
 
@@ -652,6 +652,10 @@ npm run preview
 
 # Run code quality checks
 npm run lint
+
+# Generate the JSON with the licenses of the NPM packages used. This can then replace the existing license json under /legal/usedLibs.
+npx license-checker --json --production --out licenses.json
+
 ```
 
 ---
@@ -696,33 +700,32 @@ See `src/legal/usedLibs/licenses.json` for all used libraries.
 - Mobile and desktop layouts are completely separated for optimal UX on each device
 
 ## Used NPM Libs
-<br />├── @capacitor/android@8.3.0
-<br />├── @capacitor/cli@8.3.0
-<br />├── @capacitor/core@8.3.0
-<br />├── @capacitor/device@8.0.2
-<br />├── @capacitor/ios@8.3.0
-<br />├── @capacitor/status-bar@8.0.2
-<br />├── @capgo/capacitor-navigation-bar@8.0.25
-<br />├── @emnapi/wasi-threads@1.2.1 extraneous
-<br />├── @eslint/js@9.39.4
-<br />├── @huggingface/transformers@3.8.1
-<br />├── @mlc-ai/web-llm@0.2.82
-<br />├── @types/node@24.12.2
-<br />├── @types/react-dom@19.2.3
-<br />├── @types/react@19.2.14
-<br />├── @vitejs/plugin-react@6.0.1
-<br />├── eslint-plugin-react-hooks@7.0.1
-<br />├── eslint-plugin-react-refresh@0.5.2
-<br />├── eslint@9.39.4
-<br />├── globals@17.4.0
-<br />├── i18next-browser-languagedetector@8.2.1
-<br />├── i18next@26.0.3
-<br />├── license-checker@25.0.1
-<br />├── onnxruntime-web@1.24.3
-<br />├── react-dom@19.2.4
-<br />├── react-i18next@17.0.2
-<br />├── react-icons@5.6.0
-<br />├── react@19.2.4
-<br />├── typescript-eslint@8.58.0
-<br />├── typescript@5.9.3
-<br />└── vite@8.0.3
+<br /> ├──  @capacitor/android@8.3.0
+<br /> ├──  @capacitor/cli@8.3.0
+<br /> ├──  @capacitor/core@8.3.0
+<br /> ├──  @capacitor/device@8.0.2
+<br /> ├──  @capacitor/ios@8.3.0
+<br /> ├──  @capacitor/status-bar@8.0.2
+<br /> ├──  @capgo/capacitor-navigation-bar@8.0.25
+<br /> ├──  @emnapi/wasi-threads@1.2.1 extraneous
+<br /> ├──  @eslint/js@9.39.4
+<br /> ├──  @huggingface/transformers@3.8.1
+<br /> ├──  @mlc-ai/web-llm@0.2.82
+<br /> ├──  @types/node@24.12.2
+<br /> ├──  @types/react-dom@19.2.3
+<br /> ├──  @types/react@19.2.14
+<br /> ├──  @vitejs/plugin-react@6.0.1
+<br /> ├──  eslint-plugin-react-hooks@7.0.1
+<br /> ├──  eslint-plugin-react-refresh@0.5.2
+<br /> ├──  eslint@9.39.4
+<br /> ├──  globals@17.4.0
+<br /> ├──  i18next-browser-languagedetector@8.2.1
+<br /> ├──  i18next@26.0.3
+<br /> ├──  license-checker@25.0.1
+<br /> ├──  react-dom@19.2.4
+<br /> ├──  react-i18next@17.0.2
+<br /> ├──  react-icons@5.6.0
+<br /> ├──  react@19.2.4
+<br /> ├──  typescript-eslint@8.58.0
+<br /> ├──  typescript@5.9.3
+<br /> └── vite@8.0.3

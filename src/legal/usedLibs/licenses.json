@@ -1080,13 +1080,6 @@
     "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@huggingface/transformers/node_modules/onnxruntime-web/node_modules/onnxruntime-common",
     "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@huggingface/transformers/node_modules/onnxruntime-web/node_modules/onnxruntime-common/README.md"
   },
-  "onnxruntime-common@1.24.3": {
-    "licenses": "MIT",
-    "repository": "https://github.com/Microsoft/onnxruntime",
-    "publisher": "fs-eire",
-    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/onnxruntime-common",
-    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/onnxruntime-common/README.md"
-  },
   "onnxruntime-node@1.21.0": {
     "licenses": "MIT",
     "repository": "https://github.com/Microsoft/onnxruntime",
@@ -1100,13 +1093,6 @@
     "publisher": "fs-eire",
     "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@huggingface/transformers/node_modules/onnxruntime-web",
     "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/@huggingface/transformers/node_modules/onnxruntime-web/README.md"
-  },
-  "onnxruntime-web@1.24.3": {
-    "licenses": "MIT",
-    "repository": "https://github.com/Microsoft/onnxruntime",
-    "publisher": "fs-eire",
-    "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/onnxruntime-web",
-    "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/onnxruntime-web/README.md"
   },
   "open@8.4.2": {
     "licenses": "MIT",

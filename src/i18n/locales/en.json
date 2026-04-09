@@ -23,6 +23,10 @@
       },
       "active": "ACTIVE"
     },
+    "iosWarning": {
+      "title": "⚠️ iOS Compatibility Notice",
+      "description": "Transformers.js models have not been tested to work reliably on iOS devices. The application may restart after downloading models. This varies by device and iOS version."
+    },
     "availableModels": "Available Models",
     "modelsSubtitle": "Library of weights compatible with your current engine.",
     "viewRegistry": "View Registry",
