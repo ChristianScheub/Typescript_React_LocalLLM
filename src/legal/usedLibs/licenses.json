@@ -1207,7 +1207,7 @@
     "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/prompts",
     "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/prompts/license"
   },
-  "protobufjs@7.5.4": {
+  "protobufjs@7.5.5": {
     "licenses": "BSD-3-Clause",
     "repository": "https://github.com/protobufjs/protobuf.js",
     "publisher": "Daniel Wirtz",
@@ -1578,7 +1578,7 @@
     "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/type-fest",
     "licenseFile": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM/node_modules/type-fest/license"
   },
-  "typescript-react-localllm@0.0.0": {
+  "typescript-react-localllm@1.0.9": {
     "licenses": "UNLICENSED",
     "private": true,
     "path": "/Users/christianscheub/Documents/Develope/ReactLocalLLM/Typescript_React_LocalLLM",
